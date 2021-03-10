@@ -589,8 +589,9 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 30px;
-  background: #1977cc;
+  background: #00A8A3;
   border-radius: 4px;
+  box-shadow: 8px 6px 2px 1px #DADDDD;
   color: #fff;
 }
 

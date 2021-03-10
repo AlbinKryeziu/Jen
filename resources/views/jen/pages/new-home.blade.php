@@ -1,75 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Home</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('jen/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('jen/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{ asset('jen/assets/css/style.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Medilab - v2.1.1
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-  <!-- ======= Top Bar ======= -->
 
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+@include('jen/pages/assets/header')
 
-      <h1 class="logo mr-auto"><a href="index.html">Len</a></h1>
-    
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">Sign Up</a></li>
-          <li><a href="#services">Login</a></li>
-         
-         
 
-        </ul>
-      </nav>
 
-     
 
-    </div>
-  </header>
   <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/img2.jpg') }}') top center;">
 
     <div class="container" style="text-align: center">
       <h1>Welcome to Len</h1>
       <h2>We are Website when you can search for any doctors</h2>
-      <a href="#about" class="btn-get-started scrollto">Search Doctor</a>
+      <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
   </section><!-- End Hero -->
 <div class="padding" style="margin: 80px;">
