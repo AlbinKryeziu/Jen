@@ -41,9 +41,18 @@
 
           <li><a href="{{ url('register/doctor') }}">Sign Up</a></li>
           <li><a href="{{ url('login') }}">Login</a></li>
-         
-         
-
+          @if (Auth::check())
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">My profile</a></li>
+              <li><a href="#">Lo gaut</a></li>
+              
+                
+              </li>
+            </ul>
+            @endif
+              
+          </li>
         </ul>
       </nav>
 

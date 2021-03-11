@@ -25,3 +25,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('home/', [PageController::class,'index']);
 
 Route::get('register/doctor', [RegisterController::class,'index']);
+Route::get('register/client', [RegisterController::class,'indexClient']);
