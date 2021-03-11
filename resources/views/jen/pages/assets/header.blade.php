@@ -39,8 +39,8 @@
           <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
           <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Search Doctor</a></li>
 
-          <li><a href="#about">Sign Up</a></li>
-          <li><a href="#services">Login</a></li>
+          <li><a href="{{ url('register/doctor') }}">Sign Up</a></li>
+          <li><a href="{{ url('login') }}">Login</a></li>
          
          
 
