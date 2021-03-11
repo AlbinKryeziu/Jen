@@ -40,7 +40,9 @@
           <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Doctors</a></li>
 
           <li><a href="{{ url('register/client') }}">Sign Up</a></li>
+          @if (!Auth::check())
           <li><a href="{{ url('login') }}">Login</a></li>
+          @endif
           @if (Auth::check())
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
