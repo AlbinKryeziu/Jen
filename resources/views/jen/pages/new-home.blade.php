@@ -139,7 +139,7 @@ section .section-title {
 
 @media (max-width: 575.98px) {
 
-  #contatti{padding-bottom: 800px;}
+  #contatti{padding-bottom: 350px;}
   #contatti .maps iframe{
     width: 100%;
     height: 450px;
@@ -149,7 +149,7 @@ section .section-title {
 
 @media (min-width: 576px) {
 
-   #contatti{padding-bottom: 800px;}
+   #contatti{padding-bottom: 350px;}
 
    #contatti .maps iframe{
      width: 100%;
@@ -168,7 +168,7 @@ section .section-title {
 }
 
 @media (min-width: 992px) {
-  #contatti{padding-bottom: 200px;}
+  #contatti{padding-bottom: 350px;}
 
    #contatti .maps iframe{
      width: 100%;
@@ -306,7 +306,7 @@ section .section-title {
     </section>
     <section id="carousel" style="" >
         <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -314,13 +314,13 @@ section .section-title {
         </ol>
         <div class="carousel-inner" style="box-shadow: 7px 2px 25px #E0E5E5">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/imagedoctor.jpg') }}" alt="First slide">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/imagedoctor.jpg') }}" alt="First slide" style="height: 550px; object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/imageDoctor1.jpg') }}" alt="Second slide">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/imageDoctor1.jpg') }}" alt="Second slide"style="height: 550px; object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/doctor3.jpg') }}" alt="Third slide">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/doctor3.jpg') }}" alt="Third slide"style="height: 550px; object-fit: cover;">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -334,8 +334,7 @@ section .section-title {
       </div>
         </div>
     </section>
-    <br>
-<br> 
+
 
     <section id="counts" class="counts">
       <div class="container">
