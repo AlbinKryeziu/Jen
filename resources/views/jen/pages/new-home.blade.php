@@ -31,7 +31,6 @@ section .section-title {
     text-align: center;
     color: #00a8a8;
     margin-bottom: 50px;
-    text-transform: uppercase;
 }
 
 #team .card {
@@ -220,7 +219,7 @@ section .section-title {
         <div class="container">
   
           <div class="section-title">
-            <h2>How it Work</h2>
+            <h2>How it Works</h2>
             <p></p>
           </div>
   
@@ -264,7 +263,7 @@ section .section-title {
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3 style="text-align: center" style="color: #00a8a8;">What we offer</h3>
+            <h3 style="text-align: center" style="color: #00a8a8;">What We Offer</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <div class="icon-box">
@@ -379,7 +378,7 @@ section .section-title {
   
     <section id="testimonials" class="testimonials">
       <div class="container">
-        <h3 style="text-align: center; color:#00A8A3"> <i class="bx bxs-quote-alt-left quote-icon-left" style="color: #70c3be"></i>Happy Client <i class="bx bxs-quote-alt-right quote-icon-right" style="color: #70c3be"></i></h3>
+        <h3 style="text-align: center; color:#00A8A3"> <i class="bx bxs-quote-alt-left quote-icon-left" style="color: #70c3be"></i>Happy Clients <i class="bx bxs-quote-alt-right quote-icon-right" style="color: #70c3be"></i></h3>
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-wrap">
@@ -455,7 +454,7 @@ section .section-title {
  
     <section id="team" class="pb-5">
       <div class="container">
-          <h5 class="section-title h1">OUR TEAM</h5>
+          <h5 class="section-title h1">Our Doctors</h5>
           <div class="row">
               <!-- Team member -->
               <div class="col-xs-12 col-sm-6 col-md-4">
@@ -822,7 +821,7 @@ section .section-title {
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
+ 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->

@@ -26,18 +26,28 @@
                         <h2 class="title">register as a doctor</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form method="POST" action="{{ url('doctor/account') }}">
+                            @csrf
                             <div class="form-row m-b-55">
                                 <div class="name">Name</div>
                                 <div class="value">
                                     <div class="row row-space">
                                         <div class="col-2">
+                                            @error('first_name')
+                                            <div class="error">{{ $message }}</div>
+                                           @enderror
                                             <div class="input-group-desc">
                                                 <input class="input--style-5" type="text" name="first_name" />
                                                 <label class="label--desc">first name</label>
+                                               
                                             </div>
+                                           
                                         </div>
+                                        
                                         <div class="col-2">
+                                            @error('last_name')
+                                            <div class="error">{{ $message }}</div>
+                                           @enderror
                                             <div class="input-group-desc">
                                                 <input class="input--style-5" type="text" name="last_name" />
                                                 <label class="label--desc">last name</label>
@@ -53,22 +63,75 @@
                                     <div class="input-group">
                                         <input class="input--style-5" type="email" name="email" />
                                     </div>
+                                    @error('email')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Phone</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" />
+                                        <input class="input--style-5" type="number" name="phone" />
                                     </div>
+                                    @error('phone')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Speciality</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" />
+                                        <input class="input--style-5" type="text" name="speciality" />
                                     </div>
+                                    @error('speciality')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Country</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="text" name="country" />
+                                    </div>
+                                    @error('country')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Address</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="text" name="address" />
+                                    </div>
+                                    @error('address')
+                                    <div class="error " style="color: red">{{ $message }}</div>
+                                   @enderror
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Password</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="password" name="password" />
+                                    </div>
+                                    @error('password')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Password Confirm</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="password" name="password_confirmation" />
+                                    </div>
+                                    @error('password_confirmation')
+                                    <div class="error">{{ $message }}</div>
+                                   @enderror
                                 </div>
                             </div>
 

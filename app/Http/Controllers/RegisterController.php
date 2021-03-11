@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterClientRequest;
+use App\Models\Doctor;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -15,9 +18,27 @@ class RegisterController extends Controller
         return view('jen/pages/registerClient');
     }
 
-    public function registerClient(RegisterClientRequest $request){
+    public function registerDoctor(RegisterClientRequest $request){
 
-        return $request;
+       $user = new User();
+       $user->name = $request->first_name.' '. $request->last_name;
+       $user->email = $request->email;
+       $user->password = Hash::make($request->password);
+       $user->save();
+       if($user){
+           $doctor = new Doctor();
+           $doctor->name = $request->first_name;
+           $doctor->surname = $request->last_name;
+           $doctor->speciality = $request->speciality;
+           $doctor->country = $request->country;
+           $doctor->address = $request->address;
+           $doctor->phone = $request->phone;
+       }
+
+       if ($user || $doctor){
+
+        return redirect()->route('login');
+       }
 
     }
 }

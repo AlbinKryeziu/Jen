@@ -59,8 +59,8 @@
 
         <div class="row">
 
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
+          <div class="col-lg-6 p-4">
+            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
               <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
@@ -74,8 +74,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
+          <div class="col-lg-6 p-4" >
+            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
               <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
@@ -89,8 +89,9 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
+     
+          <div class="col-lg-6 p-4">
+            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
               <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
@@ -104,8 +105,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
+          <div class="col-lg-6 p-4">
+            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
               <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
@@ -153,11 +154,11 @@
     </div>
   </footer>
 
-  <div id="preloader"></div>
+  
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
  
-  <script src="{{ asset('jen/assets/vendor/jquery/jquery.min.js') }}"></script>
+  
   <script src="{{ asset('jen/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('jen/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('jen/assets/vendor/php-email-form/validate.js') }}"></script>
