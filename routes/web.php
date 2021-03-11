@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('client/register', [RegisterController::class,'registerClient']);
+
 Route::get('home/', [PageController::class,'index']);
 
 Route::get('register/doctor', [RegisterController::class,'index']);

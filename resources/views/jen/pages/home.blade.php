@@ -2,12 +2,14 @@
 @include('jen/pages/assets/header')
 
 
-
+<style>
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  </style>
 
 <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center;">
     <div class="container">
       <h1>Doctor Here</h1>
-      <h2 style=" width: 800px;">Please fill in all the fields to ask for a doctor and our system will find a doctor if it exists with your data</h2>
+      <h2 style=" width: 800px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
      
     </div>
   </section>
@@ -20,8 +22,8 @@
         <div class="row col-12">
           <div class="col-lg-12 d-flex align-items-stretch">
             <div class="content col-12">
-              <h3>Why Choose Medilab?</h3>
-              <label style="margin: 4px;">Speciality</label >
+              <h3>Search Doctors</h3>
+              <label style="margin: 4px;">Specialty</label >
               <input type="text" class="form-control p-4" style="margin: 4px;">
               <label style="margin: 4px;">Country</label >
                 <input type="text" class="form-control p-4"style="margin: 4px;">
@@ -59,71 +61,70 @@
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Medical Officer</span>
                 <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                <br>
+                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
+                <div class="social" style="text-align: center">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Medical Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <br>
+                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
+                <div class="social" style="text-align: center">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Medical Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <br>
+                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
+                <div class="social" style="text-align: center">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Medical Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <br>
+                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
+                <div class="social" style="text-align: center">
+                
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Anesthesiologist</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cardiology</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
+         
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 

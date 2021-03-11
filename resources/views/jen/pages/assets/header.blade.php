@@ -37,7 +37,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-          <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Search Doctor</a></li>
+          <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Doctors</a></li>
 
           <li><a href="{{ url('register/client') }}">Sign Up</a></li>
           <li><a href="{{ url('login') }}">Login</a></li>

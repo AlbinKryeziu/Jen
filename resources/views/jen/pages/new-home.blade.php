@@ -188,7 +188,7 @@ section .section-title {
 
     <div class="container" style="text-align: center">
       <h1>Welcome to Len</h1>
-      <h2>We are Website when you can search for any doctors</h2>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
       <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
   </section><!-- End Hero -->
@@ -229,7 +229,7 @@ section .section-title {
               <div class="icon-box">
                 <div class="icon"><i class=" bx bx-user-plus"></i></div>
                 <h4><a href="">Sign Up</a></h4>
-                <p>The first step you need to do is open an account with us</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
               </div>
             </div>
   
@@ -237,7 +237,7 @@ section .section-title {
               <div class="icon-box">
                 <div class="icon"><i class="bx bxs-lock-alt"></i></div>
                 <h4><a href="">Log in</a></h4>
-                <p>The second step you need to log in on our website</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
               </div>
             </div>
   
@@ -245,7 +245,7 @@ section .section-title {
               <div class="icon-box">
                 <div class="icon"><i class="bx bx bx-search"></i></div>
                 <h4><a href="">Explore</a></h4>
-                <p>Step Three You can now search for your nearest doctor in your area</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
               </div>
             </div>
           </div>
@@ -265,29 +265,27 @@ section .section-title {
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h3 style="text-align: center" style="color: #00a8a8;">What we offer</h3>
-            <p>We aim to bring clients together with doctors in a web site where it can be used and easily managed by users</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <div class="icon-box">
-                <div class="card" style="box-shadow: 7px 5px 5px #E0E5E5">
+                <div class="card" style=" box-shadow: 5px 7px 9px -4px #D3D7D7;">
                     <div class="card-body">
               <div class="icon"><strong>1</strong></div>
               <h4 class="title"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
               </div>
             </div>
 
             <div class="icon-box">
-                <div class="card" style="box-shadow: 7px 5px 5px #E0E5E5">
+                <div class="card" style=" box-shadow: 5px 7px 9px -4px #D3D7D7">
                     <div class="card-body">
               <div class="icon"><strong>2</strong></div>
               <h4 class="title"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
               </div>
@@ -295,12 +293,11 @@ section .section-title {
 
             <div class="icon-box">
                 <div class="card">
-                    <div class="card-body" style="box-shadow: 7px 5px 5px #E0E5E5">
+                    <div class="card-body" style=" box-shadow: 5px 7px 9px -4px #D3D7D7">
               <div class="icon"><strong>3</strong></div>
               <h4 class="title"><a href=""></a></h4>
-                  <p class="card-text" style="padding: 10px; text-align: center;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content
+                  <p class="card-text" style="padding: 15px; text-align: center;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
               </div>
@@ -382,7 +379,7 @@ section .section-title {
   
     <section id="testimonials" class="testimonials">
       <div class="container">
-        <h2 style="text-align: center"> <i class="bx bxs-quote-alt-left quote-icon-left"></i>Happy Client <i class="bx bxs-quote-alt-right quote-icon-right"></i></h2>
+        <h3 style="text-align: center; color:#00A8A3"> <i class="bx bxs-quote-alt-left quote-icon-left" style="color: #70c3be"></i>Happy Client <i class="bx bxs-quote-alt-right quote-icon-right" style="color: #70c3be"></i></h3>
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-wrap">
@@ -787,9 +784,9 @@ section .section-title {
                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Inserisci testo" rows="3" required></textarea>
               </div>
             </div>
-            <div class="col-12" style="width: 120px;">
+            <div class="col-lg-12" style="float: right">
               
-              <button class="btn btn-light" type="submit">Invia</button>
+              <button class="btn" style="background-color:#00A8A3;color:white;" type="submit">Sent</button>
            
             </div>
             
