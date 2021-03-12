@@ -314,15 +314,16 @@ section .section-title {
         </ol>
         <div class="carousel-inner" style="box-shadow: 7px 2px 25px #E0E5E5">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/imagedoctor.jpg') }}" alt="First slide" style="height: 550px; object-fit: cover;">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/img15.jpg') }}" alt="First slide" style="height: 550px; object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/imageDoctor1.jpg') }}" alt="Second slide"style="height: 550px; object-fit: cover;">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/female.jpg') }}" alt="Second slide"style="height: 550px; object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('jen/assets/img/doctor3.jpg') }}" alt="Third slide"style="height: 550px; object-fit: cover;">
+            <img class="d-block w-100" src="{{ asset('jen/assets/img/young.jpg') }}" alt="Third slide"style="height: 550px; object-fit: cover;">
           </div>
         </div>
+        
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
