@@ -85,11 +85,15 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit porfile</h6>
+                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Change working hours</h6>
+                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
+                            </h6>
                         </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                          <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
+                      </li>
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
@@ -221,43 +225,30 @@
                       <div class="card h-100">
                           <div class="card-body">
                               <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
-                              <div class="row">
-                                  <div class="col-sm-3">
-                                      <h6 class="mb-0">Speciality</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                      {{ $user->doctor->address }}
-                                  </div>
-                              </div>
-                              <hr />
-                              <div class="row">
-                                  <div class="col-sm-3">
-                                      <h6 class="mb-0">Work Schedule</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                      {{ $user->doctor->workEnvironment }}
-                                  </div>
-                              </div>
-                              <hr />
-                              <div class="row">
-                                  <div class="col-sm-3">
-                                      <h6 class="mb-0">Services</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                      {{ $user->doctor->services }}
-                                  </div>
-                              </div>
-                              <hr />
-
-                              <div class="row">
-                                  <div class="col-sm-3">
-                                      <h6 class="mb-0">License</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                      {{ $user->doctor->services }}
-                                  </div>
-                              </div>
-                              <hr />
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Day</th>
+                                    <th scope="col">Start Time</th>
+                                    <th scope="col">End Time</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($user->schedule as $key => $schedule)
+                                        
+                                   
+                                  <tr>
+                                    <th scope="row">{{$loop->iteration }}</th>
+                                    <td>{{ $schedule->day }}</td>
+                                    <td>{{ $schedule->start }}</td>
+                                    <td>{{ $schedule->end }}</td>
+                                  </tr>
+                                  @endforeach
+                                  
+                                </tbody>
+                              </table>
+                             
                           </div>
                       </div>
                   </div>

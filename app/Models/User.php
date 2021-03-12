@@ -62,4 +62,7 @@ class User extends Authenticatable
     public function doctor(){
         return $this->hasOne(Doctor::class,'user_id','id');
     }
+    public function schedule(){
+        return $this->hasMany(WorkSchedule::class,'user_id','id');
+    }
 }

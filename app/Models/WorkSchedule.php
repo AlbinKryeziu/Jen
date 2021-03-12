@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class WorkSchedule extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'day',
+        'start',
+        'end',
+        'user_id',
+    ];
 }
