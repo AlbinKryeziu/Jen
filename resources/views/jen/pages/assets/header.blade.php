@@ -30,8 +30,8 @@
 <body>
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo mr-auto"><a href="index.html">Jen</a></h1>
+<img src="{{ asset('jen/assets/img/SPNlogofinal (2).png') }}" width="210px;">
+      <h1 class="logo mr-auto"><a href="index.html"></a></h1>
     
 
       <nav class="nav-menu d-none d-lg-block">

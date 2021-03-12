@@ -12,9 +12,11 @@ class DoctorController extends Controller
 
         $id = Auth::id();
 
-        return $user = User::with('doctor')->where('id',$id)->get();
+          $user = User::with('doctor')->where('id',$id)->get();
 
-        return view('jen/doctors/index');
+        return view('jen/doctors/index',[
+            'user'=>$user,
+        ]);
         
     }
 }

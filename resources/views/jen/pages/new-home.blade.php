@@ -186,7 +186,7 @@ section .section-title {
   <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/img2.jpg') }}') top center;">
 
     <div class="container" style="text-align: center">
-      <h1>Welcome to Len</h1>
+      <h1>Welcome to Jen</h1>
       <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
       <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
@@ -318,6 +318,7 @@ section .section-title {
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="{{ asset('jen/assets/img/female.jpg') }}" alt="Second slide"style="height: 550px; object-fit: cover;">
+           
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="{{ asset('jen/assets/img/young.jpg') }}" alt="Third slide"style="height: 550px; object-fit: cover;">
