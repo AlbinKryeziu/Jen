@@ -76,8 +76,8 @@
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <button class="btn btn-primary">Follow</button>
-                                <button class="btn btn-outline-primary">Message</button>
+                               <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
+                              
                             </div>
                         </div>
                     </div>
@@ -85,11 +85,11 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
-                            </h6>
+                            <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
+                            </h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                           <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
@@ -116,9 +116,9 @@
                                     <line x1="2" y1="12" x2="22" y2="12"></line>
                                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                                 </svg>
-                                Edit porfile
+                               Website
                             </h6>
-                            <span class="text-secondary">Weebsite</span>
+                            
                         </li>
                     </ul>
                 </div>

@@ -59,7 +59,7 @@
         box-shadow: none !important;
     }
     #footer {
-        margin-top: 150px;
+        margin-top: 50px;
     }
 </style>
 <div class="container p-4">
@@ -84,21 +84,20 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black">  <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6></a>
+                            <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
+                            </h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
-                            </a>
-                        </li>
+                          <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
+                      </li>
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
-                        <a href="{{ $user->doctor->website }}" target="_blank" style="color: black"><li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -116,51 +115,53 @@
                                     <line x1="2" y1="12" x2="22" y2="12"></line>
                                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                                 </svg>
-                            Website
+                               Website
                             </h6>
                             
-                        </li></a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Create Work Schedule</h6>
-
-                        <form method="POST" action="{{ url('doctor/add/schedule') }}">
-                            @csrf
-                            <table class="table table-bordered table-hover" id="tab_logic">
-                                <thead>
-                                    <tr id="num">
-                                        <th class="text-center">#</th>
-                                        <th class="text-center">Day</th>
-                                        <th class="text-center">Start Time</th>
-                                        <th class="text-center">End Time</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr id="addr0">
-                                        <td>1</td>
-                                        <td><input type="text" name="day[]" id="myText" value="{{old('category[]')}}" class="form-control cta" /></td>
-                                        <td><input type="time" name="start[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
-                                        <td><input type="time" name="end[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
-                                    </tr>
-
-                                    <tr id="addr1"></tr>
-                                </tbody>
-                            </table>
-                            <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Save</button>
-                        </form>
+                      <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Personal Info</h6>
+                      <form method="POST" action="{{ url('doctor/update/profile') }}">
+                        @csrf
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">First Name</label>
+                          <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp"value="{{ $user->doctor->name }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Last Name</label>
+                            <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp"value="{{ $user->doctor->surname }}">
+                          </div>
+                        
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Phone</label>
+                            <input type="number" class="form-control" name="phone" aria-describedby="emailHelp" value="{{ $user->doctor->phone }}">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Address</label>
+                            <input type="text" class="form-control" name="address" aria-describedby="emailHelp"value="{{ $user->doctor->address }}">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Country</label>
+                            <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}">
+                          </div>
+                        <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Submit</button>
+                      </form>
                     </div>
                 </div>
-                <div class="row clearfix">
-                    <div class="col-md-12">
-                        <button type="button" id="add_row" class="btn btn-default pull-left">Add Row</button>
-                        <button type="button" id="delete_row" class="pull-right btn btn-default">Delete Row</button>
-                    </div>
-                </div>
+                
+                  </div>
+              </div>
+          
+          
             </div>
+            
+              </div>
+              
         </div>
     </div>
 </div>
@@ -189,72 +190,3 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('jen/assets/js/main.js') }}"></script>
-<script>
-    $(document).ready(function () {
-        var i = 1;
-        $("#add_row").click(function () {
-            b = i - 1;
-            $("#addr" + i)
-                .html($("#addr" + b).html())
-                .find("td:first-child")
-                .html(i + 1);
-            $("#tab_logic").append('<tr id="addr' + (i + 1) + '"></tr>');
-            var lastProduct = jQuery("#addr" + (i - 1))
-                .find("td:eq(1) input")
-                .val();
-
-            i++;
-        });
-        $("#delete_row").click(function () {
-            if (i > 1) {
-                $("#addr" + (i - 1)).html("");
-                $("#addr" + i).remove();
-                i--;
-            }
-            calc();
-        });
-        $("#tab_logic tbody").on("keyup change", function () {
-            calc();
-        });
-        $("#tax").on("keyup change", function () {
-            calc_total();
-        });
-    });
-    $(document).ready(function () {
-        $("#btn1").click(function () {
-            $("ol").append("<li>other list<br>");
-        });
-        $("#btn2").click(function () {
-            $("ol").append("<input></input><br>");
-        });
-    });
-    function showContent() {
-        myTable = document.getElementsById("form-data")[0];
-        myClone = myTable.cloneNode(true);
-        document.body.appendChild(myClone);
-    }
-    function calc() {
-        $("#tab_logic tbody tr").each(function (i, element) {
-            var html = $(this).html();
-            var allProducts = [];
-            if (html != "") {
-                var qty = $(this).find(".qty").val();
-                var price = $(this).find(".price").val();
-                $(this)
-                    .find(".total")
-                    .val((qty * price).toFixed(2));
-                calc_total();
-            }
-        });
-    }
-    function calc_total() {
-        total = 0;
-        $(".total").each(function () {
-            total += parseFloat($(this).val());
-        });
-        $("#sub_total").val(total.toFixed(2));
-        tax_sum = (total / 100) * $("#tax").val();
-        $("#tax_amount").val(tax_sum.toFixed(2));
-        $("#total_amount").val((tax_sum + total).toFixed(2));
-    }
-</script>

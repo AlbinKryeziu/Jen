@@ -34,3 +34,7 @@ Route::get('register/client', [RegisterController::class,'indexClient']);
 Route::get('profile/', [DoctorController::class,'index']);
 Route::get('doctor/schedule', [DoctorController::class,'createSchedule']);
 Route::post('doctor/add/schedule', [DoctorController::class,'addSchedule']);
+Route::get('doctor/edit/profile/{doctorId}', [DoctorController::class,'editProfileDoctor']);
+Route::post('doctor/update/profile', [DoctorController::class,'updateProfileDoctor']);
+Route::get('doctor/work', [DoctorController::class,'editWorkDoctor']);
+Route::post('doctor/update/work', [DoctorController::class,'updateWorkDoctor']);

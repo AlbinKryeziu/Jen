@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Doctor;
 use App\Models\User;
 use App\Models\WorkSchedule;
 use Illuminate\Http\Request;
@@ -9,42 +10,88 @@ use Illuminate\Support\Facades\Auth;
 
 class DoctorController extends Controller
 {
-    public function index(){
-
+    public function index()
+    {
         $id = Auth::id();
 
-          $user = User::with('doctor','schedule')->where('id',$id)->get();
+        $user = User::with('doctor', 'schedule')
+            ->where('id', $id)
+            ->get();
 
-        return view('jen/doctors/index',[
-            'user'=>$user,
+        return view('jen/doctors/index', [
+            'user' => $user,
         ]);
-        
     }
 
-    public function createSchedule(Request $request){
+    public function createSchedule(Request $request)
+    {
         $id = Auth::id();
 
-          $user = User::with('doctor')->where('id',$id)->get();
-       return view('jen/doctors/schedule',[
-        'user'=>$user,
-       ]);
+        $user = User::with('doctor')
+            ->where('id', $id)
+            ->get();
+        return view('jen/doctors/schedule', [
+            'user' => $user,
+        ]);
     }
 
-    public function addSchedule(Request $request){
-
+    public function addSchedule(Request $request)
+    {
         for ($i = 0; $i < count($request['day']); $i++) {
-           $work = WorkSchedule::create([
+            $work = WorkSchedule::create([
                 'day' => $request['day'][$i],
                 'start' => $request['start'][$i],
                 'end' => $request['end'][$i],
                 'user_id' => Auth::id(),
-                
             ]);
-        
         }
-        if($work){
+        if ($work) {
             return redirect()->back();
         }
-      
+    }
+    public function editProfileDoctor($doctorId){
+        $user = User::with('doctor')
+       ->where('id', $doctorId)
+       ->get();
+
+       return view('jen/doctors/edit-profile', [
+        'user' => $user,
+    ]);
+    }
+    public function updateProfileDoctor(Request $request){
+        $user = Doctor::where('user_id',Auth::id())->update([
+            'name' =>$request->first_name,
+            'surname' =>$request->last_name,
+            'phone' =>$request->phone,
+            'address' =>$request->address,
+            'country' =>$request->country,
+        ]);
+        if($user){
+            return redirect()->back();
+        }
+       
+    }
+
+    public function editWorkDoctor(){
+        $user = User::with('doctor')
+       ->where('id', Auth::id())
+       ->get();
+
+       return view('jen/doctors/edit-work', [
+        'user' => $user,
+    ]);
+    }
+
+    public function updateWorkDoctor(Request $request){
+        $doctor = Doctor::where('user_id',Auth::id())->update([
+            'speciality'=>$request->speciality,
+            'workEnvironment'=>$request->workEnvironment,
+            'services'=>$request->services,
+            'license'=>$request->license,
+            'website'=>$request->website,
+        ]);
+        if($doctor){
+            return redirect()->back();
+        }
     }
 }
