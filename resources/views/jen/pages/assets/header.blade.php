@@ -38,16 +38,24 @@
         <ul>
           <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
           <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Doctors</a></li>
-
+          @if (!Auth::check())
           <li><a href="{{ url('register/client') }}">Sign Up</a></li>
+          @endif
           @if (!Auth::check())
           <li><a href="{{ url('login') }}">Login</a></li>
           @endif
           @if (Auth::check())
-          <li class="drop-down"><a href="">Drop Down</a>
+          <li class="drop-down"><a href="">{{ auth()->user()->name }}</a>
             <ul>
-              <li><a href="#">My profile</a></li>
-              <li><a href="#">Lo gaut</a></li>
+              
+              <li><a href="{{ url('profile/') }}">My profile</a></li>
+              <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                Logout
+            </a>    
+            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+            
               
                 
               </li>

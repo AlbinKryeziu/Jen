@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,5 @@ Route::get('home/', [PageController::class,'index']);
 
 Route::get('register/doctor', [RegisterController::class,'index']);
 Route::get('register/client', [RegisterController::class,'indexClient']);
+
+Route::get('profile/', [DoctorController::class,'index']);

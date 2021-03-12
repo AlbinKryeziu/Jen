@@ -33,6 +33,8 @@ class RegisterController extends Controller
            $doctor->country = $request->country;
            $doctor->address = $request->address;
            $doctor->phone = $request->phone;
+           $doctor->user_id = $user->id;
+           $doctor->save();
        }
 
        if ($user || $doctor){

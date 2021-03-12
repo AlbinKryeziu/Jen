@@ -10,4 +10,5 @@ class PageController extends Controller
 
         return view('jen/pages/home');
     }
+    
 }
