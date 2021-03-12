@@ -94,4 +94,14 @@ class DoctorController extends Controller
             return redirect()->back();
         }
     }
+
+    public function profileDoctorDetails($doctorId){
+
+       $user = User::with('doctor', 'schedule')
+        ->where('id', $doctorId)
+        ->get();
+        return view('jen/doctors/profile',[
+            'user' => $user,
+        ]);
+    }
 }

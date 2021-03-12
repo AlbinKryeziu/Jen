@@ -15,24 +15,29 @@
   </section>
 
   <main id="main">
-
+    <form>
+      @csrf
+   
     <section id="why-us" class="why-us">
       <div class="container">
 
         <div class="row col-12">
           <div class="col-lg-12 d-flex align-items-stretch">
+           
+         
             <div class="content col-12">
               <h3>Search Doctors</h3>
               <label style="margin: 4px;">Specialty</label >
-              <input type="text" class="form-control p-4" style="margin: 4px;">
+              <input type="text" class="form-control p-4" name="specialty" style="margin: 4px;">
               <label style="margin: 4px;">Country</label >
-                <input type="text" class="form-control p-4"style="margin: 4px;">
+                <input type="text" class="form-control p-4" name="country" style="margin: 4px;">
               <label style="margin: 4px;">Address</label >
-              <input type="text" class="form-control p-4"style="margin: 4px;">
+              <input type="text" class="form-control p-4" name="address" style="margin: 4px;">
               <div class="text-center">
-                <a href="#" class="more-btn" style="margin: 4px;">Search <i class="bx bx-chevron-right"></i></a>
+                <button type="submit" class="more-btn">Search <i class="bx bx-chevron-right"></i></button>
               </div>
             </div>
+          
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
@@ -43,7 +48,7 @@
             </div>
           </div>
         </div>
-
+      </form>
       </div>
     </section>
    
@@ -58,68 +63,29 @@
         </div>
 
         <div class="row">
-
-          <div class="col-lg-6 p-4">
-            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
-              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <br>
-                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
-                <div class="social" style="text-align: center">
-                
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 p-4" >
-            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
-              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <br>
-                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
-                <div class="social" style="text-align: center">
-                
-                </div>
-              </div>
-            </div>
-          </div>
+         @foreach($doctor as $key => $doctor)
+           
      
           <div class="col-lg-6 p-4">
             <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
               <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
+                <h4>{{ $doctor->name }} {{ $doctor->surname }}</h4>
+                <span>{{ $doctor->speciality }}</span>
                 <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                 <br>
-                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
+                <a href="{{ url('profile/doctor/details/'.$doctor->user_id) }}" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
                 <div class="social" style="text-align: center">
                 
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 p-4">
-            <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #D3D7D7;">
-              <div class="pic"><img src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <br>
-                <a href="" type="button" class="btn col-lg-12" style="background-color:#70c3be; color:white;"><i class="fa fa-plus"></i></a>
-                <div class="social" style="text-align: center">
-                
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
+          
+     
+         
+          
 
           
 
@@ -131,7 +97,6 @@
 
       </div>
     </section>
-   
 
    
     

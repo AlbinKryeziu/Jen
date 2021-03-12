@@ -59,7 +59,7 @@
         box-shadow: none !important;
     }
     #footer {
-        margin-top: 50px;
+        margin-top: 120px;
     }
 </style>
 <div class="container p-4">

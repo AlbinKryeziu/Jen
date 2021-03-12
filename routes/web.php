@@ -38,3 +38,4 @@ Route::get('doctor/edit/profile/{doctorId}', [DoctorController::class,'editProfi
 Route::post('doctor/update/profile', [DoctorController::class,'updateProfileDoctor']);
 Route::get('doctor/work', [DoctorController::class,'editWorkDoctor']);
 Route::post('doctor/update/work', [DoctorController::class,'updateWorkDoctor']);
+Route::get('profile/doctor/details/{doctorId}', [DoctorController::class,'profileDoctorDetails']);

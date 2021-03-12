@@ -62,6 +62,7 @@
         margin-top: 50px;
     }
 </style>
+
 <div class="container p-4">
     <div class="main-body">
         @foreach($user as $key => $user)
@@ -176,7 +177,7 @@
                 </div>
                 <div class="row gutters-sm">
                     <div class="col-sm-12 mb-3">
-                        <div class="card h-100">
+                        <div class="card h-100" style="border-top: 3px solid #70c3be;">
                             <div class="card-body">
                                 <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Proefesional Details</h6>
                                 <div class="row">
@@ -222,7 +223,7 @@
                 </div>
                 <div class="row gutters-sm">
                   <div class="col-sm-12 mb-3">
-                      <div class="card h-100">
+                      <div class="card h-100" style="border-top: 3px solid #70c3be;">
                           <div class="card-body">
                               <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
                               <table class="table">
