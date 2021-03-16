@@ -59,15 +59,7 @@
         box-shadow: none !important;
     }
     #footer {
-        margin-top: 110px;
-    }
-    .inputWrapper {
-        height: 32px;
-        width: 64px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        /*Using a background color, but you can use a background image to represent a button*/
+        margin-top: 180px;
     }
 </style>
 <div class="container p-4">
@@ -84,7 +76,6 @@
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <form></form>
                                 <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
                             </div>
                         </div>
@@ -98,7 +89,7 @@
                             </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black;">
+                            <a href="" style="color: black;">
                                 <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
                             </a>
                         </li>
@@ -138,50 +129,27 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Personal Info</h6>
-                        <form method="POST" action="{{ url('doctor/update/profile') }}" enctype="multipart/form-data">
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Social Media Links</h6>
+                        <form method="POST" action="{{ url('socail/add') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">First Name</label>
-                                <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp" value="{{ $user->doctor->name }}" />
-                                @error('first_name')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
+                                <label for="exampleInputEmail1">Your Personal Website</label>
+                                <input type="text" class="form-control" name="website" value="{{ $social->website }}" />
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Last Name</label>
-                                <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp" value="{{ $user->doctor->surname }}" />
-                                @error('last_name')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
+                                <label for="exampleInputEmail1"><fieldset>Facebook</fieldset></label>
+                                <input type="text" class="form-control" name="facebook" value="{{ $social->facebook }}" />
                             </div>
                             <div class="form-group">
-                                <label for="file">Profile Photo</label><br />
-                                <input type="file" class="" name="avatar" />
+                                <label for="exampleInputEmail1"><fieldset>Instagram</fieldset></label>
+                                <input type="text" class="form-control" name="instagram" value="{{ $social->instagram }}" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1"><fieldset>Other</fieldset></label>
+                                <input type="text" class="form-control" name="other" value="{{ $social->other }}" />
                             </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Phone</label>
-                                <input type="text" class="form-control" name="phone" aria-describedby="emailHelp" value="{{ $user->doctor->phone }}" />
-                                @error('phone')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Address</label>
-                                <input type="text" class="form-control" name="address" aria-describedby="emailHelp" value="{{ $user->doctor->address }}" />
-                                @error('address')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Country</label>
-                                <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}" />
-                                @error('country')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
                         </form>
                     </div>
                 </div>

@@ -65,4 +65,7 @@ class User extends Authenticatable
     public function schedule(){
         return $this->hasMany(WorkSchedule::class,'user_id','id');
     }
+    public function socialMedia(){
+        return $this->hasOne(SocialLink::class,'user_id','id');
+    }
 }

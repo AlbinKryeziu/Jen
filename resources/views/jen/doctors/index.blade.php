@@ -61,6 +61,9 @@
     #footer {
         margin-top: 50px;
     }
+    input[type="file"] {
+        display: none;
+    }
 </style>
 
 <div class="container p-4">
@@ -72,13 +75,17 @@
                 <div class="card" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
+                            @if(!$user->doctor->profilePath)
                             <img src="{{ asset('jen/assets/img/logoDoctor.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                            @else
+                            <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                            @endif
+
                             <div class="mt-3">
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                               <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
-                              
+                                <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
                             </div>
                         </div>
                     </div>
@@ -86,54 +93,58 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
-                            </h6></a>
+                            <a href="{{ url('doctor/work') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                            </a>
                         </li>
                         @if(!count(auth()->user()->schedule))
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                          <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
-                      </li>
-                      @else 
-                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                        <a href="{{ url('edit/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6></a>
-                    </li>
-                      @endif
+                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
+                            </a>
+                        </li>
+                        @else
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <a href="{{ url('edit/schedule') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6>
+                            </a>
+                        </li>
+                        @endif
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-globe mr-2 icon-inline"
-                                >
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                               Website
-                            </h6>
-                            
+                            <a href="{{ url('socail/media') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
+                            </a>
                         </li>
+                        @if($user->socialMedia)
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <a href="{{ url('socail/edit') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Social Media</h6>
+                            </a>
+                        </li>
+                        @else
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <a href="{{ url('socail/media') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Add Social Media</h6>
+                            </a>
+                        </li>
+
+                        @endif
                     </ul>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Full Name</h6>
@@ -228,44 +239,36 @@
                     </div>
                 </div>
                 <div class="row gutters-sm">
-                  <div class="col-sm-12 mb-3">
-                      <div class="card h-100" style="border-top: 3px solid #70c3be;">
-                          <div class="card-body">
-                              <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Work Schedule</h6>
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Day</th>
-                                    <th scope="col">Start Time</th>
-                                    <th scope="col">End Time</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($user->schedule as $key => $schedule)
-                                        
-                                   
-                                  <tr>
-                                    <th scope="row">{{$loop->iteration }}</th>
-                                    <td>{{ $schedule->day }}</td>
-                                    <td>{{ $schedule->start }}</td>
-                                    <td>{{ $schedule->end }}</td>
-                                  </tr>
-                                  @endforeach
-                                  
-                                </tbody>
-                              </table>
-                             
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          
-          
+                    <div class="col-sm-12 mb-3">
+                        <div class="card h-100" style="border-top: 3px solid #70c3be;">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Day</th>
+                                            <th scope="col">Start Time</th>
+                                            <th scope="col">End Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($user->schedule as $key => $schedule)
+
+                                        <tr>
+                                            <th scope="row">{{$loop->iteration }}</th>
+                                            <td>{{ $schedule->day }}</td>
+                                            <td>{{ $schedule->start }}</td>
+                                            <td>{{ $schedule->end }}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-              </div>
-              
         </div>
     </div>
 </div>

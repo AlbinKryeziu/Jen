@@ -44,3 +44,6 @@ Route::get('edit/schedule', [DoctorController::class,'editSchedule']);
 Route::post('update/schedule', [DoctorController::class,'updateSchedule']);
 Route::post('update/delete', [DoctorController::class,'deteleSchedule']);
 Route::post('delete/schedule/multiple', [DoctorController::class,'deleteMultipleSchedule']);
+Route::get('socail/media', [DoctorController::class,'socialMedia']);
+Route::post('socail/add', [DoctorController::class,'addSocialMedia']);
+Route::get('socail/edit', [DoctorController::class,'editSocialmedia']);

@@ -7,6 +7,7 @@ use App\Http\Requests\ScheduleRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateWorkRequest;
 use App\Models\Doctor;
+use App\Models\SocialLink;
 use App\Models\User;
 use App\Models\WorkSchedule;
 use Illuminate\Console\Scheduling\Schedule;
@@ -41,7 +42,6 @@ class DoctorController extends Controller
 
     public function addSchedule(Request $request)
     {
-       
         for ($i = 0; $i < count($request['day']); $i++) {
             $work = WorkSchedule::create([
                 'day' => $request['day'][$i],
@@ -66,12 +66,20 @@ class DoctorController extends Controller
     }
     public function updateProfileDoctor(UpdateProfileRequest $request)
     {
+        if ($request->has('avatar')) {
+            $imageName = time() . '.' . $request->avatar->extension();
+            $request->avatar->move(public_path('store'), $imageName);
+        } else {
+            $imageName = null;
+        }
+
         $user = Doctor::where('user_id', Auth::id())->update([
             'name' => $request->first_name,
             'surname' => $request->last_name,
             'phone' => $request->phone,
             'address' => $request->address,
             'country' => $request->country,
+            'profilePath' => $imageName,
         ]);
         if ($user) {
             return redirect()->back();
@@ -150,5 +158,42 @@ class DoctorController extends Controller
         if ($schedule) {
             return back();
         }
+    }
+
+    public function socialMedia()
+    {
+        $id = Auth::id();
+        $user = User::with('doctor', 'schedule')
+            ->where('id', $id)
+            ->get();
+        return view('jen/doctors/add_social', [
+            'user' => $user,
+        ]);
+    }
+    public function addSocialMedia(Request $request)
+    {
+        $social = SocialLink::create([
+            'facebook' => $request->facebook,
+            'instagram' => $request->instagram,
+            'website' => $request->website,
+            'other' => $request->other,
+            'user_id' => Auth::id(),
+        ]);
+        if ($social) {
+            return back();
+        }
+    }
+
+    public function editSocialmedia()
+    {
+        $social = SocialLink::where('user_id', Auth::id())->first();
+        $id = Auth::id();
+        $user = User::with('doctor', 'schedule')
+            ->where('id', $id)
+            ->get();
+        return view('jen/doctors/edit-social', [
+            'social' => $social,
+            'user' => $user,
+        ]);
     }
 }
