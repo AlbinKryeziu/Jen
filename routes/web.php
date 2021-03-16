@@ -39,3 +39,6 @@ Route::post('doctor/update/profile', [DoctorController::class,'updateProfileDoct
 Route::get('doctor/work', [DoctorController::class,'editWorkDoctor']);
 Route::post('doctor/update/work', [DoctorController::class,'updateWorkDoctor']);
 Route::get('profile/doctor/details/{doctorId}', [DoctorController::class,'profileDoctorDetails']);
+
+Route::get('edit/schedule', [DoctorController::class,'editSchedule']);
+Route::post('update/schedule', [DoctorController::class,'updateSchedule']);

@@ -92,9 +92,15 @@
                             <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
                             </h6></a>
                         </li>
+                        @if(!auth()->user()->schedule)
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                           <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
                       </li>
+                      @else 
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <a href="{{ url('edit/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6></a>
+                    </li>
+                      @endif
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
@@ -225,7 +231,7 @@
                   <div class="col-sm-12 mb-3">
                       <div class="card h-100" style="border-top: 3px solid #70c3be;">
                           <div class="card-body">
-                              <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
+                              <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Work Schedule</h6>
                               <table class="table">
                                 <thead>
                                   <tr>
