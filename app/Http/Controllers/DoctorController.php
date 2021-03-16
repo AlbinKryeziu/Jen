@@ -39,8 +39,9 @@ class DoctorController extends Controller
         ]);
     }
 
-    public function addSchedule(ScheduleRequest $request)
+    public function addSchedule(Request $request)
     {
+       
         for ($i = 0; $i < count($request['day']); $i++) {
             $work = WorkSchedule::create([
                 'day' => $request['day'][$i],

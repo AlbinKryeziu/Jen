@@ -92,7 +92,7 @@
                             <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
                             </h6></a>
                         </li>
-                        @if(!auth()->user()->schedule)
+                        @if(!count(auth()->user()->schedule))
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                           <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
                       </li>
