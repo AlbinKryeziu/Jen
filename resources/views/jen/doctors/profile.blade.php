@@ -179,7 +179,7 @@
                                             <h6 class="mb-0">Speciality</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            {{ $user->doctor->address }}
+                                            {{ $user->doctor->speciality }}
                                         </div>
                                     </div>
                                     <hr />
