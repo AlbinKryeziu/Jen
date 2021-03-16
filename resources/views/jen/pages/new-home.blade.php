@@ -6,7 +6,7 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    background: #F6F7F7 !important;
 }
 
 .btn-primary:hover,
@@ -190,12 +190,12 @@ section .section-title {
       <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
       <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
-  </section><!-- End Hero -->
+  </section>
 <div class="padding" style="margin: 80px;">
 </div>
   <main id="main">
 
-    <!-- ======= Why Us Section ======= -->
+  
     <section id="why-us" class="why-us">
       <div class="container">
 
@@ -224,8 +224,8 @@ section .section-title {
           </div>
   
           <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="icon-box">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" >
+              <div class="icon-box" style="border: 2px solid #17a2b8">
                 <div class="icon"><i class=" bx bx-user-plus"></i></div>
                 <h4><a href="">Sign Up</a></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -233,7 +233,7 @@ section .section-title {
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-              <div class="icon-box">
+              <div class="icon-box" style="border: 2px solid #17a2b8">
                 <div class="icon"><i class="bx bxs-lock-alt"></i></div>
                 <h4><a href="">Log in</a></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -241,7 +241,7 @@ section .section-title {
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-              <div class="icon-box">
+              <div class="icon-box" style="border: 2px solid #17a2b8">
                 <div class="icon"><i class="bx bx bx-search"></i></div>
                 <h4><a href="">Explore</a></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -270,7 +270,7 @@ section .section-title {
                 <div class="card" style=" box-shadow: 5px 7px 9px -4px #D3D7D7;">
                     <div class="card-body">
               <div class="icon"><strong>1</strong></div>
-              <h4 class="title"><a href=""></a></h4>
+              <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
@@ -282,7 +282,7 @@ section .section-title {
                 <div class="card" style=" box-shadow: 5px 7px 9px -4px #D3D7D7">
                     <div class="card-body">
               <div class="icon"><strong>2</strong></div>
-              <h4 class="title"><a href=""></a></h4>
+              <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
@@ -294,7 +294,7 @@ section .section-title {
                 <div class="card">
                     <div class="card-body" style=" box-shadow: 5px 7px 9px -4px #D3D7D7">
               <div class="icon"><strong>3</strong></div>
-              <h4 class="title"><a href=""></a></h4>
+              <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 15px; text-align: center;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
@@ -344,7 +344,7 @@ section .section-title {
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
-            <div class="count-box">
+            <div class="count-box" style="border-top: 4px solid #17a2b8">
               <i class="icofont-doctor-alt"></i>
               <span data-toggle="counter-up">85</span>
               <p>Doctors</p>
@@ -352,7 +352,7 @@ section .section-title {
           </div>
 
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
+            <div class="count-box" style="border-top: 4px solid #17a2b8">
               <i class="icofont-patient-bed"></i>
               <span data-toggle="counter-up">18</span>
               <p>Departments</p>
@@ -360,7 +360,7 @@ section .section-title {
           </div>
 
           <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
+            <div class="count-box" style="border-top: 4px solid #17a2b8">
               <i class="icofont-laboratory"></i>
               <span data-toggle="counter-up">8</span>
               <p>Research Labs</p>
@@ -383,7 +383,7 @@ section .section-title {
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-wrap">
-            <div class="testimonial-item">
+            <div class="testimonial-item"  style="border-top: 1px solid #17a2b8; border-bottom:1px solid #17a2b8">
               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
               <h3>Saul Goodman</h3>
               <h4>Ceo &amp; Founder</h4>
@@ -396,7 +396,7 @@ section .section-title {
           </div>
 
           <div class="testimonial-wrap">
-            <div class="testimonial-item">
+            <div class="testimonial-item" style="border-top: 1px solid #17a2b8; border-bottom:1px solid #17a2b8">
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Sara Wilsson</h3>
               <h4>Designer</h4>
@@ -409,7 +409,7 @@ section .section-title {
           </div>
 
           <div class="testimonial-wrap">
-            <div class="testimonial-item">
+            <div class="testimonial-item" style="border-top: 2px solid #17a2b8; border-bottom:1px solid #17a2b8">
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
               <h3>Jena Karlis</h3>
               <h4>Store Owner</h4>
@@ -457,22 +457,22 @@ section .section-title {
       <div class="container">
           <h5 class="section-title h1">Our Doctors</h5>
           <div class="row">
-              <!-- Team member -->
+            
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" >
                       <div class="mainflip flip-0">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -504,23 +504,22 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
-              <!-- Team member -->
+           
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                       <div class="mainflip">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -552,23 +551,22 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
-              <!-- Team member -->
+           
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                       <div class="mainflip">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -600,23 +598,22 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
-              <!-- Team member -->
+            
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                       <div class="mainflip">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -648,23 +645,22 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
-              <!-- Team member -->
+          
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                       <div class="mainflip">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -679,11 +675,7 @@ section .section-title {
                                                   <i class="fa fa-twitter"></i>
                                               </a>
                                           </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-skype"></i>
-                                              </a>
-                                          </li>
+                                         
                                           <li class="list-inline-item">
                                               <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
                                                   <i class="fa fa-google"></i>
@@ -696,23 +688,22 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
-              <!-- Team member -->
+            
               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                       <div class="mainflip">
                           <div class="frontside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
                                       <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
                           <div class="backside">
-                              <div class="card">
+                              <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center mt-4">
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
@@ -744,7 +735,7 @@ section .section-title {
                       </div>
                   </div>
               </div>
-              <!-- ./Team member -->
+         
   
           </div>
       </div>
@@ -820,12 +811,12 @@ section .section-title {
       </div>
      
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
  
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-  <!-- Vendor JS Files -->
+
   <script src="{{ asset('jen/assets/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('jen/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('jen/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
@@ -836,7 +827,7 @@ section .section-title {
   <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
-  <!-- Template Main JS File -->
+  
   <script src="{{ asset('jen/assets/js/main.js') }}"></script>
 
 </body>

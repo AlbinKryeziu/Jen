@@ -286,5 +286,4 @@
 <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
-<!-- Template Main JS File -->
 <script src="{{ asset('jen/assets/js/main.js') }}"></script>
