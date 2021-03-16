@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterClientRequest;
+use App\Http\Requests\ScheduleRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateWorkRequest;
 use App\Models\Doctor;
@@ -38,7 +39,7 @@ class DoctorController extends Controller
         ]);
     }
 
-    public function addSchedule(Request $request)
+    public function addSchedule(ScheduleRequest $request)
     {
         for ($i = 0; $i < count($request['day']); $i++) {
             $work = WorkSchedule::create([

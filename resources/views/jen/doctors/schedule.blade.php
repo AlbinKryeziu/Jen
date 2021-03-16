@@ -84,10 +84,14 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black">  <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6></a>
+                            <a href="{{ url('doctor/work') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/schedule') }}" style="color: black;">
@@ -98,28 +102,29 @@
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
-                        <a href="{{ $user->doctor->website }}" target="_blank" style="color: black"><li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-globe mr-2 icon-inline"
-                                >
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            Website
-                            </h6>
-                            
-                        </li></a>
+                        <a href="{{ $user->doctor->website }}" target="_blank" style="color: black;">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-globe mr-2 icon-inline"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                    Website
+                                </h6>
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -143,14 +148,23 @@
                                     <tr id="addr0">
                                         <td>1</td>
                                         <td><input type="text" name="day[]" id="myText" value="{{old('category[]')}}" class="form-control cta" /></td>
+                                        @error('day[]')
+                                        <div class="error">{{ $message }}</div>
+                                        @enderror
                                         <td><input type="time" name="start[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
+                                        @error('start[]')
+                                        <div class="error">{{ $message }}</div>
+                                        @enderror
                                         <td><input type="time" name="end[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
+                                        @error('end[]')
+                                        <div class="error">{{ $message }}</div>
+                                        @enderror
                                     </tr>
 
                                     <tr id="addr1"></tr>
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Save</button>
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
                         </form>
                     </div>
                 </div>
