@@ -1,5 +1,5 @@
 @include('jen/pages/assets/header')
-
+@include('jen/doctors/assets/swal')
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -296,3 +296,10 @@
 <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('jen/assets/js/main.js') }}"></script>
+@if(Session::has('success'))
+<script>
+    swal("Success", "{{Session::get('success')}}", "success", {
+        button: "ok",
+    });
+</script>
+@endif

@@ -51,7 +51,8 @@ class DoctorController extends Controller
             ]);
         }
         if ($work) {
-            return redirect()->back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
     public function editProfileDoctor($doctorId)
@@ -82,7 +83,8 @@ class DoctorController extends Controller
             'profilePath' => $imageName,
         ]);
         if ($user) {
-            return redirect()->back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -107,7 +109,8 @@ class DoctorController extends Controller
             'website' => $request->website,
         ]);
         if ($doctor) {
-            return redirect()->back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -140,7 +143,8 @@ class DoctorController extends Controller
             'end' => $request->end,
         ]);
         if ($schedule) {
-            return back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -156,7 +160,8 @@ class DoctorController extends Controller
     {
         $schedule = WorkSchedule::where('user_id', Auth::id())->delete();
         if ($schedule) {
-            return back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -208,7 +213,8 @@ class DoctorController extends Controller
         ]);
         
         if ($social) {
-            return back();
+            return back()
+            ->with('success', 'The action  was completed successfully');
         }
     }
 }

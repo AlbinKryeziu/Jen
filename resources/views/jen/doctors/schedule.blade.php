@@ -1,4 +1,5 @@
 @include('jen/pages/assets/header')
+@include('jen/doctors/assets/swal')
 
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -281,3 +282,10 @@
         $("#total_amount").val((tax_sum + total).toFixed(2));
     }
 </script>
+@if(Session::has('success'))
+<script>
+    swal("Success", "{{Session::get('success')}}", "success", {
+        button: "ok",
+    });
+</script>
+@endif
