@@ -196,4 +196,19 @@ class DoctorController extends Controller
             'user' => $user,
         ]);
     }
+
+    public function updateSocialmedia(Request $request){
+
+        $social = SocialLink::where('user_id',Auth::id())->update([
+            'facebook' => $request->facebook,
+            'instagram' => $request->instagram,
+            'website' => $request->website,
+            'other' => $request->other,
+            'user_id' => Auth::id(),
+        ]);
+        
+        if ($social) {
+            return back();
+        }
+    }
 }
