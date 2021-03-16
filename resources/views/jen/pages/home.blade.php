@@ -13,7 +13,9 @@
      
     </div>
   </section>
-
+  @php
+                    $specialty = App\Models\Depart::get()
+                  @endphp
   <main id="main">
     <form>
       @csrf
@@ -24,15 +26,19 @@
         <div class="row col-12">
           <div class="col-lg-12 d-flex align-items-stretch">
            
-         
             <div class="content col-12">
               <h3>Search Doctors</h3>
               <label style="margin: 4px;">Specialty</label >
-              <input type="text" class="form-control p-4" name="specialty" style="margin: 4px;">
+                <select name="specialty" class="form-control" id="cars" value="AEfdaef">
+                  @foreach ($specialty as $specialty)
+                  <option value="{{$specialty->depart}}">{{ $specialty->depart}}</option>
+                  @endforeach
+                </select>
+  
               <label style="margin: 4px;">Country</label >
-                <input type="text" class="form-control p-4" name="country" style="margin: 4px;">
+                <input type="text" class="form-control " name="country" style="margin: 4px;">
               <label style="margin: 4px;">Address</label >
-              <input type="text" class="form-control p-4" name="address" style="margin: 4px;">
+              <input type="text" class="form-control " name="address" style="margin: 4px;">
               <div class="text-center">
                 <button type="submit" class="more-btn">Search <i class="bx bx-chevron-right"></i></button>
               </div>
