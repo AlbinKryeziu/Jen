@@ -84,15 +84,20 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
-                            </h6></a>
+                            <a href="" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                          <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
-                      </li>
+                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
@@ -115,9 +120,8 @@
                                     <line x1="2" y1="12" x2="22" y2="12"></line>
                                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                                 </svg>
-                               Website
+                                Website
                             </h6>
-                            
                         </li>
                     </ul>
                 </div>
@@ -125,44 +129,44 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Proefesional Details</h6>
-                      <form method="POST" action="{{ url('doctor/update/work') }}">
-                        @csrf
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Speciality</label>
-                          <input type="text" class="form-control" name="speciality" aria-describedby="emailHelp"value="{{ $user->doctor->speciality }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Work Environment</label>
-                            <input type="text" class="form-control" name="workEnvironment" aria-describedby="emailHelp"value="{{ $user->doctor->workEnvironment }}">
-                          </div>
-                        
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Services</label>
-                            <input type="text" class="form-control" name="services" aria-describedby="emailHelp" value="{{ $user->doctor->services }}">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">License</label>
-                            <input type="text" class="form-control" name="license" aria-describedby="emailHelp"value="{{ $user->doctor->license }}">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Website Link</label>
-                            <input type="text" class="form-control" name="website" aria-describedby="emailHelp"value="{{ $user->doctor->website }}">
-                          </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Save</button>
-                      </form>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Proefesional Details</h6>
+                        <form method="POST" action="{{ url('doctor/update/work') }}">
+                            @csrf
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Speciality</label>
+                                <input type="text" class="form-control" name="speciality" aria-describedby="emailHelp" value="{{ $user->doctor->speciality }}" />
+                                @error('speciality')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Work Environment</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="workEnvironment" rows="5">{{ $user->doctor->workEnvironment }}</textarea>
+                                @error('workEnvironment')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Services</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services" rows="5">{{ $user->doctor->services }}</textarea>
+                                @error('services')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">License</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="license" rows="5">{{ $user->doctor->license }}</textarea>
+                                @error('license')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
+                        </form>
                     </div>
                 </div>
-                
-                  </div>
-              </div>
-          
-          
             </div>
-            
-              </div>
-              
         </div>
     </div>
 </div>

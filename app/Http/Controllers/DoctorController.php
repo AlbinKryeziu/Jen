@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterClientRequest;
+use App\Http\Requests\UpdateProfileRequest;
+use App\Http\Requests\UpdateWorkRequest;
 use App\Models\Doctor;
 use App\Models\User;
 use App\Models\WorkSchedule;
@@ -58,7 +61,8 @@ class DoctorController extends Controller
         'user' => $user,
     ]);
     }
-    public function updateProfileDoctor(Request $request){
+    public function updateProfileDoctor(UpdateProfileRequest $request){
+        
         $user = Doctor::where('user_id',Auth::id())->update([
             'name' =>$request->first_name,
             'surname' =>$request->last_name,
@@ -82,7 +86,7 @@ class DoctorController extends Controller
     ]);
     }
 
-    public function updateWorkDoctor(Request $request){
+    public function updateWorkDoctor(UpdateWorkRequest $request){
         $doctor = Doctor::where('user_id',Auth::id())->update([
             'speciality'=>$request->speciality,
             'workEnvironment'=>$request->workEnvironment,

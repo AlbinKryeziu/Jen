@@ -61,6 +61,14 @@
     #footer {
         margin-top: 110px;
     }
+    .inputWrapper {
+        height: 32px;
+        width: 64px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        /*Using a background color, but you can use a background image to represent a button*/
+    }
 </style>
 <div class="container p-4">
     <div class="main-body">
@@ -76,6 +84,7 @@
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
+                                <form></form>
                                 <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
                             </div>
                         </div>
@@ -84,15 +93,20 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details
-                            </h6></a>
+                            <a href="{{ url('doctor/work') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                            </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                          <a href="{{ url('doctor/schedule') }}" style="color: black"><h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6></a>
-                      </li>
+                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
@@ -115,9 +129,8 @@
                                     <line x1="2" y1="12" x2="22" y2="12"></line>
                                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                                 </svg>
-                               Website
+                                Website
                             </h6>
-                            
                         </li>
                     </ul>
                 </div>
@@ -125,43 +138,50 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Personal Info</h6>
-                      <form method="POST" action="{{ url('doctor/update/profile') }}">
-                        @csrf
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">First Name</label>
-                          <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp"value="{{ $user->doctor->name }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Last Name</label>
-                            <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp"value="{{ $user->doctor->surname }}">
-                          </div>
-                        
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Phone</label>
-                            <input type="number" class="form-control" name="phone" aria-describedby="emailHelp" value="{{ $user->doctor->phone }}">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Address</label>
-                            <input type="text" class="form-control" name="address" aria-describedby="emailHelp"value="{{ $user->doctor->address }}">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Country</label>
-                            <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}">
-                          </div>
-                        <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Submit</button>
-                      </form>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Personal Info</h6>
+                        <form method="POST" action="{{ url('doctor/update/profile') }}">
+                            @csrf
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">First Name</label>
+                                <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp" value="{{ $user->doctor->name }}" />
+                                @error('first_name')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Last Name</label>
+                                <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp" value="{{ $user->doctor->surname }}" />
+                                @error('last_name')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Phone</label>
+                                <input type="text" class="form-control" name="phone" aria-describedby="emailHelp" value="{{ $user->doctor->phone }}" />
+                                @error('phone')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Address</label>
+                                <input type="text" class="form-control" name="address" aria-describedby="emailHelp" value="{{ $user->doctor->address }}" />
+                                @error('address')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Country</label>
+                                <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}" />
+                                @error('country')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
+                        </form>
                     </div>
                 </div>
-                
-                  </div>
-              </div>
-          
-          
             </div>
-            
-              </div>
-              
         </div>
     </div>
 </div>

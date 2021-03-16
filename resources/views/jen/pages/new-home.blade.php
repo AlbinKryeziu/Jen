@@ -464,7 +464,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
@@ -511,7 +511,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
@@ -558,7 +558,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
@@ -605,7 +605,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
@@ -652,7 +652,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
@@ -695,7 +695,7 @@ section .section-title {
                           <div class="frontside">
                               <div class="card" style="border-top: 2px solid #17a2b8; border-bottom:2px solid #17a2b8">
                                   <div class="card-body text-center">
-                                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image"></p>
+                                      <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
