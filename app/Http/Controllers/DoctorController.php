@@ -133,4 +133,20 @@ class DoctorController extends Controller
             return back();
         }
     }
+
+    public function deteleSchedule(Request $request)
+    {
+        $schedule = WorkSchedule::where('id', $request->id)->delete();
+        if ($schedule) {
+            return back();
+        }
+    }
+
+    public function deleteMultipleSchedule()
+    {
+        $schedule = WorkSchedule::where('user_id', Auth::id())->delete();
+        if ($schedule) {
+            return back();
+        }
+    }
 }

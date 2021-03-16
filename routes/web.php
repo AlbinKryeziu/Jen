@@ -42,3 +42,5 @@ Route::get('profile/doctor/details/{doctorId}', [DoctorController::class,'profil
 
 Route::get('edit/schedule', [DoctorController::class,'editSchedule']);
 Route::post('update/schedule', [DoctorController::class,'updateSchedule']);
+Route::post('update/delete', [DoctorController::class,'deteleSchedule']);
+Route::post('delete/schedule/multiple', [DoctorController::class,'deleteMultipleSchedule']);

@@ -62,9 +62,9 @@
         margin-top: 150px;
     }
     body {
-        font-family: "Varela Round", sans-serif;
+        font-family: 'Varela Round', sans-serif;
     }
-    .modal-confirm {
+    .modal-confirm {		
         color: #636363;
         width: 400px;
     }
@@ -76,7 +76,7 @@
         font-size: 14px;
     }
     .modal-confirm .modal-header {
-        border-bottom: none;
+        border-bottom: none;   
         position: relative;
     }
     .modal-confirm h4 {
@@ -94,14 +94,14 @@
     }
     .modal-confirm .modal-footer {
         border: none;
-        text-align: center;
+        text-align: center;		
         border-radius: 5px;
         font-size: 13px;
         padding: 10px 15px 25px;
     }
     .modal-confirm .modal-footer a {
         color: #999;
-    }
+    }		
     .modal-confirm .icon-box {
         width: 80px;
         height: 80px;
@@ -109,6 +109,7 @@
         border-radius: 50%;
         z-index: 9;
         text-align: center;
+        
     }
     .modal-confirm .icon-box i {
         color: #f15e5e;
@@ -116,8 +117,7 @@
         display: inline-block;
         margin-top: 13px;
     }
-    .modal-confirm .btn,
-    .modal-confirm .btn:active {
+    .modal-confirm .btn, .modal-confirm .btn:active {
         color: #fff;
         border-radius: 4px;
         background: #60c7c1;
@@ -133,15 +133,13 @@
     .modal-confirm .btn-secondary {
         background: #c1c1c1;
     }
-    .modal-confirm .btn-secondary:hover,
-    .modal-confirm .btn-secondary:focus {
+    .modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
         background: #a8a8a8;
     }
     .modal-confirm .btn-danger {
         background: #f15e5e;
     }
-    .modal-confirm .btn-danger:hover,
-    .modal-confirm .btn-danger:focus {
+    .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
         background: #ee3535;
     }
     .trigger-btn {
@@ -171,14 +169,10 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
-                            </a>
+                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black">  <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
-                            </a>
+                            <a href="{{ url('doctor/work') }}" style="color: black"> <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/schedule') }}" style="color: black;">
@@ -189,71 +183,77 @@
                 </div>
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
-                        <a href="{{ $user->doctor->website }}" target="_blank" style="color: black;">
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-globe mr-2 icon-inline"
-                                    >
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                    </svg>
-                                    Website
-                                </h6>
-                            </li>
-                        </a>
+                        <a href="{{ $user->doctor->website }}" target="_blank" style="color: black"><li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-globe mr-2 icon-inline"
+                                >
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            Website
+                            </h6>
+                            
+                        </li></a>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Create Work Schedule</h6>
-                        <table class="table table-striped">
+                        <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Create Work Schedule</h6>
+                        <a class="btn btn-outline-danger float-right p-1 multipleDelete">Delete All</a>
+                    <br/>
+                    <br/>
+                        <table class="table table-striped table-responsive ">
                             <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Day</th>
-                                    <th scope="col">Start Time</th>
-                                    <th scope="col">End Time</th>
-                                    <th scope="col">Action</th>
-                                </tr>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Day</th>
+                                <th scope="col">Start Time</th>
+                                <th scope="col">End Time</th>
+                                <th scope="col">Action</th>
+                              </tr>
                             </thead>
                             <tbody>
-                                @foreach ($user->schedule as $schedule)
-
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>{{ $schedule->day }}</td>
-                                    <td><i class="fa fa-clock-o"></i> {{ $schedule->start }}</td>
-                                    <td><i class="fa fa-clock-o"></i> {{ $schedule->end }}</td>
-                                    <td>
-                                        <i class="fa fa-pencil acceptEvent" data-shchedule="{{ $schedule->id }}" data-name="{{$schedule->day}}" data-start="{{" $schedule->end}} data-end={{ $schedule->end}}></i>
-                                    </td>
-                                </tr>
-                                @endforeach
+                                @foreach ($user->schedule as  $schedule)
+                                    
+                                
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>{{ $schedule->day }}</td>
+                                <td><i class="fa fa-clock-o"></i> {{ $schedule->start }}</td>
+                                <td><i class="fa fa-clock-o"></i> {{ $schedule->end }}</td>
+                                <td>
+                                    <i class="fa fa-pencil acceptEvent" data-shchedule="{{ $schedule->id }}" data-name="{{$schedule->day}}" data-start={{ $schedule->end}} data-end={{ $schedule->end}}></i>
+                                    <i class="fa fa-trash scheduleDelete" data-shcheduleId="{{ $schedule->id }}"></i>
+                                 
+                                </td>
+                              </tr>
+                              @endforeach
                             </tbody>
-                        </table>
-
+                          </table>
+                          <hr style="background-color:#00A8A3"/>
+                          
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
                             <table class="table table-striped table-responsive" id="tab_logic">
                                 <thead>
                                     <tr id="num">
-                                        <th scope="col">#</th>
-                                        <th scope="col">Day</th>
-                                        <th scope="col">Start Time</th>
-                                        <th scope="col">End Time</th>
+                                        <th scope="col" >#</th>
+                                        <th scope="col"  >Day</th>
+                                        <th scope="col" >Start Time</th>
+                                        <th scope="col" >End Time</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -267,7 +267,7 @@
                                     <tr id="addr1"></tr>
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
+                            <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Save</button>
                         </form>
                     </div>
                 </div>
@@ -282,7 +282,9 @@
     </div>
 </div>
 
+
 @endforeach
+
 
 <footer id="footer">
     <div class="container d-md-flex py-4">
@@ -293,7 +295,9 @@
             <div class="credits"></div>
         </div>
     </div>
+  
 </footer>
+
 <script src="{{ asset('jen/assets/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('jen/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('jen/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
@@ -313,111 +317,177 @@
             <div class="modal-content">
                 <div class="modal-header flex-column">
                     <div class="icon-box" style="border: 3px solid green;">
-                        <i class="fa fa-clock-o" aria-hidden="true" style="color: green;"></i>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="color:green"></i>
                     </div>
-                    <h4 class="modal-title w-100">Update Day Schedule</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title w-100">Update Day Schedule </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
                 </div>
                 <div class="modal-body">
-                    <label style="float: left;"><strong>Days</strong></label>
-                    <input type="text" name="day" id="day" class="form-control" value="day" />
-                    <br />
-                    <label style="float: left;"><strong>Start Time</strong></label>
-                    <input type="text" name="start" id="start" class="form-control" value="start" />
-                    <br />
-                    <label style="float: left;"><strong>End Time</strong></label>
-                    <input type="text" name="end" id="end" class="form-control" value="end" />
-                    <br />
-                    <input type="hidden" name="scheduleId" id="scheduleId" class="form-control" value="end" />
+                    <label style="float: left"><strong>Days</strong></label>
+                   <input type="text" name="day"  id="day" class="form-control " value="day">
+                   <br>
+                   <label style="float: left"><strong>Start Time</strong></label>
+                   <input type="text" name="start"  id="start" class="form-control " value="start">
+                   <br>
+                   <label style="float: left"><strong>End Time</strong></label>
+                   <input type="text" name="end"  id="end" class="form-control " value="end">
+                   <br>
+                   <input type="hidden" name="scheduleId"  id="scheduleId" class="form-control ">
+                   
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
-            <script>
-                $(document).on("click", ".acceptEvent", function () {
-                    var requestId = $(this).attr("data-evenRequstId");
-                    var scheduleId = $(this).attr("data-shchedule");
-                    var days = $(this).attr("data-name");
-                    var start = $(this).attr("data-start");
-                    var end = $(this).attr("data-end");
-                    $("#scheduleId").val(scheduleId);
-                    $("#day").val(days);
-                    $("#start").val(start);
-                    $("#end").val(end);
-                    $("#myModal").modal("show");
-                });
-            </script>
-            <script>
-                $(document).ready(function () {
-                    var i = 1;
-                    $("#add_row").click(function () {
-                        b = i - 1;
-                        $("#addr" + i)
-                            .html($("#addr" + b).html())
-                            .find("td:first-child")
-                            .html(i + 1);
-                        $("#tab_logic").append('<tr id="addr' + (i + 1) + '"></tr>');
-                        var lastProduct = jQuery("#addr" + (i - 1))
-                            .find("td:eq(1) input")
-                            .val();
-
-                        i++;
-                    });
-                    $("#delete_row").click(function () {
-                        if (i > 1) {
-                            $("#addr" + (i - 1)).html("");
-                            $("#addr" + i).remove();
-                            i--;
-                        }
-                        calc();
-                    });
-                    $("#tab_logic tbody").on("keyup change", function () {
-                        calc();
-                    });
-                    $("#tax").on("keyup change", function () {
-                        calc_total();
-                    });
-                });
-                $(document).ready(function () {
-                    $("#btn1").click(function () {
-                        $("ol").append("<li>other list<br>");
-                    });
-                    $("#btn2").click(function () {
-                        $("ol").append("<input></input><br>");
-                    });
-                });
-                function showContent() {
-                    myTable = document.getElementsById("form-data")[0];
-                    myClone = myTable.cloneNode(true);
-                    document.body.appendChild(myClone);
-                }
-                function calc() {
-                    $("#tab_logic tbody tr").each(function (i, element) {
-                        var html = $(this).html();
-                        var allProducts = [];
-                        if (html != "") {
-                            var qty = $(this).find(".qty").val();
-                            var price = $(this).find(".price").val();
-                            $(this)
-                                .find(".total")
-                                .val((qty * price).toFixed(2));
-                            calc_total();
-                        }
-                    });
-                }
-                function calc_total() {
-                    total = 0;
-                    $(".total").each(function () {
-                        total += parseFloat($(this).val());
-                    });
-                    $("#sub_total").val(total.toFixed(2));
-                    tax_sum = (total / 100) * $("#tax").val();
-                    $("#tax_amount").val(tax_sum.toFixed(2));
-                    $("#total_amount").val((tax_sum + total).toFixed(2));
-                }
-            </script>
         </form>
     </div>
 </div>
+<div id="deleteModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <form action="{{ url('update/delete') }}" method="POST">
+            @csrf
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="icon-box" style="border: 3px solid red;">
+                        <i class="fa fa-trash" aria-hidden="true" style="color:red"></i>
+                    </div>
+                    <h4 class="modal-title w-100">Are you shure</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure if you want to delete this record</p>
+                    <input type="hidden" name="id"  id="id" class="form-control ">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success" style="background-color:red; color:white">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="deleteMultiple" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <form action="{{ url('delete/schedule/multiple') }}" method="POST">
+            @csrf
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="icon-box" style="border: 3px solid red;">
+                        <i class="fa fa-trash" aria-hidden="true" style="color:red"></i>
+                    </div>
+                    <h4 class="modal-title w-100">Are you shure</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete all records</p>
+                    <input type="hidden" name="id"  id="id" class="form-control ">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success" style="background-color:red; color:white">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+          
+<script>
+    $(document).on("click", ".acceptEvent", function () {
+        var requestId = $(this).attr("data-evenRequstId");
+        var scheduleId = $(this).attr("data-shchedule");
+        var days = $(this).attr("data-name");
+        var start = $(this).attr("data-start");
+        var end = $(this).attr("data-end");
+        $("#scheduleId").val(scheduleId);
+        $("#day").val(days);
+        $("#start").val(start);
+        $("#end").val(end);
+        $("#myModal").modal("show");
+    });
+    $(document).on("click", ".scheduleDelete", function () {
+        var requestId = $(this).attr("data-evenRequstId");
+        var id = $(this).attr("data-shcheduleId");
+        $("#id").val(id);
+        $("#deleteModal").modal("show");
+    });
+    $(document).on("click", ".multipleDelete", function () {
+        var requestId = $(this).attr("data-evenRequstId");
+        var id = $(this).attr("data-shcheduleId");
+        $("#id").val(id);
+        $("#deleteMultiple").modal("show");
+    });
+
+   
+</script>
+<script>
+    $(document).ready(function () {
+        var i = 1;
+        $("#add_row").click(function () {
+            b = i - 1;
+            $("#addr" + i)
+                .html($("#addr" + b).html())
+                .find("td:first-child")
+                .html(i + 1);
+            $("#tab_logic").append('<tr id="addr' + (i + 1) + '"></tr>');
+            var lastProduct = jQuery("#addr" + (i - 1))
+                .find("td:eq(1) input")
+                .val();
+
+            i++;
+        });
+        $("#delete_row").click(function () {
+            if (i > 1) {
+                $("#addr" + (i - 1)).html("");
+                $("#addr" + i).remove();
+                i--;
+            }
+            calc();
+        });
+        $("#tab_logic tbody").on("keyup change", function () {
+            calc();
+        });
+        $("#tax").on("keyup change", function () {
+            calc_total();
+        });
+    });
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("ol").append("<li>other list<br>");
+        });
+        $("#btn2").click(function () {
+            $("ol").append("<input></input><br>");
+        });
+    });
+    function showContent() {
+        myTable = document.getElementsById("form-data")[0];
+        myClone = myTable.cloneNode(true);
+        document.body.appendChild(myClone);
+    }
+    function calc() {
+        $("#tab_logic tbody tr").each(function (i, element) {
+            var html = $(this).html();
+            var allProducts = [];
+            if (html != "") {
+                var qty = $(this).find(".qty").val();
+                var price = $(this).find(".price").val();
+                $(this)
+                    .find(".total")
+                    .val((qty * price).toFixed(2));
+                calc_total();
+            }
+        });
+    }
+    function calc_total() {
+        total = 0;
+        $(".total").each(function () {
+            total += parseFloat($(this).val());
+        });
+        $("#sub_total").val(total.toFixed(2));
+        tax_sum = (total / 100) * $("#tax").val();
+        $("#tax_amount").val(tax_sum.toFixed(2));
+        $("#total_amount").val((tax_sum + total).toFixed(2));
+    }
+</script>
