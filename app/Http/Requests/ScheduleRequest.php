@@ -24,17 +24,20 @@ class ScheduleRequest extends FormRequest
     public function rules()
     {
         return [
-            'day[]' => 'required',
-            'start[]' => 'required',
-            'end[]' => 'required',
+            "day.*" => 'required',
+            "start.*" => 'required',
+            "end.*" => "required",
         ];
     }
+
     public function messages()
     {
         return [
-        'day[].required' =>'The day field is required.',
-        'start[].required' =>'The start field is required.',
-        'end[].required' =>'The end field is required.',
+            "day.*.required" => 'The day field is required',
+            "start.*.required" => 'The start field is required',
+            "end.*.required" => 'The end field is required',
         ];
+      
     }
+       
 }

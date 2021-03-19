@@ -147,6 +147,7 @@
                             @csrf
                             <table class="table table-bordered table-hover" id="tab_logic">
                                 <thead>
+                                    
                                     <tr id="num">
                                         <th class="text-center">#</th>
                                         <th class="text-center">Day</th>
@@ -157,17 +158,17 @@
                                 <tbody>
                                     <tr id="addr0">
                                         <td>1</td>
-                                        <td><input type="text" name="day[]" id="myText" value="{{old('category[]')}}" class="form-control cta" /></td>
-                                        @error('day[]')
-                                        <div class="error">{{ $message }}</div>
+                                        <td><input type="text" name="day[]" id="myText" value="" class="form-control cta" /></td>
+                                        @error('day.*')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
                                         @enderror
-                                        <td><input type="time" name="start[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
-                                        @error('start[]')
-                                        <div class="error">{{ $message }}</div>
+                                        <td><input type="time" name="start[]" id="" value="" class="form-control" allProducts /></td>
+                                        @error('start.*')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
                                         @enderror
-                                        <td><input type="time" name="end[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
-                                        @error('end[]')
-                                        <div class="error">{{ $message }}</div>
+                                        <td><input type="time" name="end[]" id="" value="" class="form-control" allProducts /></td>
+                                        @error('end.*')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
                                         @enderror
                                     </tr>
 
