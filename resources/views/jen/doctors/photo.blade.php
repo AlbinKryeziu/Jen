@@ -1,6 +1,4 @@
-@include('jen/pages/assets/header')
-
-@include('jen/doctors/assets/swal')
+@include('jen/pages/assets/header') @include('jen/doctors/assets/swal')
 
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -81,17 +79,20 @@
                 <div class="card" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            @if(!$user->doctor->profilePath)
-                            <img src="{{ asset('jen/assets/img/logoDoctor.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
-                            @else
+                            @if($user->doctor->profilePath))
                             <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                            @else
+                            <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
                             @endif
 
                             <div class="mt-3">
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
+                                <div class="btn-group" role="group" aria-label="Third group">
+                                    <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
+                                    <a href="{{ url('profile/') }} " class="p-2"><strong>Profile</strong></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -126,7 +127,7 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url($user->socialMedia->website) }}" target="_blank"  style="color: black;">
+                            <a href="{{ url($user->socialMedia->website) }}" target="_blank" style="color: black;">
                                 <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
                             </a>
                         </li>
@@ -150,12 +151,10 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        @if ($errors->any())
-    @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger">{{ $error }}</div>
-    @endforeach
-@endif
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Profile  Photo</h6>
+                        @if ($errors->any()) @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                        @endforeach @endif
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Profile Photo</h6>
                         <form method="POST" action="{{ url('photo/store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
@@ -165,8 +164,6 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
-                            </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -207,23 +204,19 @@
     });
 </script>
 
-@endif
-{{-- <script>
-    
+@endif {{--
+<script>
     const inputElement = document.querySelector('input[id="avatar"]');
-   
-    const pond = FilePond.create( inputElement );
+
+    const pond = FilePond.create(inputElement);
     FilePond.setOptions({
-        
-    server: {
-        onload: true,
-        url: 'photo/store',
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        }
-    
-       
-    }
-   
-});
-    </script> --}}
+        server: {
+            onload: true,
+            url: "photo/store",
+            headers: {
+                "X-CSRF-TOKEN": "{{ csrf_token() }}",
+            },
+        },
+    });
+</script>
+--}}

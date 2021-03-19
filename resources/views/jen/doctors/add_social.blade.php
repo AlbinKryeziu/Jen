@@ -1,5 +1,4 @@
-@include('jen/pages/assets/header')
-@include('jen/doctors/assets/swal')
+@include('jen/pages/assets/header') @include('jen/doctors/assets/swal')
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -81,7 +80,10 @@
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
+                                <div class="btn-group" role="group" aria-label="Third group">
+                                    <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
+                                    <a href="{{ url('profile/') }} " class="p-2"><strong>Profile</strong></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +118,7 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="@if($user->socialMedia){{ url($user->socialMedia->website) }}" @endif target="_blank"  style="color: black;">
+                            <a href="@if($user->socialMedia){{ url($user->socialMedia->website) }}" @endif target="_blank" style="color: black;">
                                 <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
                             </a>
                         </li>

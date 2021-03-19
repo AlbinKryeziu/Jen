@@ -84,8 +84,11 @@
                                     <h4>{{ $user->name }}</h4>
                                     <p class="text-secondary mb-1"></p>
                                     <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                  
-                                  
+                                    <div class="btn-group" role="group" aria-label="Third group">
+                                        <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
+                                        <a href="{{ url('profile/') }} "class="p-2"><strong>Profile</strong></a>
+                                      </div>
+                                   
                                 </div>
                             </div>
                         </div>
