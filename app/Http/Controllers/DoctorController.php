@@ -6,6 +6,7 @@ use App\Http\Requests\RegisterClientRequest;
 use App\Http\Requests\ScheduleRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateWorkRequest;
+use App\Models\Depart;
 use App\Models\Doctor;
 use App\Models\SocialLink;
 use App\Models\User;
@@ -90,13 +91,14 @@ class DoctorController extends Controller
     }
 
     public function editWorkDoctor()
-    {
+    {   $speacility = Depart::get();
         $user = User::with('doctor')
             ->where('id', Auth::id())
             ->get();
 
         return view('jen/doctors/edit-work', [
             'user' => $user,
+            'speacility' => $speacility,
         ]);
     }
 

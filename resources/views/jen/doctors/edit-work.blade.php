@@ -71,7 +71,7 @@
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
                             @if(!$user->doctor->profilePath)
-                            <img src="{{ asset('jen/assets/img/logoDoctor.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                            <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
                             @else
                             <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
                             @endif
@@ -146,8 +146,14 @@
                         <form method="POST" action="{{ url('doctor/update/work') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Speciality</label>
-                                <input type="text" class="form-control" name="speciality" aria-describedby="emailHelp" value="{{ $user->doctor->speciality }}" />
+                                <label for="speciality">Speciality</label>
+                                <select name="speciality" id="speciality" class="form-control">
+                                    <option value="{{ $user->doctor->speciality }}">{{ $user->doctor->speciality }}</option>
+                                    @foreach ( $speacility as $speacility )
+                                    <option value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
+                                    @endforeach
+                                </select>
+
                                 @error('speciality')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
