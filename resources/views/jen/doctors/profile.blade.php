@@ -2,7 +2,6 @@
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-
     .main-body {
         padding: 15px;
     }
@@ -58,22 +57,18 @@
 </style>
 
 <style>
-  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-  </style>
+    @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+</style>
 
 <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/image20.jpeg') }}') top center; background-size: cover ">
-    <div class="container">
-      
-     
-     
-    </div>
-  </section>
+    <div class="container"></div>
+</section>
 
-  <main id="main">
+<main id="main">
     <div class="container p-4">
         <div class="main-body">
             @foreach($user as $key => $user)
-    
+
             <div class="row gutters-sm">
                 <div class="col-md-4 mb-3">
                     <div class="card" style="border-top: 3px solid #70c3be;">
@@ -81,50 +76,45 @@
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
                                 <div class="mt-3">
-                                    <h4>{{ $user->name }}</h4>
+                                    <h4>{{ $user->doctor->name }} {{$user->doctor->surname }}</h4>
                                     <p class="text-secondary mb-1"></p>
                                     <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                    <div class="btn-group" role="group" aria-label="Third group">
-                                        <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
-                                        <a href="{{ url('profile/') }} "class="p-2"><strong>Profile</strong></a>
-                                      </div>
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="{{ $user->doctor->website }}" target="_blank" style="color: black"> <h6 class="mb-0">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-globe mr-2 icon-inline"
-                                    >
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                    </svg>
-                                   Website
-                                </h6></a>
-                                
+                                <a href="{{ $user->doctor->website }}" target="_blank" style="color: black;">
+                                    <h6 class="mb-0">
+                                        <i class="fa fa-globe" aria-hidden="true"></i>
+
+                                        Website
+                                    </h6>
+                                </a>
                             </li>
+                            @if($user->doctor->facebook)
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="{{ $user->doctor->facebook }}" target="_blank" style="color: black;">
+                                    <h6 class="mb-0"><i class="fa fa-facebook fa-lg"> </i> Facebook</h6>
+                                </a>
+                            </li>
+                            @endif @if($user->doctor->instagram)
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="{{ $user->doctor->instagram }}" target="_blank" style="color: black;">
+                                    <h6 class="mb-0"><i class="fa fa-instagram fa-lg"> </i> Instagram</h6>
+                                </a>
+                            </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                         <div class="card-body">
-                          <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
+                            <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Full Name</h6>
@@ -152,7 +142,7 @@
                                 </div>
                             </div>
                             <hr />
-    
+
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Address</h6>
@@ -173,7 +163,7 @@
                         </div>
                     </div>
                     <div class="row gutters-sm">
-                        <div class="col-sm-12 mb-3" >
+                        <div class="col-sm-12 mb-3">
                             <div class="card h-100" style="border-top: 3px solid #70c3be;">
                                 <div class="card-body">
                                     <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Proefesional Details</h6>
@@ -204,7 +194,7 @@
                                         </div>
                                     </div>
                                     <hr />
-    
+
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">License</h6>
@@ -219,50 +209,42 @@
                         </div>
                     </div>
                     <div class="row gutters-sm">
-                      <div class="col-sm-12 mb-3">
-                          <div class="card h-100" style="border-top: 3px solid #70c3be;">
-                              <div class="card-body">
-                                  <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
-                                  <table class="table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Day</th>
-                                        <th scope="col">Start Time</th>
-                                        <th scope="col">End Time</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($user->schedule as $key => $schedule)
-                                            
-                                       
-                                      <tr>
-                                        <th scope="row">{{$loop->iteration }}</th>
-                                        <td>{{ $schedule->day }}</td>
-                                        <td>{{ $schedule->start }}</td>
-                                        <td>{{ $schedule->end }}</td>
-                                      </tr>
-                                      @endforeach
-                                      
-                                    </tbody>
-                                  </table>
-                                 
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              
-              
+                        <div class="col-sm-12 mb-3">
+                            <div class="card h-100" style="border-top: 3px solid #70c3be;">
+                                <div class="card-body">
+                                    <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Day</th>
+                                                <th scope="col">Start Time</th>
+                                                <th scope="col">End Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($user->schedule as $key => $schedule)
+
+                                            <tr>
+                                                <th scope="row">{{$loop->iteration }}</th>
+                                                <td>{{ $schedule->day }}</td>
+                                                <td>{{ $schedule->start }}</td>
+                                                <td>{{ $schedule->end }}</td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                  </div>
-                  
             </div>
         </div>
     </div>
-    
+
     @endforeach
-    
+
     <footer id="footer">
         <div class="container d-md-flex py-4">
             <div class="mr-md-auto text-center text-md-left">
@@ -282,7 +264,7 @@
     <script src="{{ asset('jen/assets/vendor/counterup/counterup.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
-    
+
     <!-- Template Main JS File -->
     <script src="{{ asset('jen/assets/js/main.js') }}"></script>
-    
+</main>
