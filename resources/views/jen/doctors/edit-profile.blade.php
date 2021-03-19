@@ -172,10 +172,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label for="file">Profile Photo</label><br />
-                                <input type="file" class="" name="avatar" />
-                            </div>
+                           
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Phone</label>

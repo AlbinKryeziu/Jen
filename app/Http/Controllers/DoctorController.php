@@ -43,7 +43,6 @@ class DoctorController extends Controller
 
     public function addSchedule(ScheduleRequest $request)
     {
-     
         for ($i = 0; $i < count($request['day']); $i++) {
             $work = WorkSchedule::create([
                 'day' => $request['day'][$i],
@@ -53,8 +52,7 @@ class DoctorController extends Controller
             ]);
         }
         if ($work) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
     public function editProfileDoctor($doctorId)
@@ -69,29 +67,21 @@ class DoctorController extends Controller
     }
     public function updateProfileDoctor(UpdateProfileRequest $request)
     {
-        if ($request->has('avatar')) {
-            $imageName = time() . '.' . $request->avatar->extension();
-            $request->avatar->move(public_path('store'), $imageName);
-        } else {
-            $imageName = null;
-        }
-
         $user = Doctor::where('user_id', Auth::id())->update([
             'name' => $request->first_name,
             'surname' => $request->last_name,
             'phone' => $request->phone,
             'address' => $request->address,
             'country' => $request->country,
-            'profilePath' => $imageName,
         ]);
         if ($user) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
 
     public function editWorkDoctor()
-    {   $speacility = Depart::get();
+    {
+        $speacility = Depart::get();
         $user = User::with('doctor')
             ->where('id', Auth::id())
             ->get();
@@ -112,8 +102,7 @@ class DoctorController extends Controller
             'website' => $request->website,
         ]);
         if ($doctor) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -146,8 +135,7 @@ class DoctorController extends Controller
             'end' => $request->end,
         ]);
         if ($schedule) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -163,8 +151,7 @@ class DoctorController extends Controller
     {
         $schedule = WorkSchedule::where('user_id', Auth::id())->delete();
         if ($schedule) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
 
@@ -205,49 +192,50 @@ class DoctorController extends Controller
         ]);
     }
 
-    public function updateSocialmedia(Request $request){
-
-        $social = SocialLink::where('user_id',Auth::id())->update([
+    public function updateSocialmedia(Request $request)
+    {
+        $social = SocialLink::where('user_id', Auth::id())->update([
             'facebook' => $request->facebook,
             'instagram' => $request->instagram,
             'website' => $request->website,
             'other' => $request->other,
             'user_id' => Auth::id(),
         ]);
-        
+
         if ($social) {
-            return back()
-            ->with('success', 'The action  was completed successfully');
+            return back()->with('success', 'The action  was completed successfully');
         }
     }
 
-    public function photoProfile(){
+    public function photoProfile()
+    {
         $id = Auth::id();
         $user = User::with('doctor', 'schedule')
             ->where('id', $id)
             ->get();
-        return view('jen/doctors/photo',[
-            'user' =>$user,
+        return view('jen/doctors/photo', [
+            'user' => $user,
         ]);
     }
-    public function storeProfilePhoto(Request $request){
+    public function storeProfilePhoto(Request $request)
+    {
         if ($request->has('avatar')) {
             $imageName = time() . '.' . $request->avatar->extension();
             $request->avatar->move(public_path('store'), $imageName);
         } else {
             $imageName = null;
         }
-        $doctorProfilePhoto = Doctor::where('user_id',Auth::id())->first();
-        if($doctorProfilePhoto->profilePath){
-        if (file_exists(public_path('store/' . $doctorProfilePhoto->profilePath))) {
-            unlink(public_path('store/' . $doctorProfilePhoto->profilePath));
+        $doctorProfilePhoto = Doctor::where('user_id', Auth::id())->first();
+        if ($doctorProfilePhoto->profilePath) {
+            if (file_exists(public_path('store/' . $doctorProfilePhoto->profilePath))) {
+                unlink(public_path('store/' . $doctorProfilePhoto->profilePath));
+            }
         }
-    }
-        $user = Doctor::where('user_id',Auth::id())->update([
+        $user = Doctor::where('user_id', Auth::id())->update([
             'profilePath' => $imageName,
         ]);
-        if($user){
-            return back()->with('success','The photo has been successfully changed');
+        if ($user) {
+            return back()->with('success', 'The photo has been successfully changed');
         }
     }
 }
