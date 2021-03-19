@@ -150,11 +150,19 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
+                        @if ($errors->any())
+    @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger">{{ $error }}</div>
+    @endforeach
+@endif
                         <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Profile  Photo</h6>
                         <form method="POST" action="{{ url('photo/store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <input type="file" class="" name="avatar" id="avatar" />
+                                @error('avatar')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
                             </div>

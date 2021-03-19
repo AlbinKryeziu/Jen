@@ -235,6 +235,10 @@ class DoctorController extends Controller
         } else {
             $imageName = null;
         }
+        $doctorProfilePhoto = Doctor::where('user_id',Auth::id())->first();
+        if (file_exists(public_path('store/' . $doctorProfilePhoto->profilePath))) {
+            unlink(public_path('store/' . $doctorProfilePhoto->profilePath));
+        }
         $user = Doctor::where('user_id',Auth::id())->update([
             'profilePath' => $imageName,
         ]);
