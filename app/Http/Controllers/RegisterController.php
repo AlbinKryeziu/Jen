@@ -33,6 +33,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         if ($user) {
+            $user->role()->attach(1);
             $doctor = new Doctor();
             $doctor->name = $request->first_name;
             $doctor->surname = $request->last_name;
@@ -58,6 +59,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         if ($user) {
+            $user->role()->attach(2);   
             return redirect()->route('login');
         }
     }
