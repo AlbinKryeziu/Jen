@@ -218,4 +218,28 @@ class DoctorController extends Controller
             ->with('success', 'The action  was completed successfully');
         }
     }
+
+    public function photoProfile(){
+        $id = Auth::id();
+        $user = User::with('doctor', 'schedule')
+            ->where('id', $id)
+            ->get();
+        return view('jen/doctors/photo',[
+            'user' =>$user,
+        ]);
+    }
+    public function storeProfilePhoto(Request $request){
+        if ($request->has('avatar')) {
+            $imageName = time() . '.' . $request->avatar->extension();
+            $request->avatar->move(public_path('store'), $imageName);
+        } else {
+            $imageName = null;
+        }
+        $user = Doctor::where('user_id',Auth::id())->update([
+            'profilePath' => $imageName,
+        ]);
+        if($user){
+            return back()->with('success','The photo has been successfully changed');
+        }
+    }
 }

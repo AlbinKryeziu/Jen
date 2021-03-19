@@ -1,6 +1,10 @@
 @include('jen/pages/assets/header')
 
 @include('jen/doctors/assets/swal')
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+
+<!-- add before </body> -->
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -156,16 +160,17 @@
                                 <label for="exampleInputEmail1">First Name</label>
                                 <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp" value="{{ $user->doctor->name }}" />
                                 @error('first_name')
-                                <div class="error">{{ $message }}</div>
+                                <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Last Name</label>
                                 <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp" value="{{ $user->doctor->surname }}" />
                                 @error('last_name')
-                                <div class="error">{{ $message }}</div>
+                                <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
+                           
                             <div class="form-group">
                                 <label for="file">Profile Photo</label><br />
                                 <input type="file" class="" name="avatar" />
@@ -175,21 +180,21 @@
                                 <label for="exampleInputEmail1">Phone</label>
                                 <input type="text" class="form-control" name="phone" aria-describedby="emailHelp" value="{{ $user->doctor->phone }}" />
                                 @error('phone')
-                                <div class="error">{{ $message }}</div>
+                                <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Address</label>
                                 <input type="text" class="form-control" name="address" aria-describedby="emailHelp" value="{{ $user->doctor->address }}" />
                                 @error('address')
-                                <div class="error">{{ $message }}</div>
+                                <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Country</label>
                                 <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}" />
                                 @error('country')
-                                <div class="error">{{ $message }}</div>
+                                <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
@@ -232,4 +237,5 @@
         button: "ok",
     });
 </script>
+
 @endif

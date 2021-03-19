@@ -48,3 +48,5 @@ Route::get('socail/media', [DoctorController::class,'socialMedia']);
 Route::post('socail/add', [DoctorController::class,'addSocialMedia']);
 Route::get('socail/edit', [DoctorController::class,'editSocialmedia']);
 Route::post('socail/store', [DoctorController::class,'updateSocialmedia']);
+Route::get('photo/', [DoctorController::class,'photoProfile']);
+Route::post('photo/store', [DoctorController::class,'storeProfilePhoto']);

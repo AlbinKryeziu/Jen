@@ -1,5 +1,7 @@
 @include('jen/pages/assets/header')
+
 @include('jen/doctors/assets/swal')
+
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -59,13 +61,17 @@
         box-shadow: none !important;
     }
     #footer {
-        margin-top: 50px;
+        margin-top: 140px;
     }
-    input[type="file"] {
-        display: none;
+    .inputWrapper {
+        height: 32px;
+        width: 64px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        /*Using a background color, but you can use a background image to represent a button*/
     }
 </style>
-
 <div class="container p-4">
     <div class="main-body">
         @foreach($user as $key => $user)
@@ -85,11 +91,7 @@
                                 <h4>{{ $user->name }}</h4>
                                 <p class="text-secondary mb-1"></p>
                                 <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <div class="btn-group" role="group" aria-label="Third group">
-                                    <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
-                                    <a href="{{ url('profile/') }} "class="p-2"><strong>Profile</strong></a>
-                                  </div>
-                               
+                                <a href="{{ url('profile/') }}"><strong>Profile</strong></a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +126,7 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="@if($user->socialMedia){{ url($user->socialMedia->website) }}@endif" target="_blank"  style="color: black;">
+                            <a href="{{ url($user->socialMedia->website) }}" target="_blank"  style="color: black;">
                                 <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
                             </a>
                         </li>
@@ -148,128 +150,16 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Full Name</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Profile  Photo</h6>
+                        <form method="POST" action="{{ url('photo/store') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                                <input type="file" class="" name="avatar" id="avatar" />
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->name }}
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
                             </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Email</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->email }}
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Phone</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->doctor->phone }}
-                            </div>
-                        </div>
-                        <hr />
-
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Address</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->doctor->address }}
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Country</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->doctor->country }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gutters-sm">
-                    <div class="col-sm-12 mb-3">
-                        <div class="card h-100" style="border-top: 3px solid #70c3be;">
-                            <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Proefesional Details</h6>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Speciality</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->address }}
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Work Environment</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->workEnvironment }}
-                                    </div>
-                                </div>
-                                <hr />
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Services</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->services }}
-                                    </div>
-                                </div>
-                                <hr />
-
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">License</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->services }}
-                                    </div>
-                                </div>
-                                <hr />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gutters-sm">
-                    <div class="col-sm-12 mb-3">
-                        <div class="card h-100" style="border-top: 3px solid #70c3be;">
-                            <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Day</th>
-                                            <th scope="col">Start Time</th>
-                                            <th scope="col">End Time</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($user->schedule as $key => $schedule)
-
-                                        <tr>
-                                            <th scope="row">{{$loop->iteration }}</th>
-                                            <td>{{ $schedule->day }}</td>
-                                            <td>{{ $schedule->start }}</td>
-                                            <td>{{ $schedule->end }}</td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -299,11 +189,33 @@
 <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
+<!-- Template Main JS File -->
 <script src="{{ asset('jen/assets/js/main.js') }}"></script>
+
 @if(Session::has('success'))
 <script>
     swal("Success", "{{Session::get('success')}}", "success", {
         button: "ok",
     });
 </script>
+
 @endif
+{{-- <script>
+    
+    const inputElement = document.querySelector('input[id="avatar"]');
+   
+    const pond = FilePond.create( inputElement );
+    FilePond.setOptions({
+        
+    server: {
+        onload: true,
+        url: 'photo/store',
+        headers: {
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        }
+    
+       
+    }
+   
+});
+    </script> --}}
