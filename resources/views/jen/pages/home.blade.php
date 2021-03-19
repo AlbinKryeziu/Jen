@@ -155,7 +155,16 @@
                 <div class="col-lg-4">
                     <div class="text-center card-box" style="border: 1px solid #00a8a3;">
                         <div class="member-card pt-2 pb-2">
-                            <div class="thumb-lg member-thumb mx-auto"><img src="{{ asset('store/'.$doctor->profilePath) }}" class="rounded-circle img-thumbnail" alt="profile-image" /></div>
+                          
+                            <div class="thumb-lg member-thumb mx-auto">
+                                @if($doctor->profilePath)
+                                <img src="{{ asset('store/'.$doctor->profilePath) }}" class="rounded-circle img-thumbnail" alt="profile-image" />
+                                @else
+                                <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" class="rounded-circle img-thumbnail" alt="profile-image" />
+                         
+                                @endif
+                            
+                            </div>
                             <div class="">
                                 <br>
                                 <h4>{{ $doctor->name }} {{ $doctor->surname }}</h4>
