@@ -49,7 +49,7 @@
           <li class="drop-down"><a href="">{{ auth()->user()->name }}</a>
             <ul>
               
-              <li><a href="{{ url('profile/') }}">My profile</a></li>
+              <li><a href="{{ url('profile/') }}">Profile</a></li>
               <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                 Logout
             </a>    
