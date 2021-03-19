@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-     
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Colorlib Templates" />
         <meta name="author" content="Colorlib" />
         <meta name="keywords" content="Colorlib Templates" />
 
-       
         <title>Register</title>
 
-       
         <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all" />
         <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all" />
-       
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
 
-      
         <link href="{{ asset('register/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all" />
         <link href="{{ asset('register/vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all" />
 
-      
         <link href="{{ asset('register/css/main.css') }}" rel="stylesheet" media="all" />
     </head>
 
@@ -33,20 +28,27 @@
                         <h2 class="title">Register</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form method="POST" action="{{ url('register/client/store') }}">
+                            @csrf
                             <div class="form-row m-b-55">
                                 <div class="name">Name</div>
                                 <div class="value">
                                     <div class="row row-space">
                                         <div class="col-2">
                                             <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="first_name" />
+                                                @error('first_name')
+                                                <div class="error" style="color: red;">{{ $message }}</div>
+                                                @enderror
+                                                <input class="input--style-5" type="text" value="{{ old('first_name') }}" name="first_name" />
                                                 <label class="label--desc">first name</label>
                                             </div>
                                         </div>
                                         <div class="col-2">
+                                            @error('last_name')
+                                            <div class="error" style="color: red;">{{ $message }}</div>
+                                            @enderror
                                             <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="last_name" />
+                                                <input class="input--style-5" type="text" name="last_name" value="{{ old('last_name') }}" />
                                                 <label class="label--desc">last name</label>
                                             </div>
                                         </div>
@@ -58,7 +60,10 @@
                                 <div class="name">Email</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" />
+                                        <input class="input--style-5" type="email" name="email" value="{{ old('email') }}" />
+                                        @error('email')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -66,11 +71,36 @@
                                 <div class="name">Phone</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" />
+                                        <input class="input--style-5" type="text" name="phone" value="{{ old('phone') }}" />
+                                        @error('phone')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ url('register/doctor') }}"><p style="float: right; color: #00a8a3;">Register as doctor</p></a>
+                            <div class="form-row">
+                                <div class="name">Password</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="password" name="password" />
+                                    </div>
+                                    @error('password')
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Password Confirm</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="password" name="password_confirmation" />
+                                    </div>
+                                    @error('password_confirmation')
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <a href="{{ url('register/doctor') }}"><p style="float: right; color: #00a8a3;">Register As Doctor</p></a>
                             <br />
                             <br />
                             <div style="float: right; top: -450px;">
@@ -82,16 +112,12 @@
             </div>
         </div>
 
-      
         <script src="vendor/jquery/jquery.min.js"></script>
-       
+
         <script src="vendor/select2/select2.min.js"></script>
         <script src="vendor/datepicker/moment.min.js"></script>
         <script src="vendor/datepicker/daterangepicker.js"></script>
 
- 
         <script src="js/global.js"></script>
     </body>
-   
 </html>
-

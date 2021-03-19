@@ -14,7 +14,6 @@
         <link href="{{ asset('register/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all" />
         <link href="{{ asset('register/vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all" />
 
-       
         <link href="{{ asset('register/css/main.css') }}" rel="stylesheet" media="all" />
     </head>
 
@@ -23,7 +22,7 @@
             <div class="wrapper wrapper--w790">
                 <div class="card card-5">
                     <div class="card-heading">
-                        <h2 class="title">register as a doctor</h2>
+                        <h2 class="title">register as doctor</h2>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url('doctor/account') }}">
@@ -34,22 +33,20 @@
                                     <div class="row row-space">
                                         <div class="col-2">
                                             @error('first_name')
-                                            <div class="error">{{ $message }}</div>
-                                           @enderror
+                                            <div class="error" style="color: red;">{{ $message }}</div>
+                                            @enderror
                                             <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="first_name" />
+                                                <input class="input--style-5" type="text" name="first_name" value="{{ old('first_name') }}" />
                                                 <label class="label--desc">first name</label>
-                                               
                                             </div>
-                                           
                                         </div>
-                                        
+
                                         <div class="col-2">
                                             @error('last_name')
-                                            <div class="error">{{ $message }}</div>
-                                           @enderror
+                                            <div class="error" style="color: red;">{{ $message }}</div>
+                                            @enderror
                                             <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="last_name" />
+                                                <input class="input--style-5" type="text" name="last_name" value="{{ old('last_name') }}" />
                                                 <label class="label--desc">last name</label>
                                             </div>
                                         </div>
@@ -61,55 +58,60 @@
                                 <div class="name">Email</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" />
+                                        <input class="input--style-5" type="email" name="email" value="{{ old('email') }}" />
                                     </div>
                                     @error('email')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Phone</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="number" name="phone" />
+                                        <input class="input--style-5" type="text" name="phone" value="{{ old('phone') }}" />
                                     </div>
                                     @error('phone')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Speciality</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="text" name="speciality" />
+                                        <select name="speciality" id="speciality" class="input--style-5">
+                                            <option class="input--style-5" value="">Select Speciality</option>
+                                            @foreach ( $speciality as $speacility )
+                                            <option class="input--style-5" value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     @error('speciality')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Country</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="text" name="country" />
+                                        <input class="input--style-5" type="text" name="country" value="{{ old('country') }}" />
                                     </div>
                                     @error('country')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="name">Address</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="text" name="address" />
+                                        <input class="input--style-5" type="text" name="address" value="{{ old('address') }}" />
                                     </div>
                                     @error('address')
-                                    <div class="error " style="color: red">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
@@ -119,8 +121,8 @@
                                         <input class="input--style-5" type="password" name="password" />
                                     </div>
                                     @error('password')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
@@ -130,12 +132,12 @@
                                         <input class="input--style-5" type="password" name="password_confirmation" />
                                     </div>
                                     @error('password_confirmation')
-                                    <div class="error">{{ $message }}</div>
-                                   @enderror
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
-                            <a href="{{ url('register/client') }}"><p style="float: right; color: #00a8a3;">Register as client</p></a>
+                            <a href="{{ url('register/client') }}"><p style="float: right; color: #00a8a3;">Register As Client</p></a>
                             <br />
                             <br />
 
@@ -147,4 +149,5 @@
                 </div>
             </div>
         </div>
+    </body>
 </html>

@@ -24,12 +24,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
    return view('jen/pages/new-home');
 })->name('dashboard');
 
-Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
 
 Route::get('home/', [PageController::class,'index']);
 
+Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
 Route::get('register/doctor', [RegisterController::class,'index']);
 Route::get('register/client', [RegisterController::class,'indexClient']);
+Route::post('register/client/store', [RegisterController::class,'registerClient']);
 
 Route::get('profile/', [DoctorController::class,'index']);
 Route::get('doctor/schedule', [DoctorController::class,'createSchedule']);
