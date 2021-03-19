@@ -20,15 +20,12 @@ Route::get('/', function () {
     return view('jen/pages/new-home');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-   return view('jen/pages/new-home');
-})->name('dashboard');
 
 
 Route::get('home/', [PageController::class,'index']);
 
 Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
-Route::get('register/doctor', [RegisterController::class,'index']);
+Route::get('register/doctor', [RegisterController::class,'index'])->name('registerClient');
 Route::get('register/client', [RegisterController::class,'indexClient']);
 Route::post('register/client/store', [RegisterController::class,'registerClient']);
 

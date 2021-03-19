@@ -65,6 +65,7 @@
 <main id="main">
     <form>
         @csrf
+        
 
         <section id="why-us" class="why-us">
             <div class="container">
@@ -78,7 +79,8 @@
                             </div>
 
                             @endif
-
+                         
+                            
                             <label style="margin: 4px;">Specialty</label>
                             <select name="specialty" class="form-control" id="cars" value="AEfdaef" required>
                                 <option value="">Select Specialty</option>
