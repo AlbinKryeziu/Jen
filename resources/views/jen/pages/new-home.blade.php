@@ -467,7 +467,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href=" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -478,22 +478,22 @@ section .section-title {
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
                                           <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                              <a class="social-icon text-xs-center" target="_blank" href="">
                                                   <i class="fa fa-facebook"></i>
                                               </a>
                                           </li>
                                           <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                              <a class="social-icon text-xs-center" target="_blank" href="">
                                                   <i class="fa fa-twitter"></i>
                                               </a>
                                           </li>
                                           <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                              <a class="social-icon text-xs-center" target="_blank" href="">
                                                   <i class="fa fa-skype"></i>
                                               </a>
                                           </li>
                                           <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                              <a class="social-icon text-xs-center" target="_blank" href="">
                                                   <i class="fa fa-google"></i>
                                               </a>
                                           </li>
@@ -524,27 +524,27 @@ section .section-title {
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-facebook"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-skype"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-google"></i>
-                                              </a>
-                                          </li>
-                                      </ul>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
                           </div>
@@ -571,27 +571,27 @@ section .section-title {
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-facebook"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-skype"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-google"></i>
-                                              </a>
-                                          </li>
-                                      </ul>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
                           </div>
@@ -618,27 +618,27 @@ section .section-title {
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-facebook"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-skype"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-google"></i>
-                                              </a>
-                                          </li>
-                                      </ul>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
                           </div>
@@ -665,23 +665,27 @@ section .section-title {
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-facebook"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                         
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-google"></i>
-                                              </a>
-                                          </li>
-                                      </ul>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
                           </div>
@@ -708,27 +712,27 @@ section .section-title {
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                       <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-facebook"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-twitter"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-skype"></i>
-                                              </a>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                  <i class="fa fa-google"></i>
-                                              </a>
-                                          </li>
-                                      </ul>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
                           </div>
