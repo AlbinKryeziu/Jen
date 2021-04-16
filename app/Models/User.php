@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Role;
 
 class User extends Authenticatable
 {
@@ -65,21 +66,21 @@ class User extends Authenticatable
 
     public function hasRole($role)
     {        
-        return $result = $this->role[0]->slug == $role;;
+        return $result = $this->role[0]->slug == $role;
     }
     
     public static function getUsersByRole($role)
     {
-        return User::all()->filter->hasRole($role)->values();;
+        return User::all()->filter->hasRole($role)->values();
     }
     
     public function isDoctor() {
 
-        return $this->hasRole('doctor'); 
+        return $this->role == 1; 
     }
     public function isClient() {
 
-        return $this->hasRole('client'); 
+        return $this->role == 1; 
     }
 
     public function doctor(){

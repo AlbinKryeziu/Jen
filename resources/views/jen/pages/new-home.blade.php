@@ -747,7 +747,8 @@ section .section-title {
 
     <div class="row" style="height:550px;">
       <div class="col-md-6 maps" >
-         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen></iframe>
+     
+         <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Frisco,%20TX%2075035+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="col-md-6">
         <h2 class="text-uppercase mt-3 font-weight-bold text-white"><p style="color:#00a8a8; text-align:center">Contact Us<p></h2>
@@ -772,7 +773,7 @@ section .section-title {
             
             <div class="col-12">
               <div class="form-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Inserisci testo" rows="3" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3" required></textarea>
               </div>
             </div>
             <div class="col-lg-12" style="float: right">
@@ -783,7 +784,18 @@ section .section-title {
             
           </div>
         </form>
-       
+        <div class="text-white">
+          <i class="fa fa-phone mt-3" style="color: black"></i> <a href="tel:++1 (469) 715-8408" style="color: black">+1 (469) 715-8408</a><br>
+      
+          <i class="fa fa-envelope mt-3" style="color: black"></i> <a href="mailto:spn@selfpaynet.com" style="color: black">spn@selfpaynet.com</a><br>
+          <i class=" fa fa-map-marker mt-3" style="color: black"></i> <a  style="color: black">SelfPayNet
+            15922 Eldorado Pkwy Ste 500 #845
+            Frisco, TX 75035</a><br>
+          
+          <div class="my-4">
+          
+          </div>
+          </div>
         </div>
       </div>
 
