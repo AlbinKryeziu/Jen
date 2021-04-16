@@ -76,11 +76,15 @@ class User extends Authenticatable
     
     public function isDoctor() {
 
-        return $this->role == 1; 
+        return $this->role()
+            ->where('role_id', 1)
+            ->first();
     }
     public function isClient() {
 
-        return $this->role == 1; 
+        return $this->role()
+            ->where('role_id', 2)
+            ->first();
     }
 
     public function doctor(){

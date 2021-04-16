@@ -121,10 +121,14 @@
                 <div class="card mt-3" style="border-top: 3px solid #70c3be;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            @if($user->socialMedia)
+                                
+                           
                             <a href="{{ url($user->socialMedia->website) }}" target="_blank"  style="color: black;">
                                 <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
                             </a>
                         </li>
+                        @endif
                         @if($user->socialMedia)
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('socail/edit') }}" style="color: black;">

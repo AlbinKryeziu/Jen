@@ -60,7 +60,7 @@
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 </style>
 
-<section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/image20.jpeg') }}') top center; background-size: cover ">
+<section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center; background-size: cover ">
     <div class="container"></div>
 </section>
 
