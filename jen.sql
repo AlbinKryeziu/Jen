@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2021 at 04:20 PM
+-- Generation Time: Apr 16, 2021 at 06:19 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -128,7 +128,7 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `name`, `surname`, `speciality`, `country`, `address`, `phone`, `website`, `profilePath`, `user_id`, `created_at`, `updated_at`, `services`, `workEnvironment`, `license`) VALUES
-(6, 'Albin', 'Kryeziu', 'Allergy', 'Albania', 'haefeafaf', '+37745543212', NULL, NULL, 15, '2021-03-19 22:47:52', '2021-03-19 22:47:52', NULL, NULL, NULL);
+(7, 'James', 'John', 'Allergy', 'USA', 'Florida', '+15614528513', NULL, NULL, 16, '2021-04-16 14:09:11', '2021-04-16 14:09:11', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -248,9 +248,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('JC8KDeh3Y52qJe1FvOP2cTnw7aY99g7yEIEaDQiZ', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNTlmdmpMc01vUm1OeG9KWldxbDVvWndwbnFtaEE1d3JSTFpNT1RYcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1618582803),
-('NPoaOicAEOmM9J97QwUf6Z4vIpAvQCVbHd4pVA1E', 10, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiYkllUjN1dXJFQjdLZGY2QXY1NHMwbk43bFQyeVNtbDVrdXNJOU56VyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjEwO30=', 1616194478),
-('ZNzGdMJ4oHXrYmQRXOZPTZYw5T6jp2XvBBLMP6XY', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieGlCMG1IT2xOOXhRRU9UN0ozUEpteFQxdFZRZ1VCZEtTbTBjNUw5MyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1616197829);
+('8EcxFKbhqaFCJ5bJZiv6vgFDYJ5N9TH8aWhf0uzY', 16, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSjk2eVVxcjI1QnBYZVBxdlRFUWVHMHRodHY5cWdxUENEMkxOeEF5MCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE2O3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkdWtsd1B6dXJ4eGNIRFppNHEuWWI2Lm1Yem50MS9SVENrazBlTmVkbEYvSDNCc0t2a21yam0iO30=', 1618589833);
 
 -- --------------------------------------------------------
 
@@ -296,8 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `phone`) VALUES
-(14, 'Albin Kryeziu', 'albinkryeziu21@gmail.com', NULL, '$2y$10$VC4UmlWy7l.KZpGsBmCAs.MFryHplqUPSANnLJkNmocyP2KSlFcvu', NULL, NULL, NULL, NULL, NULL, '2021-03-19 22:42:07', '2021-03-19 22:42:07', '+37745543212'),
-(15, 'Albin Kryeziu', 'administrator@gmail.com', NULL, '$2y$10$XUgHxIRO4RaDPMo.RBQkROTwQMK/JXVql1EntzADeigOSf8DAhh0q', NULL, NULL, NULL, NULL, NULL, '2021-03-19 22:47:52', '2021-03-19 22:47:52', NULL);
+(16, 'James John', 'james@gmail.com', NULL, '$2y$10$uklwPzurxxcHDZi4q.Yb6.mXznt1/RTCkk0eNedlF/H3BsKvkmrjm', NULL, NULL, NULL, NULL, NULL, '2021-04-16 14:09:11', '2021-04-16 14:09:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -315,8 +312,7 @@ CREATE TABLE `users_roles` (
 --
 
 INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES
-(14, 2),
-(15, 1);
+(16, 1);
 
 -- --------------------------------------------------------
 
@@ -333,6 +329,13 @@ CREATE TABLE `work_schedules` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `work_schedules`
+--
+
+INSERT INTO `work_schedules` (`id`, `day`, `start`, `end`, `user_id`, `created_at`, `updated_at`) VALUES
+(17, 'Mondays', '20:13:00', '21:13:00', 16, '2021-04-16 14:13:46', '2021-04-16 14:13:46');
 
 --
 -- Indexes for dumped tables
@@ -434,7 +437,7 @@ ALTER TABLE `departs`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -470,13 +473,13 @@ ALTER TABLE `social_links`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `work_schedules`
 --
 ALTER TABLE `work_schedules`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
