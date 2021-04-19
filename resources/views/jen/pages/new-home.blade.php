@@ -384,7 +384,7 @@ section .section-title {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item"  style="border-top: 1px solid #17a2b8; border-bottom:1px solid #17a2b8">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <img src="" class="testimonial-img" alt="">
               <h3>Saul Goodman</h3>
               <h4>Ceo &amp; Founder</h4>
               <p>
@@ -397,7 +397,7 @@ section .section-title {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item" style="border-top: 1px solid #17a2b8; border-bottom:1px solid #17a2b8">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img src="" class="testimonial-img" alt="">
               <h3>Sara Wilsson</h3>
               <h4>Designer</h4>
               <p>
@@ -410,7 +410,7 @@ section .section-title {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item" style="border-top: 2px solid #17a2b8; border-bottom:1px solid #17a2b8">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <img src="" class="testimonial-img" alt="">
               <h3>Jena Karlis</h3>
               <h4>Store Owner</h4>
               <p>
@@ -423,7 +423,7 @@ section .section-title {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <img src="" class="testimonial-img" alt="">
               <h3>Matt Brandon</h3>
               <h4>Freelancer</h4>
               <p>
@@ -436,7 +436,7 @@ section .section-title {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <img src="" class="testimonial-img" alt="">
               <h3>John Larson</h3>
               <h4>Entrepreneur</h4>
               <p>
