@@ -514,7 +514,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href="" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -561,7 +561,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href="" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -608,7 +608,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href="" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -655,7 +655,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href="" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
@@ -702,7 +702,7 @@ section .section-title {
                                       <p><img class=" img-fluid" src="{{ asset('jen/assets/img/pic.png') }}" alt="card image"></p>
                                       <h4 class="card-title">Sunlimetech</h4>
                                       <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                      <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
+                                      <a href="" class="btn btn-primary btn-sm col-12"><i class="fa fa-plus"></i></a>
                                   </div>
                               </div>
                           </div>
