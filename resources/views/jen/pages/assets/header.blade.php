@@ -28,13 +28,13 @@
     <body>
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
-                <img src="{{ asset('jen/assets/img/logo.png') }}" width="210px;" />
+                <img src="{{ asset('jen/assets/img/logo.png') }}" width="200px;" />
                 <h1 class="logo mr-auto"><a href="index.html"></a></h1>
 
                 <nav class="nav-menu d-none d-lg-block">
                     <ul style="margin-right:-300px;">
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                        <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">Abous Us</a></li>
+                        <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">About Us</a></li>
                         @if (!Auth::check())
                         <li><a href="{{ url('register/doctor') }}">Sign Up</a></li>
                         @endif @if (!Auth::check())

@@ -1,151 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <title>Login 07</title>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Colorlib Templates" />
-        <meta name="author" content="Colorlib" />
-        <meta name="keywords" content="Colorlib Templates" />
-        <title>Register</title>
-        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all" />
-        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
 
-        <link href="{{ asset('register/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all" />
-        <link href="{{ asset('register/vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet" />
 
-        <link href="{{ asset('register/css/main.css') }}" rel="stylesheet" media="all" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <link rel="stylesheet" href="{{ asset('login/css/style.css') }}" />
     </head>
-
     <body>
-        <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-            <div class="wrapper wrapper--w790">
-                <div class="card card-5">
-                    <div class="card-heading">
-                        <h2 class="title">register as doctor</h2>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ url('doctor/account') }}">
-                            @csrf
-                            <div class="form-row m-b-55">
-                                <div class="name">Name</div>
-                                <div class="value">
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            @error('first_name')
-                                            <div class="error" style="color: red;">{{ $message }}</div>
-                                            @enderror
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="first_name" value="{{ old('first_name') }}" />
-                                                <label class="label--desc">first name</label>
-                                            </div>
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5"></div>
+                </div>
+                <div class="row justify-content-center" style="margin-top: -120px;">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="wrap d-md-flex">
+                            <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                                <div class="text w-100">
+                                    <img src="{{ asset('jen/assets/img/logo-trnasparent.png') }}" width="200px;" />
+                                    <br />
+                                    <br />
+                                    <h2>Welcome to SelfPayNet</h2>
+                                    <p>Already have an account</p>
+
+                                    <a href="#" class="btn btn-white btn-outline-white">Login</a>
+                                </div>
+                            </div>
+                            <div class="login-wrap p-4 p-lg-5">
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <h3 class="mb-4">Register</h3>
+                                    </div>
+                                </div>
+                                <form method="POST" action="{{ url('doctor/account') }}">
+                                    @csrf
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="name">Name of Company</label>
+                                        <input type="text" class="form-control" placeholder="Username" required />
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="name">Email</label>
+                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Username" required />
+                                        @error('email')
+                                    <div class="error" style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="name">Phone</label>
+                                        <input type="text" name="phone" value="{{ old('phone') }}" class="form-control" placeholder="Username" required />
+                                        @error('phone')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="name">Speciality</label>
+                                        <div class="input-group">
+                                            <select name="speciality" id="speciality" class="input--style-5">
+                                                <option class="input--style-5" value="">Select Speciality</option>
+                                                @foreach ( $speciality as $speacility )
+                                                <option class="input--style-5" value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
-
-                                        <div class="col-2">
-                                            @error('last_name')
-                                            <div class="error" style="color: red;">{{ $message }}</div>
-                                            @enderror
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="last_name" value="{{ old('last_name') }}" />
-                                                <label class="label--desc">last name</label>
-                                            </div>
+                                        @error('speciality')
+                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="password">Zip</label>
+                                        <input type="password" class="form-control" placeholder="Password" required />
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="password">Password</label>
+                                        <input  type="password" name="password" class="form-control" placeholder="Password" required />
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="label" for="password">Password Confirm</label>
+                                        <input type="password" name="password_confirmation"  class="form-control" placeholder="Password" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control btn btn-primary submit px-3">Register</button>
+                                    </div>
+                                    <div class="form-group d-md-flex">
+                                        <div class="w-50 text-left">
+                                            <label class="checkbox-wrap checkbox-primary mb-0">
+                                                Remember Me
+                                                <input type="checkbox" checked />
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="w-50 text-md-right">
+                                            <a href="#">Forgot Password</a>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
-
-                            <div class="form-row">
-                                <div class="name">Email</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email" value="{{ old('email') }}" />
-                                    </div>
-                                    @error('email')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Phone</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="text" name="phone" value="{{ old('phone') }}" />
-                                    </div>
-                                    @error('phone')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Speciality</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <select name="speciality" id="speciality" class="input--style-5">
-                                            <option class="input--style-5" value="">Select Speciality</option>
-                                            @foreach ( $speciality as $speacility )
-                                            <option class="input--style-5" value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    @error('speciality')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Country</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="text" name="country" value="{{ old('country') }}" />
-                                    </div>
-                                    @error('country')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Address</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="text" name="address" value="{{ old('address') }}" />
-                                    </div>
-                                    @error('address')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Password</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="password" name="password" />
-                                    </div>
-                                    @error('password')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Password Confirm</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="password" name="password_confirmation" />
-                                    </div>
-                                    @error('password_confirmation')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-
-                           
-
-                            <div style="float: right; top: -450px;">
-                                <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <script src="{{ asset('login/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/popper.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
