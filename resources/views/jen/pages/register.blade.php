@@ -33,7 +33,7 @@
                                     <h2>Welcome to SelfPayNet</h2>
                                     <p>Already have an account</p>
 
-                                    <a href="{{ url('login') }}" class="btn btn-white btn-outline-white">Login</a>
+                                    <a href="{{ url('login') }}" class="btn btn-white btn-outline-white">Sign In</a>
                                 </div>
                             </div>
                             <div class="login-wrap p-4 p-lg-5">
@@ -112,7 +112,10 @@
                                             </label>
                                         </div>
                                         <div class="w-50 text-md-right">
-                                            <a href="#">Forgot Password</a>
+                                            @if (Route::has('password.request'))
+                                            <a href="{{ route('password.request') }}">Forgot Password</a>
+                                            @endif
+                                           
                                         </div>
                                     </div>
                                 </form>
@@ -122,10 +125,5 @@
                 </div>
             </div>
         </section>
-
-        <script src="{{ asset('login/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/popper.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>

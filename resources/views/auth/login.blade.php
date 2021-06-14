@@ -67,7 +67,9 @@
                                             </label>
                                         </div>
                                         <div class="w-50 text-md-right">
-                                            <a href="#">Forgot Password</a>
+                                            @if (Route::has('password.request'))
+                                            <a href="{{ route('password.request') }}">Forgot Password</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </form>
@@ -77,10 +79,5 @@
                 </div>
             </div>
         </section>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>
