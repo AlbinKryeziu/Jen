@@ -57,8 +57,8 @@
 
 <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center;">
     <div class="container">
-        <h1>Doctor Here</h1>
-        <h2 style="width: 800px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+        <h1>SEARCH HERE</h1>
+        <h2 style="width: 800px;">Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
     </div>
 </section>
 @php $specialty = App\Models\Depart::get() @endphp
@@ -89,12 +89,11 @@
                                 @endforeach
                             </select>
 
-                            <label style="margin: 4px;">Country</label>
+                            <label style="margin: 4px;">Zip</label>
                             <input type="text" class="form-control" name="country" style="margin: 4px;" required />
-                            <label style="margin: 4px;">Address</label>
-                            <input type="text" class="form-control" name="address" style="margin: 4px;" required />
-                            <div class="text-center">
-                                <button type="submit" class="more-btn">Search <i class="bx bx-chevron-right"></i></button>
+                           
+                            <div class="text-center" style="margin-top: 20px;">
+                                <button type="submit" class="more-btn" style="border: none; background:#00a8a3;color:white">Search</button>
                             </div>
                         </div>
                     </div>
@@ -140,17 +139,8 @@
     --}}
     <div class="content">
         <div class="container">
-            <div class="section-title">
-                <h2>Doctors</h2>
-                <p>
-                    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-                    officiis commodi quidem hic quas.
-                </p>
-            </div>
-            <div class="row">
-                
-                <!-- end col -->
-            </div>
+            
+            
             <!-- end row -->
             <div class="row">
                 @foreach($doctor as $key => $doctor)

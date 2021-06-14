@@ -137,9 +137,7 @@
                                 </div>
                             </div>
 
-                            <a href="{{ url('register/client') }}"><p style="float: right; color: #00a8a3;">Register As Client</p></a>
-                            <br />
-                            <br />
+                           
 
                             <div style="float: right; top: -450px;">
                                 <button class="btn btn--radius-2 btn--red" type="submit">Register</button>

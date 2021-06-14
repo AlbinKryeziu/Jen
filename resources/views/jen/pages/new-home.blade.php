@@ -186,8 +186,8 @@ section .section-title {
   <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/img2.jpg') }}') top center;">
 
     <div class="container" style="text-align: center">
-      <h1>Welcome to Jen</h1>
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
+      <h1>Welcome to SelfPayNet</h1>
+      <h2>SelfPayNet is a resource for anyone searching for quality medical care at a transparent and affordable price. When you tap the SEARCH button below it will take you a network of general and specialized medical service providers in your area.</h2>
       <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
   </section>
@@ -215,42 +215,7 @@ section .section-title {
 
    
 
-    <section id="services" class="services">
-        <div class="container">
-  
-          <div class="section-title">
-            <h2>How it Works</h2>
-            <p></p>
-          </div>
-  
-          <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" >
-              <div class="icon-box" style="border: 2px solid #17a2b8">
-                <div class="icon"><i class=" bx bx-user-plus"></i></div>
-                <h4><a href="">Sign Up</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-              <div class="icon-box" style="border: 2px solid #17a2b8">
-                <div class="icon"><i class="bx bxs-lock-alt"></i></div>
-                <h4><a href="">Log in</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-              <div class="icon-box" style="border: 2px solid #17a2b8">
-                <div class="icon"><i class="bx bx bx-search"></i></div>
-                <h4><a href="">Explore</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-      </section>
+   
 
 
 
@@ -263,8 +228,10 @@ section .section-title {
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3 style="text-align: center" style="color: #00a8a8;">What We Offer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3 style="text-align: center" style="color: #00a8a8;">Our Mission
+            </h3>
+            <p>
+            </p>
 
             <div class="icon-box">
                 <div class="card" style=" box-shadow: 5px 7px 9px -4px #D3D7D7;">
@@ -272,7 +239,7 @@ section .section-title {
               <div class="icon"><strong>1</strong></div>
               <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    By creating a comprehensive network of independent medical professionals willing to work toward price transparency, we all benefit from affordable prices to access superior health care leading to a healthier life.
                   </p>
                 </div>
               </div>
@@ -284,7 +251,7 @@ section .section-title {
               <div class="icon"><strong>2</strong></div>
               <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 10px; text-align: center;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    When third party (insurance) is eliminated from the personal relationship between you and your doctor, you take control of your health journey.
                   </p>
                 </div>
               </div>
@@ -296,7 +263,7 @@ section .section-title {
               <div class="icon"><strong>3</strong></div>
               <h4 class="title" style="border: 1px solid #17a2b8"><a href=""></a></h4>
                   <p class="card-text" style="padding: 15px; text-align: center;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    We believe the medical system has been intentionally overburdened by insurance bureaucracy. We want to change this with a network of medical professionals willing to work with those patients who decide paying out of pocket is the most efficient path.
                   </p>
                 </div>
               </div>
@@ -338,41 +305,7 @@ section .section-title {
     </section>
 
 
-    <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="count-box" style="border-top: 4px solid #17a2b8">
-              <i class="icofont-doctor-alt"></i>
-              <span data-toggle="counter-up">85</span>
-              <p>Doctors</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="count-box" style="border-top: 4px solid #17a2b8">
-              <i class="icofont-patient-bed"></i>
-              <span data-toggle="counter-up">18</span>
-              <p>Departments</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box" style="border-top: 4px solid #17a2b8">
-              <i class="icofont-laboratory"></i>
-              <span data-toggle="counter-up">8</span>
-              <p>Research Labs</p>
-            </div>
-          </div>
-
-          
-
-        </div>
-
-      </div>
-    </section>
+    
     
     
 

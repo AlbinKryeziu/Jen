@@ -21,5 +21,9 @@ class PageController extends Controller
             'doctor' =>$doctor,
         ]);
     }
+
+    public function aboutUs(){
+      return view('jen.pages.new-home');
+    }
     
 }

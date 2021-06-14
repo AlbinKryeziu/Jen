@@ -28,15 +28,15 @@
     <body>
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
-                <img src="{{ asset('jen/assets/img/SPNlogofinal (2).png') }}" width="210px;" />
+                <img src="{{ asset('jen/assets/img/logo.png') }}" width="210px;" />
                 <h1 class="logo mr-auto"><a href="index.html"></a></h1>
 
                 <nav class="nav-menu d-none d-lg-block">
-                    <ul>
+                    <ul style="margin-right:-300px;">
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                        <li class="{{ (request()->is('home')) ? 'active' : '' }}"><a href="{{ url('home/') }}">Doctors</a></li>
+                        <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">Abous Us</a></li>
                         @if (!Auth::check())
-                        <li><a href="{{ url('register/client') }}">Sign Up</a></li>
+                        <li><a href="{{ url('register/doctor') }}">Sign Up</a></li>
                         @endif @if (!Auth::check())
                         <li><a href="{{ url('login') }}">Login</a></li>
                         @endif @if (Auth::check() )
@@ -47,9 +47,7 @@
                                 @if(Auth::user()->isDoctor())
                                 <li><a href="{{ url('profile/') }}">Profile</a></li>
                                 @endif
-                                @if(Auth::user()->isClient())
-                                <li><a href="">Profile</a></li>
-                                @endif
+                                
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout
                                 </a>
