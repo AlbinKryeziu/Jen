@@ -23,7 +23,7 @@ Route::get('/', [PageController::class,'index']);
 Route::get('about', [PageController::class,'aboutUs']);
 
 Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
-Route::get('/register/doctor', [RegisterController::class,'index'])->name('registerClient');
+Route::get('/registers', [RegisterController::class,'index'])->name('registerClient');
 Route::get('register/client', [RegisterController::class,'indexClient']);
 Route::post('register/client/store', [RegisterController::class,'registerClient']);
 

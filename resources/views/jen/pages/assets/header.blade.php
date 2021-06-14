@@ -36,7 +36,7 @@
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">About Us</a></li>
                         @if (!Auth::check())
-                        <li><a href="{{ url('register/doctor') }}">Sign Up</a></li>
+                        <li><a href="{{ url('registers') }}">Register</a></li>
                         @endif @if (!Auth::check())
                         <li><a href="{{ url('login') }}">Login</a></li>
                         @endif @if (Auth::check() )
