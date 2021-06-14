@@ -32,15 +32,17 @@
                                 </div>
                             </div>
                             <div class="login-wrap p-4 p-lg-5">
-                                @if (session('status'))
-                                <p style="color: red;">{{ session('status') }}</p>
-
-                                @endif
+                               
                                 <div class="d-flex">
                                     <div class="w-100">
                                         <h3 class="mb-4">Sign In</h3>
                                     </div>
+                                   
                                 </div>
+                                @if (session('status'))
+                                <span>{{ session('status') }}</span>
+
+                                @endif
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
 
