@@ -11,6 +11,11 @@
 
         <link rel="stylesheet" href="{{ asset('loginPages/css/style.css') }}" />
     </head>
+    <style>
+        .fm{
+            font-size: 14px;
+        }
+    </style>
     <body>
         <section class="ftco-section">
             <div class="container">
@@ -63,10 +68,10 @@
                                     <div class="form-group mb-3">
                                         <label class="label" for="name">Speciality</label>
                                         <div class="input-group">
-                                            <select name="speciality" id="speciality" class="input--style-5">
-                                                <option class="input--style-5" value="">Select Speciality</option>
+                                            <select name="speciality" id="speciality" class="form-control" >
+                                                <option class="" value="">Choose one</option>
                                                 @foreach ( $speciality as $speacility )
-                                                <option class="input--style-5" value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
+                                                <option class="" value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
