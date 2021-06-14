@@ -28,7 +28,7 @@
                                     <h2>Welcome to SelfPayNet</h2>
                                     <p>Already have an account</p>
 
-                                    <a href="#" class="btn btn-white btn-outline-white">Login</a>
+                                    <a href="{{ url('login') }}" class="btn btn-white btn-outline-white">Login</a>
                                 </div>
                             </div>
                             <div class="login-wrap p-4 p-lg-5">
@@ -41,20 +41,23 @@
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label class="label" for="name">Name of Company</label>
-                                        <input type="text" class="form-control" placeholder="Username" required />
+                                        <input type="text" name="company_name" class="form-control" placeholder="Name of Company" required />
+                                        @error('company_name')
+                                        <span style="font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-3">
                                         <label class="label" for="name">Email</label>
-                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Username" required />
+                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email" required />
                                         @error('email')
-                                    <div class="error" style="color: red;">{{ $message }}</div>
-                                    @enderror
+                                        <span style="font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-3">
                                         <label class="label" for="name">Phone</label>
-                                        <input type="text" name="phone" value="{{ old('phone') }}" class="form-control" placeholder="Username" required />
+                                        <input type="text" name="phone" value="{{ old('phone') }}" class="form-control" placeholder="Phone" required />
                                         @error('phone')
-                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        <span style="font-size: 12px;">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="form-group mb-3">
@@ -68,20 +71,29 @@
                                             </select>
                                         </div>
                                         @error('speciality')
-                                        <div class="error" style="color: red;">{{ $message }}</div>
+                                        <span style="font-size: 12px;">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label class="label" for="password">Zip</label>
-                                        <input type="password" class="form-control" placeholder="Password" required />
+                                        <label class="label" for="password">Zip Code</label>
+                                        <input type="text" name="zip_code" class="form-control" placeholder="Zip Code" required />
+                                        @error('zip_code')
+                                        <span style="font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-3">
                                         <label class="label" for="password">Password</label>
-                                        <input  type="password" name="password" class="form-control" placeholder="Password" required />
+                                        <input type="password" name="password" class="form-control" placeholder="Password" required />
+                                        @error('password')
+                                        <span style="font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-3">
                                         <label class="label" for="password">Password Confirm</label>
-                                        <input type="password" name="password_confirmation"  class="form-control" placeholder="Password" required />
+                                        <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirm" required />
+                                        @error('password_confirmation')
+                                        <span style="font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="form-control btn btn-primary submit px-3">Register</button>

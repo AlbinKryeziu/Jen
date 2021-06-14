@@ -28,18 +28,17 @@ class RegisterController extends Controller
     public function registerDoctor(DoctorRegisterRequest $request)
     {
         $user = new User();
-        $user->name = $request->first_name . ' ' . $request->last_name;
+        $user->name = $request->company_name ;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
         if ($user) {
             $user->role()->attach(1);
             $doctor = new Doctor();
-            $doctor->name = $request->first_name;
-            $doctor->surname = $request->last_name;
+            $doctor->name = $request->company_name;
             $doctor->speciality = $request->speciality;
-            $doctor->country = $request->country;
-            $doctor->address = $request->address;
+            $doctor->zip_code = $request->zip_code;
+           
             $doctor->phone = $request->phone;
             $doctor->user_id = $user->id;
             $doctor->save();

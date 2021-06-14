@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Login 07</title>
+        <title>Login | SelfPayNet</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -26,9 +26,9 @@
                                     <br />
                                     <br />
                                     <h2>Welcome to SelfPayNet</h2>
-                                    <p>Already have an account</p>
+                                    <p>Don't have an account?</p>
 
-                                    <a href="#" class="btn btn-white btn-outline-white">Sign Up</a>
+                                    <a href="{{ url('registers') }}" class="btn btn-white btn-outline-white">Sign Up</a>
                                 </div>
                             </div>
                             <div class="login-wrap p-4 p-lg-5">
