@@ -98,7 +98,7 @@
                             <input type="text" class="form-control" name="country" style="margin: 4px; border-radius:15px;" required />
                            
                             <div class="text-center" style="margin-top: 20px;">
-                                <button type="submit" class="more-btn" style="border: none; background:#00a8a3;color:white">Search</button>
+                                <button type="submit" class="more-btn">Search</button>
                             </div>
                         </div>
                     </div>
