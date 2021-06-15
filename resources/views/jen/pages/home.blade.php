@@ -55,22 +55,27 @@
     }
 </style>
 
-<section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center;">
-    <div class="container">
-        <h1>SEARCH HERE</h1>
-        <h2 style="width: 800px;">Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
+<section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center; object-fit:cover">
+
+    <div class="container" style="text-align: center">
+      <h1>SEARCH HERE</h1>
+      <h2>Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
+     
     </div>
-</section>
+  </section>
+<div class="padding" style="margin: 80px;">
+</div>
+  <main id="main">
 @php $specialty = App\Models\Depart::get() @endphp
-<main id="main">
+
     <form>
         @csrf
         
 
         <section id="why-us" class="why-us">
             <div class="container">
-                <div class="row col-12">
-                    <div class="col-lg-12 d-flex align-items-stretch">
+                <div class="row col-11">
+                    <div class="col-lg-12 d-flex align-items-stretch bd">
                         <div class="content col-12">
                             <h3>Search Doctors</h3>
                             @if(Session::has('errors'))
@@ -188,6 +193,8 @@
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
+
+    <script src="{{ asset('jen/assets/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/php-email-form/validate.js') }}"></script>
@@ -196,6 +203,7 @@
     <script src="{{ asset('jen/assets/vendor/counterup/counterup.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
-
+  
+    
     <script src="{{ asset('jen/assets/js/main.js') }}"></script>
 </main>

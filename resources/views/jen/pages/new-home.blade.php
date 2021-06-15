@@ -196,22 +196,7 @@ section .section-title {
   <main id="main">
 
   
-    <section id="why-us" class="why-us">
-      <div class="container">
-
-        
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-             
-                
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+   
 
    
 
