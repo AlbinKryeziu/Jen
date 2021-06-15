@@ -79,7 +79,7 @@
                         <div class="content col-12">
                             <h3>Search Doctors</h3>
                             @if(Session::has('errors'))
-                            <div class="alert alert-warning" style="background-color: #17a2b8; color: white; border: none;">
+                            <div class="alert alert-warning" style=" text-align: center; color: white; border: none; background:none">
                                 {{ Session::get('errors') }} @php Session::forget('errors'); @endphp
                             </div>
 
@@ -95,7 +95,7 @@
                             </select>
                              <br>
                             <label style="margin: 4px;">Zip Code</label>
-                            <input type="text" class="form-control" name="country" style="margin: 4px; border-radius:15px;" required />
+                            <input type="text" class="form-control" placeholder="Zip Code" name="zip_code" style="margin: 4px; border-radius:15px;" required />
                            
                             <div class="text-center" style="margin-top: 20px;">
                                 <button type="submit" class="more-btn">Search</button>
@@ -110,46 +110,19 @@
         </section>
     </form>
 
-    {{--
-    <section id="doctors" class="doctors">
-        <div class="container">
-            <div class="section-title">
-                <h2>Doctors</h2>
-                <p>
-                    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-                    officiis commodi quidem hic quas.
-                </p>
-            </div>
+    
 
-            <div class="row">
-                @foreach($doctor as $key => $doctor)
-
-                <div class="col-lg-5 p-4">
-                    <div class="member d-flex align-items-start" style="box-shadow: 8px 7px 9px -4px #d3d7d7;">
-                        <div class="pic"><img src="{{ asset('store/'.$doctor->profilePath) }}" class="img-fluid" alt="" style="width: 180px; height: 130px; object-fit: cover;" /></div>
-                        <div class="member-info">
-                            <h4>{{ $doctor->name }} {{ $doctor->surname }}</h4>
-                            <span>{{ $doctor->speciality }}</span>
-                            <p>{{ $doctor->address }}</p>
-                            <br />
-                            <a href="{{ url('profile/doctor/details/'.$doctor->user_id) }}" type="button" class="btn col-lg-12" style="background-color: #70c3be; color: white;"><i class="fa fa-plus"></i></a>
-                            <div class="social" style="text-align: center;"></div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    --}}
-    <div class="content">
+    {{-- <div class="content">
+        
         <div class="container">
             
             
             <!-- end row -->
+           
             <div class="row">
                 @foreach($doctor as $key => $doctor)
                 <div class="col-lg-4">
+                    
                     <div class="text-center card-box" style="border: 1px solid #00a8a3;">
                         <div class="member-card pt-2 pb-2">
                           
@@ -175,10 +148,11 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
+            
         </div>
-    </div>
+    </div> --}}
 
     <footer id="footer">
         <div class="container d-md-flex py-4">
