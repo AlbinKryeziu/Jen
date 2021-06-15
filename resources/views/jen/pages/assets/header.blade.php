@@ -32,13 +32,13 @@
                 <h1 class="logo mr-auto"><a href="index.html"></a></h1>
 
                 <nav class="nav-menu d-none d-lg-block">
-                    <ul style="margin-right:-300px;">
-                        <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                        <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">About Us</a></li>
+                    <ul style="margin-right:-300px; font-weight: bold; ">
+                        <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">HOME</a></li>
+                        <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">ABOUT US</a></li>
                         @if (!Auth::check())
-                        <li><a href="{{ url('registers') }}">Register</a></li>
+                        <li><a href="{{ url('registers') }}">REGISTER</a></li>
                         @endif @if (!Auth::check())
-                        <li><a href="{{ url('login') }}">Login</a></li>
+                        <li><a href="{{ url('login') }}">LOGIN</a></li>
                         @endif @if (Auth::check() )
 
                         <li class="drop-down">

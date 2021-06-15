@@ -87,15 +87,15 @@
                          
                             
                             <label style="margin: 4px;">Specialty</label>
-                            <select name="specialty" class="form-control" id="cars" value="AEfdaef" required>
+                            <select name="specialty" class="form-control" id="cars" value="AEfdaef" required style="border-radius: 15px;">
                                 <option value="">Select Specialty</option>
                                 @foreach ($specialty as $specialty)
                                 <option value="{{$specialty->depart}}">{{ $specialty->depart}}</option>
                                 @endforeach
                             </select>
-
-                            <label style="margin: 4px;">Zip</label>
-                            <input type="text" class="form-control" name="country" style="margin: 4px;" required />
+                             <br>
+                            <label style="margin: 4px;">Zip Code</label>
+                            <input type="text" class="form-control" name="country" style="margin: 4px; border-radius:15px;" required />
                            
                             <div class="text-center" style="margin-top: 20px;">
                                 <button type="submit" class="more-btn" style="border: none; background:#00a8a3;color:white">Search</button>
