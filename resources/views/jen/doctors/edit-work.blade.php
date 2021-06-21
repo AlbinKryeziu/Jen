@@ -97,7 +97,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Professional Details</h6>
                             </a>
                         </li>
                         @if(!count(auth()->user()->schedule))
@@ -146,7 +146,7 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Proefesional Details</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Professional  Details</h6>
                         <form method="POST" action="{{ url('doctor/update/work') }}">
                             @csrf
                             <div class="form-group">

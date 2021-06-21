@@ -42,7 +42,7 @@
                         @endif @if (Auth::check() )
 
                         <li class="drop-down">
-                            <a href="">{{ auth()->user()->name }}</a>
+                            <a  style="text-transform: uppercase; cursor:pointer">{{ auth()->user()->name }}</a>
                             <ul>
                                 @if(Auth::user()->isDoctor())
                                 <li><a href="{{ url('profile/') }}">Profile</a></li>

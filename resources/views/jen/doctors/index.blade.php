@@ -101,7 +101,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Professional Details</h6>
                             </a>
                         </li>
                         @if(!count(auth()->user()->schedule))
@@ -146,7 +146,7 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Business Info</h6>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Full Name</h6>
@@ -191,7 +191,7 @@
                     <div class="col-sm-12 mb-3">
                         <div class="card h-100" style="border-top: 3px solid #70c3be;">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Proefesional Details</h6>
+                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Professional Details</h6>
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Speciality</h6>

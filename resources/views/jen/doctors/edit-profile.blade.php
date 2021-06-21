@@ -104,24 +104,24 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" style="color: #00A8A3;"></i> Edit Profile</h6>
                             </a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
+                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" style="color:#00A8A3"></i> Edit Professional Details</h6>
                             </a>
                         </li>
                         @if(!count(auth()->user()->schedule))
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('doctor/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#00A8A3"></i> Create Work Schedule</h6>
                             </a>
                         </li>
                         @else
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('edit/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6>
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#00A8A3"></i> Edit Work Schedule</h6>
                             </a>
                         </li>
                         @endif
@@ -134,20 +134,20 @@
                        
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url($user->socialMedia->website) }}" target="_blank" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
+                                <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color:#00A8A3"></i> My Website</h6>
                             </a>
                         </li>
                         @endif
                         @if($user->socialMedia)
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('socail/edit') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Social Media</h6>
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#00A8A3"></i> Edit Social Media</h6>
                             </a>
                         </li>
                         @else
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <a href="{{ url('socail/media') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Add Social Media</h6>
+                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#00A8A3"></i> Add Social Media</h6>
                             </a>
                         </li>
 
@@ -158,7 +158,7 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Personal Info</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Bussiness Info</h6>
                         <form method="POST" action="{{ url('doctor/update/profile') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
@@ -198,11 +198,11 @@
 
 @endforeach
 
-<footer id="footer">
+<footer id="footer" style="margin-top:260px">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">
-                &copy; Copyright <strong><span>Jen</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>SelfPayNet</span></strong>. All Rights Reserved
             </div>
             <div class="credits"></div>
         </div>
