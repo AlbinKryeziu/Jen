@@ -14,7 +14,10 @@ class CreateDoctorSpecialitiesTable extends Migration
     public function up()
     {
         Schema::create('doctor_specialities', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('speciality');
+            $table->unsignedBigInteger('doctor_id'); 
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -163,28 +163,48 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Work Environment</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="workEnvironment" rows="5">{{ $user->doctor->workEnvironment }}</textarea>
-                                @error('workEnvironment')
+                                <label for="exampleInputEmail1">Service 1</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services_1" rows="5">{{ $user->doctor->services_1 }}</textarea>
+                                @error('services_1')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Price for Service 1</label>
+                                <input type="number" name="price_1" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}">
+                                @error('price_1')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Services</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services" rows="5">{{ $user->doctor->services }}</textarea>
-                                @error('services')
+                                <label for="exampleInputEmail1">Service 2</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services_2" rows="5">{{ $user->doctor->services_2 }}</textarea>
+                                @error('services_2')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">License</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="license" rows="5">{{ $user->doctor->license }}</textarea>
-                                @error('license')
+                                <label for="exampleInputEmail1">Price for Service 2</label>
+                                <input type="number" name="price_2" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}">
+                                @error('price_2')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Service 3 </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services_3" rows="5">{{ $user->doctor->services_3 }}</textarea>
+                                @error('services_3')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Price for Service 3</label>
+                                <input type="number" name="price_3" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}"> 
+                                @error('price_3')
+                                <div class="error">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
                         </form>
                     </div>

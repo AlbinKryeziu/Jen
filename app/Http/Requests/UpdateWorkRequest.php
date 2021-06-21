@@ -24,10 +24,12 @@ class UpdateWorkRequest extends FormRequest
     public function rules()
     {
         return [
-            'speciality' => 'required',
-            'workEnvironment' => 'required',
-            'services' => 'required',
-            'license' => 'required',
+            'services_1' =>'required',
+            'services_2' =>'required',
+            'services_3' =>'required',
+            'price_1' =>'required|numeric',
+            'price_2' =>'required|numeric',
+            'price_3' =>'required|numeric',
             
         ];
     }

@@ -95,10 +95,12 @@ class DoctorController extends Controller
     {
         $doctor = Doctor::where('user_id', Auth::id())->update([
             'speciality' => $request->speciality,
-            'workEnvironment' => $request->workEnvironment,
-            'services' => $request->services,
-            'license' => $request->license,
-            'website' => $request->website,
+            'services_1' => $request->services_1,
+            'services_2' => $request->services_2,
+            'services_3' => $request->services_3,
+            'price_1' => $request->price_1,
+            'price_2' => $request->price_2,
+            'price_3' => $request->price_3,
         ]);
         if ($doctor) {
             return back()->with('success', 'The action  was completed successfully');
