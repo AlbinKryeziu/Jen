@@ -205,7 +205,8 @@
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Update</button>
+                            
                         </form>
                     </div>
                 </div>

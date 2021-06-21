@@ -177,21 +177,14 @@
 
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Address</h6>
+                                <h6 class="mb-0">Zip Code</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                {{ $user->doctor->address }}
+                                {{ $user->doctor->zip_code }}
                             </div>
                         </div>
-                        <hr />
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Country</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                {{ $user->doctor->country }}
-                            </div>
-                        </div>
+                        <br>
+                       
                     </div>
                 </div>
                 <div class="row gutters-sm">
@@ -210,32 +203,59 @@
                                 <hr />
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Work Environment</h6>
+                                        <h6 class="">Services 1:</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->workEnvironment }}
+                                      <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_1 }}</textarea>
                                     </div>
                                 </div>
                                 <hr />
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Services</h6>
+                                        <h6 class="mb-0">Price of Service 1</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->services }}
+                                        {{ $user->doctor->price_1 }}$
                                     </div>
                                 </div>
-                                <hr />
-
+                                <hr>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">License</h6>
+                                        <h6 class="">Services 2:</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->services }}
+                                      <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_2 }}</textarea>
                                     </div>
                                 </div>
                                 <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Price of Service 2</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ $user->doctor->price_2 }}$
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="">Services 3:</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                      <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_3 }}</textarea>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Price of Service 3</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ $user->doctor->price_3 }}$
+                                    </div>
+                                </div>
+                                <hr>
+                               
                             </div>
                         </div>
                     </div>
