@@ -162,19 +162,13 @@
                         <form method="POST" action="{{ url('doctor/update/profile') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">First Name</label>
+                                <label for="exampleInputEmail1">Company Name</label>
                                 <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp" value="{{ $user->doctor->name }}" />
                                 @error('first_name')
                                 <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Last Name</label>
-                                <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp" value="{{ $user->doctor->surname }}" />
-                                @error('last_name')
-                                <div class="error" style="color: red;">{{ $message }}</div>
-                                @enderror
-                            </div>
+
 
                            
 
@@ -186,19 +180,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Address</label>
-                                <input type="text" class="form-control" name="address" aria-describedby="emailHelp" value="{{ $user->doctor->address }}" />
+                                <label for="exampleInputEmail1">Zipe Code</label>
+                                <input type="text" class="form-control" name="zip_code" aria-describedby="emailHelp" value="{{ $user->doctor->zip_code }}" />
                                 @error('address')
                                 <div class="error" style="color: red;">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Country</label>
-                                <input type="text" class="form-control" name="country" aria-describedby="emailHelp" value="{{ $user->doctor->country }}" />
-                                @error('country')
-                                <div class="error" style="color: red;">{{ $message }}</div>
-                                @enderror
-                            </div>
+                           
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Submit</button>
                         </form>
                     </div>

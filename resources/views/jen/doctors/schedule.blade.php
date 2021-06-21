@@ -149,7 +149,7 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Create Work Schedule</h6>
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Hours of Operation</h6>
 
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
@@ -159,8 +159,8 @@
                                     <tr id="num">
                                         <th class="text-center">#</th>
                                         <th class="text-center">Day</th>
-                                        <th class="text-center">Start Time</th>
-                                        <th class="text-center">End Time</th>
+                                        <th class="text-center">Open</th>
+                                        <th class="text-center">Close</th>
                                     </tr>
                                 </thead>
                                 <tbody>

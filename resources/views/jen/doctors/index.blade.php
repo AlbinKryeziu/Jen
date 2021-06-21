@@ -244,14 +244,14 @@
                     <div class="col-sm-12 mb-3">
                         <div class="card h-100" style="border-top: 3px solid #70c3be;">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Work Schedule</h6>
+                                <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Hours of Operation</h6>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Day</th>
-                                            <th scope="col">Start Time</th>
-                                            <th scope="col">End Time</th>
+                                            <th scope="col">Open</th>
+                                            <th scope="col">Close</th>
                                         </tr>
                                     </thead>
                                     <tbody>

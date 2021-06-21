@@ -69,10 +69,9 @@ class DoctorController extends Controller
     {
         $user = Doctor::where('user_id', Auth::id())->update([
             'name' => $request->first_name,
-            'surname' => $request->last_name,
+
             'phone' => $request->phone,
-            'address' => $request->address,
-            'country' => $request->country,
+            'zip_code' => $request->zip_code,
         ]);
         if ($user) {
             return back()->with('success', 'The action  was completed successfully');
