@@ -152,88 +152,11 @@
         @foreach($user as $key => $user)
 
         <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-                <div class="card" style="border-top: 3px solid #70c3be;">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            @if(!$user->doctor->profilePath)
-                            <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
-                            @else
-                            <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
-                            @endif
-
-                            <div class="mt-3">
-                                <h4>{{ $user->name }}</h4>
-                                <p class="text-secondary mb-1"></p>
-                                <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <div class="btn-group" role="group" aria-label="Third group">
-                                    <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
-                                    <a href="{{ url('profile/') }} "class="p-2"><strong>Profile</strong></a>
-                                  </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-3" style="border-top: 3px solid #70c3be;">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
-                            </a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
-                            </a>
-                        </li>
-                        @if(!count(auth()->user()->schedule))
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
-                            </a>
-                        </li>
-                        @else
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('edit/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6>
-                            </a>
-                        </li>
-                        @endif
-                    </ul>
-                </div>
-                <div class="card mt-3" style="border-top: 3px solid #70c3be;">
-                    <ul class="list-group list-group-flush">
-                        @if($user->socialMedia)
-                            
-                     
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url($user->socialMedia->website) }}" target="_blank"  style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
-                            </a>
-                        </li>
-                        @endif
-                        @if($user->socialMedia)
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('socail/edit') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Social Media</h6>
-                            </a>
-                        </li>
-                        @else
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('socail/media') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Add Social Media</h6>
-                            </a>
-                        </li>
-
-                        @endif
-                    </ul>
-                </div>
-            </div>
+            @include('jen.doctors.assets.profile-header')
             <div class="col-md-6">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Create Work Schedule</h6>
+                        <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Edit Hours of Operation</h6>
                         <a class="btn btn-outline-danger float-right p-1 multipleDelete">Delete All</a>
                     <br/>
                     <br/>
@@ -242,8 +165,8 @@
                               <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Day</th>
-                                <th scope="col">Start Time</th>
-                                <th scope="col">End Time</th>
+                                <th scope="col">Open</th>
+                                <th scope="col">Close</th>
                                 <th scope="col">Action</th>
                               </tr>
                             </thead>
@@ -269,13 +192,14 @@
                           
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
+                            <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Add New Hour Of Operation</h6>
                             <table class="table table-striped table-responsive" id="tab_logic">
                                 <thead>
                                     <tr id="num">
                                         <th scope="col" >#</th>
                                         <th scope="col"  >Day</th>
-                                        <th scope="col" >Start Time</th>
-                                        <th scope="col" >End Time</th>
+                                        <th scope="col" >Open</th>
+                                        <th scope="col" >Close</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -308,7 +232,7 @@
 @endforeach
 
 
-<footer id="footer">
+<footer id="footer" style="margin-top:300px">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">
