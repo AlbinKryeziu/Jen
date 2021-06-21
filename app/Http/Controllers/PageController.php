@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function index(){
+      if (is_null(auth()->user()->paid)) {  
+        return redirect()->route('payment');      
+        
+      }     
         $doctor =Doctor::paginate(2);
       
         if (request()->has('specialty')) {

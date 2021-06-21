@@ -20,10 +20,8 @@ class CheckPayment
         if (auth()->check()) 
         {
         if (is_null(auth()->user()->paid)) {  
-           
              
-           auth()->logout();     
-           return redirect()->route('payment');      
+            
           }            
          }      
          return $next($request);   
