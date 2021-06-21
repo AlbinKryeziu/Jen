@@ -1,13 +1,16 @@
 <div class="col-md-4 mb-3">
     <div class="card" style="border-top: 3px solid #70c3be;">
         <div class="card-body">
-            <div class="d-flex flex-column align-items-center text-center">
+            <div class="d-flex flex-column align-items-center text-center image-file">
                 @if(!$user->doctor->profilePath)
                 <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                
                 @else
                 <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
+                
                 @endif
-
+                <i class="fa fa-upload fa-5x"></i>
+                <input type="file" id="uploadfile" hidden>
                 <div class="mt-3">
                     <h4>{{ $user->name }}</h4>
                     <p class="text-secondary mb-1"></p>
@@ -75,3 +78,25 @@
         </ul>
     </div>
 </div>
+
+<style>
+    .image-file img:hover {
+  opacity: 0.5;
+  z-index: 501;
+}
+
+.image-file img:hover + i {
+  display: block;
+  z-index: 500;
+}
+.image-file i {
+  display: none;
+  position: absolute;
+  margin-left:1%;
+  margin-top:5%;
+}
+</style>
+
+<script>$('.image-file img').click(function(){
+    $('#uploadfile').click();
+});</script>
