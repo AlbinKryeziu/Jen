@@ -21,7 +21,7 @@ Route::get('/', [PageController::class,'index']);
 Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
-
+Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
 Route::get('about', [PageController::class,'aboutUs']);
 
 Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
