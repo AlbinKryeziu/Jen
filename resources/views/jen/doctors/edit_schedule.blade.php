@@ -153,51 +153,55 @@
 
         <div class="row gutters-sm">
             @include('jen.doctors.assets.profile-header')
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
                         <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Edit Hours of Operation</h6>
-                        <a class="btn btn-outline-danger float-right p-1 multipleDelete">Delete All</a>
+                        <a class="btn btn-outline-danger float-right p-1 multipleDelete" style="margin:5px">Delete All</a>
                     <br/>
                     <br/>
-                        <table class="table table-striped table-responsive ">
+                    <div class="table-responsive">
+                        <table class="table">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Day</th>
-                                <th scope="col">Open</th>
-                                <th scope="col">Close</th>
-                                <th scope="col">Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($user->schedule as  $schedule)
-                                    
-                                
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>{{ $schedule->day }}</td>
-                                <td><i class="fa fa-clock-o"></i> {{ $schedule->start }}</td>
-                                <td><i class="fa fa-clock-o"></i> {{ $schedule->end }}</td>
-                                <td>
-                                    <i class="fa fa-pencil acceptEvent" data-shchedule="{{ $schedule->id }}" data-name="{{$schedule->day}}" data-start={{ $schedule->end}} data-end={{ $schedule->end}}></i>
-                                    <i class="fa fa-trash scheduleDelete" data-shcheduleId="{{ $schedule->id }}"></i>
-                                 
-                                </td>
-                              </tr>
-                              @endforeach
-                            </tbody>
-                          </table>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Day</th>
+                                  <th scope="col">Open</th>
+                                  <th scope="col">Close</th>
+                                  <th scope="col">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach ($user->schedule as  $schedule)
+                                      
+                                  
+                                <tr>
+                                  <th scope="row">{{ $loop->iteration }}</th>
+                                  <td>{{ $schedule->day }}</td>
+                                  <td><i class="fa fa-clock-o"></i> {{ $schedule->start }}</td>
+                                  <td><i class="fa fa-clock-o"></i> {{ $schedule->end }}</td>
+                                  <td>
+                                      <i class="fa fa-pencil acceptEvent" style="margin: 1px;" data-shchedule="{{ $schedule->id }}" data-name="{{$schedule->day}}" data-start={{ $schedule->end}} data-end={{ $schedule->end}} ></i>
+                                      <i class="fa fa-trash scheduleDelete" style="margin: 1px; color:red" data-shcheduleId="{{ $schedule->id }}"></i>
+                                   
+                                  </td>
+                                </tr>
+                                @endforeach
+                              </tbody>
+                        </table>
+                      </div>
+                        
                           <hr style="background-color:#00A8A3"/>
                           
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
                             <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Add New Hour Of Operation</h6>
-                            <table class="table table-striped table-responsive" id="tab_logic">
+                            <div class="table-responsive">
+                                <table class="table">
                                 <thead>
                                     <tr id="num">
                                         <th scope="col" >#</th>
-                                        <th scope="col"  >Day</th>
+                                        <th scope="col-12"  >Day</th>
                                         <th scope="col" >Open</th>
                                         <th scope="col" >Close</th>
                                     </tr>
@@ -205,7 +209,7 @@
                                 <tbody>
                                     <tr id="addr0">
                                         <td>1</td>
-                                        <td><input type="text" name="day[]" id="myText" value="{{old('category[]')}}" class="form-control" /></td>
+                                        <td><input type="text" name="day[]" id="myText" value="{{old('category[]')}}" class="form-control"  /></td>
                                         <td><input type="time" name="start[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
                                         <td><input type="time" name="end[]" id="" value="{{old('product[]')}}" class="form-control" allProducts /></td>
                                     </tr>
@@ -213,16 +217,19 @@
                                     <tr id="addr1"></tr>
                                 </tbody>
                             </table>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                    <button type="button" id="add_row" class="btn btn-default pull-left " style="background: #0370BF; color:white;margin:1px; padding:3px 8px;">+</button>
+                                    
+                                    <button type="button" id="delete_row" class="pull-left btn btn-default" style="background: red;color:white;margin:1px; padding:3px 8px;">-</button>
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-primary" style="float: right;background-color:#00A8A3">Save</button>
                         </form>
                     </div>
                 </div>
-                <div class="row clearfix">
-                    <div class="col-md-12">
-                        <button type="button" id="add_row" class="btn btn-default pull-left">Add Row</button>
-                        <button type="button" id="delete_row" class="pull-right btn btn-default">Delete Row</button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

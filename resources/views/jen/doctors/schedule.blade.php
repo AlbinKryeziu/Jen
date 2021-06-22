@@ -72,14 +72,14 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <a href="{{ url()->previous() }}" style="color: black"><i class="fa fa-arrow-left"></i></a>
+                        
                        
                         <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;margin-top: 10px;"><span></span> Hours of Operation</h6>
 
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
-                            <table class="table table-bordered table-hover" id="tab_logic">
-                                <thead>
+                            <div class="table-responsive">
+                                <table class="table">
                                     
                                     <tr id="num">
                                         <th class="text-center">#</th>
@@ -108,6 +108,7 @@
                                     <tr id="addr1"></tr>
                                 </tbody>
                             </table>
+                            </div>
                             <div class="row clearfix">
                                 <div class="col-md-12">
                                     <button type="button" id="add_row" class="btn btn-default pull-left " style="background: #0370BF; color:white;margin:1px; padding:3px 8px;">+</button>
