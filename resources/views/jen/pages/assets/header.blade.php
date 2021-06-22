@@ -44,9 +44,9 @@
                         <li class="drop-down">
                             <a  style="text-transform: uppercase; cursor:pointer">{{ auth()->user()->name }}</a>
                             <ul>
-                                @if(Auth::user()->isDoctor())
+                               
                                 <li><a href="{{ url('profile/') }}">Profile</a></li>
-                                @endif
+                               
                                 
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout

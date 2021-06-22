@@ -16,10 +16,10 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('speciality');
+            $table->string('speciality')->nullable();
             $table->string('phone');
-            $table->string('website');
-            $table->string('profilePath');
+            $table->string('website')->nullable();
+            $table->string('profilePath')->nullable();
             $table->unsignedBigInteger('user_id'); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

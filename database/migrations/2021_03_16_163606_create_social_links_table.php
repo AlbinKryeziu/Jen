@@ -15,10 +15,11 @@ class CreateSocialLinksTable extends Migration
     {
         Schema::create('social_links', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->longText('facebook');
-            $table->longText('instagram');
-            $table->longText('linked');
-            $table->longText('website');
+            $table->longText('facebook')->nullable();
+            $table->longText('instagram')->nullable();
+            $table->longText('linked')->nullable();
+            $table->longText('website')->nullable();
+            $table->longText('other')->nullable();
             $table->unsignedBigInteger('user_id'); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
