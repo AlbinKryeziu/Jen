@@ -75,19 +75,31 @@
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Your Personal Website</label>
-                                <input type="text" class="form-control" name="website" />
+                                <input type="text" class="form-control" pattern="https?://.+"  name="website" />
+                                @error('website')
+                                   <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Facebook</fieldset></label>
-                                <input type="text" class="form-control" name="facebook" />
+                                <input type="text" class="form-control" pattern="https?://.+" name="facebook" />
+                                @error('facebook')
+                                   <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Instagram</fieldset></label>
-                                <input type="text" class="form-control" name="instagram" />
+                                <input type="text" class="form-control"  pattern="https?://.+" name="instagram" />
+                                @error('instagram')
+                                   <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Other</fieldset></label>
-                                <input type="text" class="form-control" name="other" />
+                                <input type="text" class="form-control" pattern="https?://.+" name="other" />
+                                @error('other')
+                                <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                             @enderror
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>

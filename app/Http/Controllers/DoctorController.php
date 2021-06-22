@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterClientRequest;
 use App\Http\Requests\ScheduleRequest;
+use App\Http\Requests\SocialReqeust;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateWorkRequest;
 use App\Models\Depart;
@@ -166,7 +167,7 @@ class DoctorController extends Controller
             'user' => $user,
         ]);
     }
-    public function addSocialMedia(Request $request)
+    public function addSocialMedia(SocialReqeust $request)
     {
         $social = SocialLink::create([
             'facebook' => $request->facebook,
@@ -193,7 +194,7 @@ class DoctorController extends Controller
         ]);
     }
 
-    public function updateSocialmedia(Request $request)
+    public function updateSocialmedia(SocialReqeust $request)
     {
         $social = SocialLink::where('user_id', Auth::id())->update([
             'facebook' => $request->facebook,

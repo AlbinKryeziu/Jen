@@ -67,79 +67,7 @@
         @foreach($user as $key => $user)
 
         <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-                <div class="card" style="border-top: 3px solid #70c3be;">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            @if(!$user->doctor->profilePath)
-                            <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
-                            @else
-                            <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
-                            @endif
-
-                            <div class="mt-3">
-                                <h4>{{ $user->name }}</h4>
-                                <p class="text-secondary mb-1"></p>
-                                <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
-                                <div class="btn-group" role="group" aria-label="Third group">
-                                    <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
-                                    <a href="{{ url('profile/') }} " class="p-2"><strong>Profile</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-3" style="border-top: 3px solid #70c3be;">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
-                            </a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/work') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Proefesional Details</h6>
-                            </a>
-                        </li>
-                        @if(!count(auth()->user()->schedule))
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('doctor/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Work Schedule</h6>
-                            </a>
-                        </li>
-                        @else
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('edit/schedule') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Work Schedule</h6>
-                            </a>
-                        </li>
-                        @endif
-                    </ul>
-                </div>
-                <div class="card mt-3" style="border-top: 3px solid #70c3be;">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url($user->socialMedia->website) }}" target="_blank" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
-                            </a>
-                        </li>
-                        @if($user->socialMedia)
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('socail/edit') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Social Media</h6>
-                            </a>
-                        </li>
-                        @else
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <a href="{{ url('socail/media') }}" style="color: black;">
-                                <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Add Social Media</h6>
-                            </a>
-                        </li>
-
-                        @endif
-                    </ul>
-                </div>
-            </div>
+            @include('jen.doctors.assets.profile-header')
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
@@ -148,19 +76,31 @@
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Your Personal Website</label>
-                                <input type="text" class="form-control" name="website" value="{{ $social->website }}" />
+                                <input type="text" class="form-control" name="website" pattern="https?://.+" value="{{ $social->website }}" />
+                                @error('website')
+                                <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                             @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Facebook</fieldset></label>
-                                <input type="text" class="form-control" name="facebook" value="{{ $social->facebook }}" />
+                                <input type="text" class="form-control" name="facebook" pattern="https?://.+"  value="{{ $social->facebook }}" />
+                                @error('facebook')
+                                <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                             @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Instagram</fieldset></label>
-                                <input type="text" class="form-control" name="instagram" value="{{ $social->instagram }}" />
+                                <input type="text" class="form-control" name="instagram" pattern="https?://.+" value="{{ $social->instagram }}" />
+                                @error('instagram')
+                                <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                             @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><fieldset>Other</fieldset></label>
-                                <input type="text" class="form-control" name="other" value="{{ $social->other }}" />
+                                <input type="text" class="form-control" name="other" pattern="https?://.+" value="{{ $social->other }}" />
+                                @error('other')
+                                <span style="font-size: 12px; color:red">{{ $message }}</span> 
+                             @enderror
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Save</button>
@@ -174,7 +114,7 @@
 
 @endforeach
 
-<footer id="footer">
+<footer id="footer" style="margin-top: 260px;">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">
