@@ -298,7 +298,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price for Service 1</label>
-                                <input type="number" name="price_1" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}" />
+                                <input type="number" name="price_1" id="" class="form-control"  value="{{ $user->doctor->price_1 }}" placeholder="{{ $user->doctor->price_1 }}" />
                                 @error('price_1')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
@@ -313,21 +313,21 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price for Service 2</label>
-                                <input type="number" name="price_2" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}" />
+                                <input type="number" name="price_2" id="" class="form-control" value="{{ $user->doctor->price_2 }}" placeholder="{{ $user->doctor->price_1 }}" />
                                 @error('price_2')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Service 3 </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" name="services_3" rows="5">{{ $user->doctor->services_3 }}</textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"  name="services_3" rows="5">{{ $user->doctor->services_3 }}</textarea>
                                 @error('services_3')
                                 <div class="error">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price for Service 3</label>
-                                <input type="number" name="price_3" id="" class="form-control" placeholder="{{ $user->doctor->price_1 }}" />
+                                <input type="number" name="price_3" id="" class="form-control" value="{{ $user->doctor->price_3 }}" placeholder="{{ $user->doctor->price_1 }}" />
                                 @error('price_3')
                                 <div class="error">{{ $message }}</div>
                                 @enderror

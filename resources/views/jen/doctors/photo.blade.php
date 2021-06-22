@@ -102,7 +102,7 @@
 
 @endforeach
 
-<footer id="footer">
+<footer id="footer" style="margin-top: 260px;">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">

@@ -77,7 +77,7 @@
                         <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Business Info</h6>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Full Name</h6>
+                                <h6 class="mb-0">Company Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                                 {{ $user->name }}
@@ -125,7 +125,9 @@
                                         <h6 class="mb-0">Speciality</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        {{ $user->doctor->address }}
+                                       @foreach ($user->doctor->specialitizies as $speciality )
+                                           {{ $loop->iteration }} {{ $speciality->speciality }} <br>
+                                       @endforeach
                                     </div>
                                 </div>
                                 <hr />

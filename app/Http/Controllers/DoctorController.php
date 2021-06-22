@@ -96,8 +96,8 @@ class DoctorController extends Controller
 
     public function updateWorkDoctor(UpdateWorkRequest $request)
     {
+        
         $doctor = Doctor::where('user_id', Auth::id())->update([
-            'speciality' => $request->speciality,
             'services_1' => $request->services_1,
             'services_2' => $request->services_2,
             'services_3' => $request->services_3,
