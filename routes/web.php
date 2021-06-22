@@ -49,3 +49,4 @@ Route::post('socail/store', [DoctorController::class,'updateSocialmedia']);
 Route::get('photo/', [DoctorController::class,'photoProfile']);
 Route::post('photo/store', [DoctorController::class,'storeProfilePhoto']);
 Route::post('speciality/update', [DoctorController::class,'speciaality']);
+Route::post('deleteSpeciality', [DoctorController::class,'deleteSpeciality']);

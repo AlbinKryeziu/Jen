@@ -19,4 +19,9 @@ class Doctor extends Model
         'profilePath',
         'user_id',
     ];
+
+
+    public function specialitizies(){
+        return $this->hasMany(DoctorSpeciality::class);
+    }
 }

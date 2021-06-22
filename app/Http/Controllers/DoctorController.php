@@ -255,4 +255,13 @@ class DoctorController extends Controller
 
         return back();
     }
+
+    public function deleteSpeciality(Request $request)
+    {
+        $checkSpeciality = DoctorSpeciality::findOrFail($request->id);
+
+        if ($checkSpeciality->delete()) {
+            return back()->with('success', 'The Speciality was successfully deleted');
+        }
+    }
 }
