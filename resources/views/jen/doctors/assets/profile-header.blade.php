@@ -9,8 +9,7 @@
                 <img src="{{ asset('store/'.$user->doctor->profilePath) }}" alt="Admin" class="rounded-circle" width="120" height="120px;" style="box-shadow: 5px 7px 9px -4px #d8dcdc; object-fit: cover;" />
                 
                 @endif
-                <i class="fa fa-upload fa-5x"></i>
-                <input type="file" id="uploadfile" hidden>
+                
                 <div class="mt-3">
                     <h4>{{ $user->name }}</h4>
                     <p class="text-secondary mb-1"></p>
@@ -79,24 +78,3 @@
     </div>
 </div>
 
-<style>
-    .image-file img:hover {
-  opacity: 0.5;
-  z-index: 501;
-}
-
-.image-file img:hover + i {
-  display: block;
-  z-index: 500;
-}
-.image-file i {
-  display: none;
-  position: absolute;
-  margin-left:1%;
-  margin-top:5%;
-}
-</style>
-
-<script>$('.image-file img').click(function(){
-    $('#uploadfile').click();
-});</script>
