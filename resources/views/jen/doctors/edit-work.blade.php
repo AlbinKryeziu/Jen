@@ -235,6 +235,8 @@
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
                         <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Speciality Details</h6>
+                        @if(!empty($user->doctor->specialitizies->first()))
+
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -260,6 +262,10 @@
                                 </tbody>
                             </table>
                         </div>
+                        @else
+                        <p>No Speciality so far .</p>
+                        @endif
+                        <hr />
                         <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Add New Speciality</h6>
                         <form method="POST" action="{{ url('speciality/update') }}">
                             @csrf
@@ -272,7 +278,7 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                            <br />
                             <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Update</button>
                         </form>
                     </div>
