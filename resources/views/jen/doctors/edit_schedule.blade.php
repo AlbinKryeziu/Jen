@@ -161,7 +161,7 @@
                     <br/>
                     <br/>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table"  >
                             <thead>
                                 <tr>
                                   <th scope="col">#</th>
@@ -197,7 +197,7 @@
                             @csrf
                             <h6 class="d-flex align-items-center mb-3 " style="color: #00a8a3;">Add New Hour Of Operation</h6>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="tab_logic">
                                 <thead>
                                     <tr id="num">
                                         <th scope="col" >#</th>
@@ -243,7 +243,7 @@
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">
-                &copy; Copyright <strong><span>Jen</span></strong>. All Rights Reserved
+                &copy; Copyright {{ Carbon\Carbon::now()->format('Y') }} <strong><span>SelfPayNet</span></strong>. All Rights Reserved.
             </div>
             <div class="credits"></div>
         </div>

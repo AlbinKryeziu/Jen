@@ -231,7 +231,7 @@
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
             <div class="copyright">
-                &copy; Copyright <strong><span>Jen</span></strong>. All Rights Reserved
+                &copy; Copyright {{ Carbon\Carbon::now()->format('Y') }} <strong><span>SelfPayNet</span></strong>. All Rights Reserved.
             </div>
             <div class="credits"></div>
         </div>

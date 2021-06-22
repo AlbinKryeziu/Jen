@@ -79,7 +79,7 @@
                         <form method="POST" action="{{ url('doctor/add/schedule') }}">
                             @csrf
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table"  id="tab_logic">
                                     
                                     <tr id="num">
                                         <th class="text-center">#</th>
