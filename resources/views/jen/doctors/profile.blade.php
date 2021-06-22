@@ -64,7 +64,7 @@
     <div class="container"></div>
 </section>
 
-<main id="main">
+<main id="main" style="background:#e4e8e8">
     <div class="container p-4">
         <div class="main-body">
             @foreach($user as $key => $user)
@@ -121,7 +121,7 @@
                             <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Personal Info</h6>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
+                                    <h6 class="mb-0">Company Name</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $user->name }}
@@ -149,65 +149,87 @@
 
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
+                                    <h6 class="mb-0">Zip Code</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $user->doctor->address }}
+                                    {{ $user->doctor->zip_code }}
                                 </div>
                             </div>
                             <hr />
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Country</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $user->doctor->country }}
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <div class="row gutters-sm">
                         <div class="col-sm-12 mb-3">
                             <div class="card h-100" style="border-top: 3px solid #70c3be;">
                                 <div class="card-body">
-                                    <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Proefesional Details</h6>
+                                    <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Professional Details</h6>
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Speciality</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            {{ $user->doctor->speciality }}
+                                           @foreach ($user->doctor->specialitizies as $speciality )
+                                               {{ $loop->iteration }} {{ $speciality->speciality }} <br>
+                                           @endforeach
                                         </div>
                                     </div>
                                     <hr />
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Work Environment</h6>
+                                            <h6 class="">Services 1:</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            {{ $user->doctor->workEnvironment }}
+                                          <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_1 }}</textarea>
                                         </div>
                                     </div>
                                     <hr />
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Services</h6>
+                                            <h6 class="mb-0">Price of Service 1</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            {{ $user->doctor->services }}
+                                            {{ $user->doctor->price_1 }}$
                                         </div>
                                     </div>
-                                    <hr />
-
+                                    <hr>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">License</h6>
+                                            <h6 class="">Services 2:</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            {{ $user->doctor->services }}
+                                          <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_2 }}</textarea>
                                         </div>
                                     </div>
                                     <hr />
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Price of Service 2</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            {{ $user->doctor->price_2 }}$
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="">Services 3:</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                          <textarea name=""id="" class="col-sm-12" cols="44" rows="5" style="border: 1px solid #70c3be" disabled>{{ $user->doctor->services_3 }}</textarea>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Price of Service 3</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            {{ $user->doctor->price_3 }}$
+                                        </div>
+                                    </div>
+                                    <hr>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -228,12 +250,12 @@
                                         </thead>
                                         <tbody>
                                             @foreach($user->schedule as $key => $schedule)
-
+    
                                             <tr>
                                                 <th scope="row">{{$loop->iteration }}</th>
                                                 <td>{{ $schedule->day }}</td>
-                                                <td>{{ $schedule->start }}</td>
-                                                <td>{{ $schedule->end }}</td>
+                                                <td>{{ Carbon\Carbon::parse( $schedule->start)->format('H:s') }}</td>
+                                                <td>{{ Carbon\Carbon::parse( $schedule->end)->format('H:s')}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>

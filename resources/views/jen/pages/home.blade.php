@@ -56,21 +56,17 @@
 </style>
 
 <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/doctor.jpg') }}') top center; object-fit:cover">
-
-    <div class="container" style="text-align: center">
-      <h1>SEARCH HERE</h1>
-      <h2>Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
-     
+    <div class="container" style="text-align: center;">
+        <h1>SEARCH HERE</h1>
+        <h2>Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
     </div>
-  </section>
-<div class="padding" style="margin: 80px;">
-</div>
-  <main id="main">
-@php $specialty = App\Models\Depart::get() @endphp
+</section>
+<div class="padding" style="margin: 80px;"></div>
+<main id="main">
+    @php $specialty = App\Models\Depart::get() @endphp
 
     <form>
         @csrf
-        
 
         <section id="why-us" class="why-us">
             <div class="container">
@@ -79,13 +75,12 @@
                         <div class="content col-12">
                             <h3>Search Doctors</h3>
                             @if(Session::has('errors'))
-                            <div class="alert alert-warning" style=" text-align: center; color: white; border: none; background:none">
+                            <div class="alert alert-warning" style="text-align: center; color: white; border: none; background: none;">
                                 {{ Session::get('errors') }} @php Session::forget('errors'); @endphp
                             </div>
 
                             @endif
-                         
-                            
+
                             <label style="margin: 4px;">Specialty</label>
                             <select name="specialty" class="form-control" id="cars" value="AEfdaef" required style="border-radius: 15px;">
                                 <option value="">Select Specialty</option>
@@ -93,10 +88,10 @@
                                 <option value="{{$specialty->depart}}">{{ $specialty->depart}}</option>
                                 @endforeach
                             </select>
-                             <br>
+                            <br />
                             <label style="margin: 4px;">Zip Code</label>
-                            <input type="text" class="form-control" placeholder="Zip Code" name="zip_code" style="margin: 4px; border-radius:15px;" required />
-                           
+                            <input type="text" class="form-control" placeholder="Zip Code" name="zip_code" style="margin: 4px; border-radius: 15px;" required />
+
                             <div class="text-center" style="margin-top: 20px;">
                                 <button type="submit" class="more-btn">Search</button>
                             </div>
@@ -110,33 +105,27 @@
         </section>
     </form>
 
-    
+    @if(!is_null($doctor))
 
-    {{-- <div class="content">
-        
+    <div class="content">
         <div class="container">
-            
-            
             <!-- end row -->
-           
+
             <div class="row">
                 @foreach($doctor as $key => $doctor)
                 <div class="col-lg-4">
-                    
                     <div class="text-center card-box" style="border: 1px solid #00a8a3;">
                         <div class="member-card pt-2 pb-2">
-                          
                             <div class="thumb-lg member-thumb mx-auto">
                                 @if($doctor->profilePath)
                                 <img src="{{ asset('store/'.$doctor->profilePath) }}" class="rounded-circle img-thumbnail" alt="profile-image" />
                                 @else
                                 <img src="{{ asset('jen/assets/img/doctorLogoFinal.png') }}" class="rounded-circle img-thumbnail" alt="profile-image" />
-                         
+
                                 @endif
-                            
                             </div>
                             <div class="">
-                                <br>
+                                <br />
                                 <h4>{{ $doctor->name }} {{ $doctor->surname }}</h4>
                                 <p class="text-muted">
                                     {{ $doctor->speciality }} <span>| </span><span><a href="">{{ $doctor->address }}</a></span>
@@ -150,9 +139,9 @@
                 </div>
                 @endforeach
             </div>
-            
         </div>
-    </div> --}}
+    </div>
+    @endif
 
     <footer id="footer">
         <div class="container d-md-flex py-4">
@@ -167,7 +156,6 @@
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-
     <script src="{{ asset('jen/assets/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
@@ -177,7 +165,6 @@
     <script src="{{ asset('jen/assets/vendor/counterup/counterup.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
-  
-    
+
     <script src="{{ asset('jen/assets/js/main.js') }}"></script>
 </main>
