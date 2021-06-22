@@ -208,8 +208,8 @@
                                         <tr>
                                             <th scope="row">{{$loop->iteration }}</th>
                                             <td>{{ $schedule->day }}</td>
-                                            <td>{{ $schedule->start }}</td>
-                                            <td>{{ $schedule->end }}</td>
+                                            <td>{{ Carbon\Carbon::parse( $schedule->start)->format('H:s') }}</td>
+                                            <td>{{ Carbon\Carbon::parse( $schedule->end)->format('H:s')}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

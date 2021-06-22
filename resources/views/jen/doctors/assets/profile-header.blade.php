@@ -14,7 +14,7 @@
                 <div class="mt-3">
                     <h4>{{ $user->name }}</h4>
                     <p class="text-secondary mb-1"></p>
-                    <p class="text-muted font-size-sm">{{ $user->doctor->speciality }}</p>
+                    
                     <div class="btn-group" role="group" aria-label="Third group">
                         <a href="{{ url('photo/') }}" class="p-2"><strong>Change Photo</strong></a>
                         <a href="{{ url('profile/') }} " class="p-2"><strong>Profile</strong></a>
@@ -27,24 +27,24 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('doctor/edit/profile/'.$user->id) }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Profile</h6>
+                    <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" style="color:#00A8A3 "></i> Edit Profile</h6>
                 </a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('doctor/work') }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit Professional Details</h6>
+                    <h6 class="mb-0"><i class="fa fa-user-md fa-lg" aria-hidden="true" style="color:#00A8A3 "></i> Edit Professional Details</h6>
                 </a>
             </li>
             @if(!count(auth()->user()->schedule))
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('doctor/schedule') }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Create Hours of Operation</h6>
+                    <h6 class="mb-0"><i class="fa fa-calendar-plus-o" aria-hidden="true" style="color:#00A8A3 "></i> Create Hours of Operation</h6>
                 </a>
             </li>
             @else
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('edit/schedule') }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Hours of Operation</h6>
+                    <h6 class="mb-0"><i class="fa fa-calendar fa-sm" aria-hidden="true" style="color:#00A8A3 "></i> Edit Hours of Operation</h6>
                 </a>
             </li>
             @endif
@@ -57,20 +57,20 @@
           
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url($user->socialMedia->website) }}" target="_blank" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true"></i> My Website</h6>
+                    <h6 class="mb-0"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color:#00A8A3 "></i> My Website</h6>
                 </a>
             </li>
             @endif
             @if($user->socialMedia)
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('socail/edit') }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Edit Social Media</h6>
+                    <h6 class="mb-0"><i class="fa fa-share-square-o fa-lg" aria-hidden="true" style="color:#00A8A3 "></i> Edit Social Media</h6>
                 </a>
             </li>
             @else
             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <a href="{{ url('socail/media') }}" style="color: black;">
-                    <h6 class="mb-0"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Add Social Media</h6>
+                    <h6 class="mb-0"><i class="fa fa-share-square-o fa-lg" aria-hidden="true" style="color:#00A8A3 "></i> Add Social Media</h6>
                 </a>
             </li>
 
