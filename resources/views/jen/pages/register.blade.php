@@ -27,11 +27,11 @@
                         <div class="wrap d-md-flex">
                             <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                                 <div class="text w-100">
-                                    <img src="{{ asset('jen/assets/img/logo-trnasparent.png') }}" width="200px;" />
+                                    <img src="{{ asset('jen/assets/img/logo.png') }}" width="200px;" />
                                     <br />
                                     <br />
-                                    <h2>Welcome to SelfPayNet</h2>
-                                    <p>Already have an account</p>
+                                    <h4 style="color: white">Welcome to SelfPayNet</h4>
+                                    <p>Already have an account ?</p>
 
                                     <a href="{{ url('login') }}" class="btn btn-white btn-outline-white">Sign In</a>
                                 </div>
