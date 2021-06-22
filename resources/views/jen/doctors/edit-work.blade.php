@@ -1,4 +1,21 @@
 @include('jen/pages/assets/header') @include('jen/doctors/assets/swal')
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <style type="text/css">
+        .dropdown-toggle{
+            height: 40px;
+            width: 670px !important;
+        }
+        @media screen and (max-width: 640px) {
+            .dropdown-toggle{
+            height: 40px;
+            width: 270px !important;
+        }  
+        }
+    </style>
 <style>
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -70,22 +87,33 @@
             <div class="col-md-8">
                 <div class="card mb-3" style="border-top: 3px solid #70c3be;">
                     <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Professional  Details</h6>
-                        <form method="POST" action="{{ url('doctor/update/work') }}">
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Speciality  Details</h6>
+                        <form method="POST" action="{{ url('speciality/update') }}">
                             @csrf
-                            <div class="form-group">
-                                <label for="speciality">Speciality</label>
-                                <select name="speciality" id="speciality" class="form-control">
-                                    <option value="{{ $user->doctor->speciality }}">{{ $user->doctor->speciality }}</option>
+                           
+
+                            <div class="form-group ">
+                                <label>Select Speciality :</label><br/>
+                                <select class="selectpicker" multiple data-live-search="true" name="speciality[]" class="form-group col-12">
                                     @foreach ( $speacility as $speacility )
                                     <option value="{{ $speacility->depart }}">{{ $speacility->depart }}</option>
                                     @endforeach
                                 </select>
-
-                                @error('speciality')
-                                <div class="error">{{ $message }}</div>
-                                @enderror
                             </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="float: right; background-color: #00a8a3;">Update</button>
+                            
+                        </form>
+                    </div>
+                </div>
+                <div class="card mb-3" style="border-top: 3px solid #70c3be;">
+                    <div class="card-body">
+                        <h6 class="d-flex align-items-center mb-3" style="color: #00a8a3;">Edit Professional  Details</h6>
+                        <form method="POST" action="{{ url('doctor/update/work') }}">
+                            @csrf
+                           
+
+                            
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Service 1</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="services_1" rows="5">{{ $user->doctor->services_1 }}</textarea>
@@ -140,7 +168,11 @@
 </div>
 
 @endforeach
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select').selectpicker();
+    });
+</script>
 <footer id="footer">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">

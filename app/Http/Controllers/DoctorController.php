@@ -9,12 +9,14 @@ use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateWorkRequest;
 use App\Models\Depart;
 use App\Models\Doctor;
+use App\Models\DoctorSpeciality;
 use App\Models\SocialLink;
 use App\Models\User;
 use App\Models\WorkSchedule;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\CssSelector\Node\Specificity;
 
 class DoctorController extends Controller
 {
@@ -239,5 +241,18 @@ class DoctorController extends Controller
         if ($user) {
             return back()->with('success', 'The photo has been successfully changed');
         }
+    }
+
+    public function speciaality(Request $request)
+    {
+        $doctorId = Doctor::where('user_id', Auth::id())->first();
+        for ($i = 0; $i < count($request['speciality']); $i++) {
+            $menagerAuth = DoctorSpeciality::create([
+                'speciality' => $request['speciality'][$i],
+                'doctor_id' => $doctorId->id,
+            ]);
+        }
+
+        return back();
     }
 }
