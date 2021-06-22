@@ -6,6 +6,7 @@ use App\Http\Requests\DoctorRegisterRequest;
 use App\Http\Requests\RegisterClientRequest;
 use App\Models\Depart;
 use App\Models\Doctor;
+use App\Models\DoctorSpeciality;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -36,12 +37,17 @@ class RegisterController extends Controller
             $user->role()->attach(1);
             $doctor = new Doctor();
             $doctor->name = $request->company_name;
-            $doctor->speciality = $request->speciality;
             $doctor->zip_code = $request->zip_code;
            
             $doctor->phone = $request->phone;
             $doctor->user_id = $user->id;
             $doctor->save();
+        }
+        if($doctor){
+            $specilaity = new DoctorSpeciality();
+            $specilaity->speciality = $request->speciality;
+            $specilaity->doctor_id = $doctor->id;
+            $specilaity->save();
         }
 
         if ($user || $doctor) {
@@ -49,17 +55,5 @@ class RegisterController extends Controller
         }
     }
 
-    public function registerClient(RegisterClientRequest $request)
-    {
-        $user = new User();
-        $user->name = $request->first_name . ' ' . $request->last_name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->password = Hash::make($request->password);
-        $user->save();
-        if ($user) {
-            $user->role()->attach(2);   
-            return redirect()->route('login');
-        }
-    }
+   
 }
