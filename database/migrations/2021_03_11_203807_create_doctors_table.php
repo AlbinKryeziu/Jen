@@ -20,6 +20,7 @@ class CreateDoctorsTable extends Migration
             $table->string('phone');
             $table->string('website')->nullable();
             $table->string('profilePath')->nullable();
+            $table->string('zip_code')->nullable();
             $table->unsignedBigInteger('user_id'); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

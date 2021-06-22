@@ -30,6 +30,7 @@ class UserSeeder extends Seeder
         $doctor->name = $user->name;
         $doctor->phone ='1111111';
         $doctor->user_id = $user->id;
+        $doctor->zip_code = '32003';
         $doctor->save();
 
         $specilaity =  new DoctorSpeciality();
