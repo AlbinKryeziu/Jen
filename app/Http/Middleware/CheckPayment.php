@@ -19,10 +19,11 @@ class CheckPayment
  
         if (auth()->check()) 
         {
-        if (is_null(auth()->user()->paid)) {  
-             
-            
-          }            
+          if (auth()->check()) {
+            if (is_null(auth()->user()->paid)) {
+                return redirect('payment');
+            }
+          }      
          }      
          return $next($request);   
        } 

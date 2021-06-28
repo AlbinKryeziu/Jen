@@ -21,6 +21,7 @@ Route::get('/', [PageController::class,'index']);
 Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
+Route::group(['middleware' => ['payment']], function () {
 Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
 Route::get('about', [PageController::class,'aboutUs']);
 
@@ -50,3 +51,4 @@ Route::get('photo/', [DoctorController::class,'photoProfile']);
 Route::post('photo/store', [DoctorController::class,'storeProfilePhoto']);
 Route::post('speciality/update', [DoctorController::class,'speciaality']);
 Route::post('deleteSpeciality', [DoctorController::class,'deleteSpeciality']);
+});
