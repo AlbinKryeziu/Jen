@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'SelfPaynet';
-        $user->email = 'selfapynet@gmail.com';
+        $user->email = 'spn@selfpaynet.com';
         $user->password = Hash::make('password');
         $user->paid = Carbon::now()->toDateTimeString();
         $user->save();
@@ -32,7 +32,6 @@ class UserSeeder extends Seeder
         $doctor->user_id = $user->id;
         $doctor->zip_code = '32003';
         $doctor->save();
-
         $specilaity =  new DoctorSpeciality();
         $specilaity->speciality ='Anesthesiology';
         $specilaity->doctor_id = $doctor->id;
