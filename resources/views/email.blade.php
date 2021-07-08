@@ -135,8 +135,8 @@
                             <br>
                             <br>
                             <p style="margin: 0;"> Name: {{ $data['name'] }}</p><br>
-                            <p style="margin: 0;"> Name: {{ $data['email'] }}</p><br>
-                            <p style="margin: 0;"> Name: {{ $data['phone'] }}</p><br>
+                            <p style="margin: 0;"> Email: {{ $data['email'] }}</p><br>
+                            <p style="margin: 0;"> Phone: {{ $data['phone'] }}</p><br>
                         </td>
                     </tr>
                    

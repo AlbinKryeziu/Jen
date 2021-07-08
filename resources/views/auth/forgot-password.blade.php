@@ -35,7 +35,7 @@
                             <div class="login-wrap p-4 p-lg-5">
                                 <div class="d-flex">
                                     <div class="w-100">
-                                        <h3 class="mb-4">Forgot Password</h3>
+                                        <h3 class="mb-4">Forgot Password?</h3>
                                     </div>
                                 </div>
                                 @if (session('status'))

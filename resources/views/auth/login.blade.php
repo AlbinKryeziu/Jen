@@ -27,7 +27,7 @@
                                     <br />
                                     <br />
                                     <h4 style="color: white">Welcome to SelfPayNet</h4>
-                                    <p>Don't have an account?</p>
+                                    <p>Don't have an account ?</p>
 
                                     <a href="{{ url('registers') }}" class="btn btn-white btn-outline-white">Sign Up</a>
                                 </div>
@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="w-50 text-md-right">
                                             @if (Route::has('password.request'))
-                                            <a href="{{ route('password.request') }}">Forgot Password</a>
+                                            <a href="{{ route('password.request') }}">Forgot Password ?</a>
                                             @endif
                                         </div>
                                     </div>

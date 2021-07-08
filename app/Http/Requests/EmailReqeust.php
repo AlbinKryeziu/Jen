@@ -25,7 +25,7 @@ class EmailReqeust extends FormRequest
     {
         return [
             'name'=>'required',
-            'email'=>'required|mail',
+            'email'=>'required',
             'phone'=>'required|numeric',
             'message' =>'required',
         ];

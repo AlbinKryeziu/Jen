@@ -16,13 +16,17 @@ class EmailController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'message' => $request->message,
-        ] ;
+        ];
            
            
            
        
        
-        \Mail::to('your_receiver_email@gmail.com')->send(new \App\Mail\ContactEmail($data));
+       $email=  \Mail::to('albinkryeziu21@gmail.com')->send(new \App\Mail\ContactEmail($data));
+
+      
+           return back()->with('success-message','Message sent successfully, Thank you!');
+      
         
     }
     
