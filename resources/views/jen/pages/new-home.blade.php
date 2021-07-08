@@ -176,7 +176,48 @@ section .section-title {
    }
 }
 
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.contact3 {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+}
 
+.contact3 h1,
+.contact3 h2,
+.contact3 h3,
+.contact3 h4,
+.contact3 h5,
+.contact3 h6 {
+  color: #3e4555;
+}
+
+.contact3 .font-weight-medium {
+  font-weight: 500;
+}
+
+.contact3 .card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.contact3 .btn-danger-gradiant {
+  background: #ff4d7e;
+  background: -webkit-linear-gradient(legacy-direction(to right), #ff4d7e 0%, #ff6a5b 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff4d7e), to(#ff6a5b));
+  background: -webkit-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+  background: -o-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+  background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+}
+
+.contact3 .btn-danger-gradiant:hover {
+  background: #ff6a5b;
+  background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+  background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+  background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+  background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+}
 
 
 
@@ -188,7 +229,7 @@ section .section-title {
     <div class="container" style="text-align: center">
       <h1>Welcome to SelfPayNet</h1>
       <h2>SelfPayNet is a resource for anyone searching for quality medical care at a transparent and affordable price. When you tap the SEARCH button below it will take you a network of general and specialized medical service providers in your area.</h2>
-      <a href="{{ url('home/') }}" class="btn-get-started scrollto">Search Doctor</a>
+      <a href="{{ url('/') }}" class="btn-get-started scrollto">Search Doctor</a>
     </div>
   </section>
 <div class="padding" style="margin: 80px;">
@@ -679,7 +720,7 @@ section .section-title {
   </section>
   
 
-<div class="row" id="contatti">
+{{-- <div class="row" id="contatti">
 <div class="container mt-5" >
 
     <div class="row" style="height:550px;">
@@ -734,12 +775,105 @@ section .section-title {
           </div>
           </div>
         </div>
+        
       </div>
 
     </div>
 </div>
+</div> --}}
+<div class="contact3 py-5">
+  <div class="row no-gutters">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card-shadow">
+            <img src="{{ asset('jen/assets/img/contact3.png') }}" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-box ml-3">
+            <h1 class="font-weight-light mt-2">Contact Us</h1>
+            <form class="mt-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group mt-2">
+                    <input class="form-control" type="text" placeholder="Name">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mt-2">
+                    <input class="form-control" type="email" placeholder="Email Address">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mt-2">
+                    <input class="form-control" type="text" placeholder="Phone">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mt-2">
+                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <button type="submit" class="btn  mt-3 text-white border-0 px-3 py-2" style="background: #17a2b8"><span>Sent Message</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card mt-4 border-0 mb-4">
+            <div class="row">
+              <div class="col-lg-4 col-md-4">
+                <div class="card-body d-flex align-items-center c-detail">
+                  <div class="mr-3 align-self-center">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                  </div>
+                  <div class="">
+                    <h6 class="font-weight-medium">Address</h6>
+                    <p class=""> 15922 Eldorado Pkwy Ste <br> 500 #845
+                      Frisco, TX 75035
+                      </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <div class="card-body d-flex align-items-center c-detail">
+                  <div class="mr-3 align-self-center">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+                  
+                  </div>
+                
+                  <div class="">
+                    <h6 class="font-weight-medium">Phone</h6>
+                    <p class="">+1 (469) 715-8408
+                      </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <div class="card-body d-flex align-items-center c-detail">
+                  <div class="mr-3 align-self-center">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+                   
+                  </div>
+                  <div class="">
+                    <h6 class="font-weight-medium">Email</h6>
+                    <p class="">
+                      spn@selfpaynet.com
+                    
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
   
 
   </main>
