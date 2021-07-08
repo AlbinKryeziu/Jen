@@ -9,19 +9,10 @@ class Doctor extends Model
 {
     use HasFactory;
     protected $table = 'doctors';
-    protected $fillable = [
-        'name',
-        'surname',
-        'speciality',
-        'country',
-        'address',
-        'phone',
-        'profilePath',
-        'user_id',
-    ];
+    protected $fillable = ['name', 'surname', 'speciality', 'country', 'address', 'phone', 'profilePath', 'user_id'];
 
-
-    public function specialitizies(){
+    public function specialitizies()
+    {
         return $this->hasMany(DoctorSpeciality::class);
     }
 }

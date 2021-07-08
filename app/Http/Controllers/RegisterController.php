@@ -29,7 +29,7 @@ class RegisterController extends Controller
     public function registerDoctor(DoctorRegisterRequest $request)
     {
         $user = new User();
-        $user->name = $request->company_name ;
+        $user->name = $request->company_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
@@ -37,12 +37,12 @@ class RegisterController extends Controller
             $doctor = new Doctor();
             $doctor->name = $request->company_name;
             $doctor->zip_code = $request->zip_code;
-           
+
             $doctor->phone = $request->phone;
             $doctor->user_id = $user->id;
             $doctor->save();
         }
-        if($doctor){
+        if ($doctor) {
             $specilaity = new DoctorSpeciality();
             $specilaity->speciality = $request->speciality;
             $specilaity->doctor_id = $doctor->id;
@@ -53,6 +53,4 @@ class RegisterController extends Controller
             return redirect()->route('login');
         }
     }
-
-   
 }
