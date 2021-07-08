@@ -3,6 +3,7 @@
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\StripeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,8 +22,11 @@ Route::get('/', [PageController::class,'index']);
 Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
-Route::group(['middleware' => ['payment']], function () {
 Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
+
+Route::group(['middleware' => ['payment']], function () {
+    
+
 Route::get('about', [PageController::class,'aboutUs']);
 
 Route::post('doctor/account', [RegisterController::class,'registerDoctor']);
