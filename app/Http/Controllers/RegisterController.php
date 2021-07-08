@@ -34,7 +34,6 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         if ($user) {
-            $user->role()->attach(1);
             $doctor = new Doctor();
             $doctor->name = $request->company_name;
             $doctor->zip_code = $request->zip_code;

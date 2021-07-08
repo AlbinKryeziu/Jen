@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Doctor;
 use App\Models\DoctorSpeciality;
+use App\Models\Role;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -20,12 +21,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        $roleName = new Role();
+        $roleName->name= 'Doctor';
+        $roleName->slug = 'doctor';
+        $roleName->save();
+
         $user = new User();
         $user->name = 'SelfPaynet';
         $user->email = 'spn@selfpaynet.com';
         $user->password = Hash::make('password');
         $user->paid = Carbon::now()->toDateTimeString();
         $user->save();
+        $user->role()->attach(1);
+        
         $doctor = new Doctor();
         $doctor->name = $user->name;
         $doctor->phone ='1111111';
