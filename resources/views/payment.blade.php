@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-12">
-                                        <div class="form-control total btn btn-info">Total: <span class="amount">$100</span></div>
+                                        <div class="form-control total btn btn-info">Total: <span class="amount">$50</span></div>
                                     </div>
                                 </div>
                                 <div class="form-row">

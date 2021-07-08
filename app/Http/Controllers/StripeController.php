@@ -18,7 +18,7 @@ class StripeController extends Controller
         \Stripe\Stripe::setApiKey('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');
         try {
             $stripe = \Stripe\Charge::create([
-                "amount" => 100 * 100,
+                "amount" => 50 * 100,
                 "currency" => "usd",
                 "source" => $request->input('stripeToken'), // obtained with Stripe.js
                 "description" => "Pyment Users.",

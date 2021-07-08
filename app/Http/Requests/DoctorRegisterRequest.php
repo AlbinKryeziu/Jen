@@ -28,7 +28,7 @@ class DoctorRegisterRequest extends FormRequest
             'email' => 'required|email|unique:users',
             'phone' => 'required|numeric',
             'speciality' => 'required',
-            'zip_code' => 'required||postal_code:Us',
+            'zip_code' => 'required',
             'password' => 'min:8|required_with:password_confirmation|same:password_confirmation',
             'password_confirmation' => 'min:8'
         ];
@@ -37,7 +37,7 @@ class DoctorRegisterRequest extends FormRequest
     public function messages()
     {
         return[
-            'zip_code.postal_code' =>'The :attribute field must be a valid postal code.',
+            'zip_code' =>'The :attribute field must be a valid postal code.',
         ];
     }
 }
