@@ -793,26 +793,39 @@ section .section-title {
         <div class="col-lg-6">
           <div class="contact-box ml-3">
             <h1 class="font-weight-light mt-2">Contact Us</h1>
-            <form class="mt-4">
+            <form class="mt-4" method="POST" action="{{ url('email') }}">
+              @csrf
               <div class="row">
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="text" placeholder="Name">
+                    <input class="form-control" type="text" placeholder="Name" name="name">
+                    @error('name')
+                     <span style="font-size: 12px; color:red">{{ $message }}</span>
+                    @enderror
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="email" placeholder="Email Address">
+                    <input class="form-control" type="email" placeholder="Email Address" name="email">
+                    @error('email')
+                     <span style="font-size: 12px; color:red">{{ $message }}</span>
+                    @enderror
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="text" placeholder="Phone">
+                    <input class="form-control" type="text" placeholder="Phone" name="phone">
+                    @error('phone')
+                    <span style="font-size: 12px; color:red">{{ $message }}</span>
+                   @enderror
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Message" name="message"></textarea>
+                    @error('message')
+                    <span style="font-size: 12px; color:red">{{ $message }}</span>
+                   @enderror
                   </div>
                 </div>
                 <div class="col-lg-12">

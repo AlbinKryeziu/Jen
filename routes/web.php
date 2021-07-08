@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\StripeController;
@@ -23,6 +24,7 @@ Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
 Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
+Route::post('email',[EmailController::class,'email']);
 
 Route::group(['middleware' => ['payment']], function () {
     Route::get('about', [PageController::class, 'aboutUs']);

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Carbon\Carbon;
 use Session;
 use Stripe;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class StripeController extends Controller
 {
@@ -27,6 +29,7 @@ class StripeController extends Controller
                 $user = User::where('id', Auth::id())->update([
                     'paid' => Carbon::now()->toDateString(),
                 ]);
+                
             }
             return redirect('/');
         } catch (\Exception $e) {
