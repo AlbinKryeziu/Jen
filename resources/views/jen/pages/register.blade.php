@@ -32,6 +32,7 @@
                                     <br />
                                     <br />
                                     <h4 style="color: white">Welcome to SelfPayNet</h4>
+                                    <p>To use SelfPayNet you have to pay $50 per month. <br>After registration you will go to the payment section.</p>
                                     <p>Already have an account ?</p>
 
                                     <a href="{{ url('login') }}" class="btn btn-white btn-outline-white">Sign In</a>
