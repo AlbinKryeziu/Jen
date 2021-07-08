@@ -778,7 +778,13 @@ section .section-title {
 
   
   <script src="{{ asset('jen/assets/js/main.js') }}"></script>
-
+  @if(Session::has('success-message'))
+  <script>
+      swal("Success", "{{Session::get('success-message')}}", "success", {
+          button: "ok",
+      });
+  </script>
+  @endif
 </body>
 
 </html>

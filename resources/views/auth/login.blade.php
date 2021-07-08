@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Login | SelfPayNet</title>
+        <link href="{{ asset('jen/assets/img/icon.png') }}" rel="icon" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 

@@ -167,4 +167,13 @@
     <script src="{{ asset('jen/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
     <script src="{{ asset('jen/assets/js/main.js') }}"></script>
+
+    @if(Session::has('success-message'))
+    <script>
+        swal("Success", "{{Session::get('success-message')}}", "success", {
+            button: "ok",
+        });
+    </script>
+    @endif
+    
 </main>
