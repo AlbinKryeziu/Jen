@@ -74,15 +74,21 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-12">
-                                        <div class="form-control total btn btn-info">Total: <span class="amount">$50</span></div>
+                                        <div class="form-control total btn btn-info" style="pointer-events: none; background: #f5f5f5; color: black; border: none; padding: 5px;">
+                                            Total: <span class="amount"><strong>$50</strong></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="col-md-12 form-group">
-                                        <button class="form-control btn btn-primary submit-button" type="submit" style="margin-top: 10px;">Pay »</button>
+                                    <div class="col-md-6 form-group">
+                                        <a href="{{ url('back') }}" class="form-control btn btn-primary" style="margin-top: 10px;">Back To Home </a>
                                     </div>
                                 </div>
-                                
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <button class="form-control btn btn-primary submit-button" type="submit" style="margin-top: 10px; background: #17a2b8;">Pay Now</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

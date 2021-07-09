@@ -24,8 +24,8 @@ Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
 Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
-Route::post('email',[EmailController::class,'email']);
-
+Route::post('email', [EmailController::class, 'email']);
+Route::get('back', [PageController::class, 'back']);
 Route::group(['middleware' => ['payment']], function () {
     Route::get('about', [PageController::class, 'aboutUs']);
 

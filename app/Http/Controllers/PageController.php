@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Doctor;
 use App\Models\DoctorSpeciality;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -35,5 +36,11 @@ class PageController extends Controller
     public function aboutUs()
     {
         return view('jen.pages.new-home');
+    }
+
+    public function back()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

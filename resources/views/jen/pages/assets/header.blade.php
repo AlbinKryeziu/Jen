@@ -9,7 +9,6 @@
         <meta content="" name="description" />
         <meta content="" name="keywords" />
         <link href="{{ asset('jen/assets/img/icon.png') }}" rel="icon" />
-        
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
@@ -25,7 +24,11 @@
 
         <link href="{{ asset('jen/assets/css/style.css') }}" rel="stylesheet" />
     </head>
-
+    <script>
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+    </script>
     <body>
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
@@ -33,8 +36,7 @@
                 <h1 class="logo mr-auto"><a href="index.html"></a></h1>
 
                 <nav class="nav-menu d-none d-lg-block float-right">
-                    <ul >
-                        
+                    <ul>
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">HOME</a></li>
                         <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">ABOUT US</a></li>
                         @if (!Auth::check())
@@ -44,12 +46,10 @@
                         @endif @if (Auth::check() )
 
                         <li class="drop-down">
-                            <a  style="text-transform: uppercase; cursor:pointer">{{ auth()->user()->name }}</a>
+                            <a style="text-transform: uppercase; cursor: pointer;">{{ auth()->user()->name }}</a>
                             <ul>
-                               
                                 <li><a href="{{ url('profile/') }}">Profile</a></li>
-                               
-                                
+
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout
                                 </a>
@@ -63,4 +63,5 @@
                 </nav>
             </div>
         </header>
- 
+    </body>
+</html>
