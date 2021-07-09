@@ -32,8 +32,9 @@
                 <img src="{{ asset('jen/assets/img/logo.png') }}" width="200px;" />
                 <h1 class="logo mr-auto"><a href="index.html"></a></h1>
 
-                <nav class="nav-menu d-none d-lg-block">
-                    <ul style="margin-right:-300px; font-weight: bold; ">
+                <nav class="nav-menu d-none d-lg-block float-right">
+                    <ul >
+                        
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">HOME</a></li>
                         <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">ABOUT US</a></li>
                         @if (!Auth::check())
@@ -62,5 +63,4 @@
                 </nav>
             </div>
         </header>
-    </body>
-</html>
+ 
