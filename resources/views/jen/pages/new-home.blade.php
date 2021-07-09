@@ -224,7 +224,7 @@ section .section-title {
 </style>
 
 
-  <section id="hero" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/img2.jpg') }}') top center;">
+  <section id="hero1" class="d-flex align-items-center" style="background: url('{{ asset('jen/assets/img/img2.jpg') }}') top center;">
 
     <div class="container" style="text-align: center">
       <h1>Welcome to SelfPayNet</h1>

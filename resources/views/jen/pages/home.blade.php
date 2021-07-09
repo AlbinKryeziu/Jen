@@ -61,7 +61,7 @@
         <h2>Find the care you need in 2 simple steps. First, select the specialty of care required. Second, enter your zip for a selection of providers near you!</h2>
     </div>
 </section>
-<div class="padding" style="margin: 80px;"></div>
+
 <main id="main">
     @php $specialty = App\Models\Depart::get() @endphp
 
@@ -142,7 +142,7 @@
         </div>
     </div>
     @endif
-
+<br><br>
     <footer id="footer">
         <div class="container d-md-flex py-4">
             <div class="mr-md-auto text-center text-md-left">
