@@ -38,9 +38,9 @@
                         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{ url('/') }}">HOME</a></li>
                         <li class="{{ (request()->is('about')) ? 'active' : '' }}"><a href="{{ url('about') }}">ABOUT US</a></li>
                         @if (!Auth::check())
-                        <li><a href="{{ url('registers') }}">REGISTER</a></li>
+                        <li class="{{ (request()->is('registers')) ? 'active' : '' }}"><a href="{{ url('registers') }}">REGISTER</a></li>
                         @endif @if (!Auth::check())
-                        <li><a href="{{ url('login') }}">LOGIN</a></li>
+                        <li class="{{ (request()->is('login')) ? 'active' : '' }}"><a href="{{ url('login') }}">LOGIN</a></li>
                         @endif @if (Auth::check() )
 
                         <li class="drop-down">

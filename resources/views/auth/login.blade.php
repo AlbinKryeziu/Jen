@@ -38,7 +38,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="wrap d-md-flex">
-                    <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                    <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last" >
                         <div class="text w-100">
                             <img src="{{ asset('jen/assets/img/logo.png') }}" width="200px;" />
                             <br />
